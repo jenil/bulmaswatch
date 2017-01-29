@@ -1,0 +1,46 @@
+////////////////////////////////////////////////
+// FLATLY
+////////////////////////////////////////////////
+$grey: #8c9b9d;
+$grey-light: #a9afb7;
+$grey-lighter: #dee2e5;
+$orange: #e67e22;
+$yellow: #f1b70e;
+$green: #2ecc71;
+$turquoise: #1abc9c;
+$blue: #3498db;
+$purple: #8e44ad;
+$red: #e74c3c;
+$white-ter: #ecf0f1;
+$primary: #34495e;
+$yellow-invert: #fff;
+
+$family-sans-serif: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+$family-monospace: "Inconsolata", "Consolas", "Monaco", monospace;
+
+$radius-small: 3px;
+$radius: .4em;
+$radius-large: 8px;
+$size-6: 15px;
+$size-7: .85em;
+$title-weight: 500;
+$subtitle-weight: 400;
+$subtitle: darken($grey, 20);
+
+$border-width: 2px;
+
+$text: $primary;
+$text-light: lighten($primary, 10);
+$text-strong: darken($primary, 5);
+
+$link: $turquoise;
+$link-hover: darken($link, 10);
+$link-focus: darken($link, 10);
+$link-active: darken($link, 10);
+
+$button: $primary; // primary-darker
+$button-hover: darken($primary, 5); // primary-dark
+$button-focus: darken($primary, 5); // primary-dark
+$button-active: darken($primary, 5); // primary-dark
+
+$nav-height: 4rem;
