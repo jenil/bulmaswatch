@@ -188,7 +188,6 @@ h6 {
 
     .nav-item a:not(.button),
     a.nav-item:not(.button) {
-        color: $white;
 
         &:hover {
             background-color: $link-hover;
@@ -197,6 +196,7 @@ h6 {
         // Modifiers
         &.is-active {
             color: $white;
+            background-color: $link-active;
 
             &.is-tab {
                 border-bottom-color: $white;
@@ -206,7 +206,7 @@ h6 {
 
     .nav-toggle {
         &:hover {
-            background-color: $button-active;
+            background-color: $link-hover;
         }
 
         span {

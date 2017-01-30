@@ -145,7 +145,8 @@ h6 {
         }
         // Modifiers
         &.is-active {
-            color: $turquoise;
+            color: $white;
+            background-color: $button-active;
 
             &.is-tab {
                 border-bottom-color: $turquoise;
