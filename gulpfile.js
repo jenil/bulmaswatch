@@ -7,7 +7,7 @@ var cp = require('child_process');
 
 gulp.task('jekyll-build', function(done) {
   browserSync.notify('Jekyll build');
-  cp.exec('bundle exec jekyll build', function(err, stdout, stderr) {
+  cp.exec('bundle exec jekyll build --config _config.yml,_config.local.yml', function(err, stdout, stderr) {
     console.log(stdout);
   }).on('exit', function(code) {
         done(code === 0 ? null : 'ERROR: Jekyll process exited with code: '+code);
