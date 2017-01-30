@@ -29,7 +29,6 @@ h6 {
     &.is-focused,
     &:active,
     &:focus {
-        border-color: $button-focus-border;
         box-shadow: 0 0 0 2px rgba($button-focus-border, 0.25);
     }
     @each $name, $pair in $colors {
@@ -102,6 +101,10 @@ h6 {
 
     .card-footer {
         background-color: rgba($white-ter, .8);
+    }
+    .card-footer,
+    .card-footer-item {
+        border-width: $border-width;
     }
 }
 
