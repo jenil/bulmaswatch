@@ -1,0 +1,17 @@
+title: Bulmaswatch
+email: i@jgog.in
+description: Free themes for Bulma
+baseurl: "/" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: geekGogari
+github_username:  jgog
+
+# Build settings
+markdown: kramdown
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - gulpfile.js
+  - package.json
+  - yarn.lock

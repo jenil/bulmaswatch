@@ -1,3 +1,7 @@
+---
+permalink: /preview/
+---
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,7 +10,7 @@
   <title> Test </title>
   <meta name="viewport" content="width=device-width, minimum-scale=1.0">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" />
-  <link href="../flatly/bulmaswatch.min.css" id="stylesheet" rel="stylesheet" type="text/css" />
+  <link href="/flatly/bulmaswatch.min.css" id="stylesheet" rel="stylesheet" type="text/css" />
   <style type="text/css">
   .switcher {
     position: fixed;
@@ -2157,35 +2161,14 @@
       </section>
     </div>
   </div>
-  <footer class="footer">
-    <div class="container">
-      <div class="content has-text-centered">
-        <p>
-          <strong>Bulmaswatch</strong> by
-          <a href="http://jgog.in" target="_blank">Jenil Gogari</a>.
-          <br>
-          Based on  <a href="http://bulma.io" target="_blank">Bulma</a>.
-          Icons from  <a href="http://fontawesome.io/" target="_blank">Font Awesome</a>.
-          Web Fonts from  <a href="https://fonts.google.com/" target="_blank">Google</a>.
-          <br>
-          The source code is licensed
-          <a href="http://opensource.org/licenses/mit-license.php" target="_blank">MIT</a>.
-        </p>
-        <p>
-          <a class="icon" href="#">
-            <i class="fa fa-github"></i>
-          </a>
-        </p>
-      </div>
-    </div>
-  </footer>
+  {% include footer.html %}
   <div class="switcher select">
     <select>
       <option selected="" value="flatly"> Flatly </option>
       <option value="darkly"> Darkly </option>
     </select>
   </div>
-  <script crossorigin="anonymous" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" src="http://code.jquery.com/jquery-3.1.1.min.js">
+  <script crossorigin="anonymous" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" src="https://code.jquery.com/jquery-3.1.1.min.js">
   </script>
   <script type="text/javascript">
   function switchTheme(t) {

@@ -1,4 +1,7 @@
-.idea
+_site
+.sass-cache
+.jekyll-metadata
 node_modules
 *.lock
-.sass-cache/
+*.gem
+.bundle

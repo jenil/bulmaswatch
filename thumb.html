@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title> Test </title>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" />
+  <link href="/flatly/bulmaswatch.min.css" id="stylesheet" rel="stylesheet" type="text/css" />
+  <style type="text/css">
+
+  body {
+    width: 500px;
+    height: 333px;
+  }
+
+  .switcher {
+    position: fixed;
+    top: 0;
+    right: 0;
+  }
+  </style>
+</head>
+
+<body>
+  <nav class="nav has-shadow">
+    <div class="container">
+      <div class="nav-left">
+        <a class="nav-item is-active">Home</a>
+        <a class="nav-item">Features</a </div>
+        <span class="nav-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </div>
+  </nav>
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <br>
+        <h1 class="title" id="title"> Hero title </h1>
+        <h2 class="subtitle" id="subtitle"> Hero subtitle </h2>
+        <br>
+        <br>
+        <div class="block">
+          <a class="button">Button</a>
+          <a class="button is-primary">Primary</a>
+          <a class="button is-info">Info</a>
+        <!-- </div>
+        <div class="block"> -->
+          <a class="button is-success">Success</a>
+          <a class="button is-warning">Warning</a>
+          <a class="button is-danger">Danger</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="switcher select is-hidden-mobile">
+    <select>
+      <option selected="" value="flatly"> Flatly </option>
+      <option value="darkly"> Darkly </option>
+    </select>
+  </div>
+  <script crossorigin="anonymous" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" src="http://code.jquery.com/jquery-3.1.1.min.js">
+  </script>
+  <script type="text/javascript">
+  function switchTheme(t) {
+    var theme = t || 'flatly';
+    $('#stylesheet').attr('href', '../' + theme + '/bulmaswatch.min.css');
+    var title = theme.charAt(0).toUpperCase() + theme.substring(1);
+    window.history.replaceState(theme, title, '?' + theme);
+    $('#title').text(title);
+    $('#subtitle').text(title);
+    document.title = title;
+  }
+  $(function() {
+    $('.switcher select').change(function(e) {
+      switchTheme(e.target.value);
+    });
+    if (window.location.search) {
+      $('.switcher select').val(window.location.search.substring(1));
+      $('.switcher select').trigger('change');
+    }
+    $('.modal-background, .modal-close').click(function() {
+      $(this).parent().removeClass('is-active');
+    });
+
+  });
+  </script>
+</body>
+
+</html>
