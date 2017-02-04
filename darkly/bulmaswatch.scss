@@ -21,7 +21,7 @@ h6 {
 }
 
 .hero {
-  background-color: $grey-dark;
+    background-color: $grey-dark;
 }
 
 .box {
@@ -156,12 +156,12 @@ h6 {
 }
 
 .modal-card-body {
-  background-color: $grey-darker;
+    background-color: $grey-darker;
 }
 
-.modal-card-head,
-.modal-card-foot {
-  border-color: $grey-dark;
+.modal-card-foot,
+.modal-card-head {
+    border-color: $grey-dark;
 }
 
 .message-header {
@@ -179,16 +179,8 @@ h6 {
     background-color: $primary;
     border-radius: $radius;
 
-    .nav-item a,
-    a.nav-item {
-        &:hover {
-            color: $button-hover;
-        }
-    }
-
     .nav-item a:not(.button),
     a.nav-item:not(.button) {
-
         &:hover {
             background-color: $link-hover;
             color: $white;
@@ -239,8 +231,9 @@ h6 {
     a {
         border-width: $border-width;
         margin-bottom: -$border-width;
+
         &.is-active {
-          border-bottom-color: $link-active;
+            border-bottom-color: $link-active;
         }
     }
 }
@@ -253,10 +246,11 @@ h6 {
             color: $link-hover;
         }
     }
+
     &.is-active {
-      .panel-icon {
-        color: $link-active;
-      }
+        .panel-icon {
+            color: $link-active;
+        }
     }
 }
 
@@ -274,8 +268,9 @@ h6 {
         a {
             border-width: $border-width;
         }
+
         li.is-active a {
-          background-color: darken($grey-darker, 4);
+            background-color: darken($grey-darker, 4);
         }
     }
 
@@ -287,6 +282,33 @@ h6 {
 
         li + li {
             margin-left: -$border-width;
+        }
+    }
+}
+
+.hero {
+    // Colors
+    .nav {
+      background-color: $primary;
+    }
+    @each $name, $pair in $colors {
+        $color: nth($pair, 1);
+        $color-invert: nth($pair, 2);
+
+        &.is-#{$name} {
+            .nav {
+              background-color: $color;
+            }
+            .nav-item a:not(.button),
+            a.nav-item {
+                color: $color-invert;
+
+                &.is-active,
+                &:hover {
+                    background-color: darken($color, 10);
+                    color: $color-invert;
+                }
+            }
         }
     }
 }

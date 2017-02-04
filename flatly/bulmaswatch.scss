@@ -102,6 +102,7 @@ h6 {
     .card-footer {
         background-color: rgba($white-ter, .8);
     }
+
     .card-footer,
     .card-footer-item {
         border-width: $border-width;
@@ -117,7 +118,7 @@ h6 {
 }
 
 .message-header {
-  font-weight: $weight-bold;
+    font-weight: $weight-bold;
 }
 
 .message-body {
@@ -176,13 +177,14 @@ h6 {
 .panel-heading,
 .panel-tabs {
     border-width: $border-width;
+
     &:first-child {
-      border-top-width: $border-width;
+        border-top-width: $border-width;
     }
 }
 
 .panel-heading {
-  font-weight: $weight-bold;
+    font-weight: $weight-bold;
 }
 
 .panel-tabs {
@@ -193,34 +195,66 @@ h6 {
 }
 
 .panel-block {
-  &:hover {
-    color: $button-hover;
-    .panel-icon {
-      color: $button-hover;
+    &:hover {
+        color: $button-hover;
+
+        .panel-icon {
+            color: $button-hover;
+        }
     }
-  }
 }
 
 .tabs {
-  a {
-    border-bottom-width: $border-width;
-    margin-bottom: -$border-width;
-  }
-  ul {
-    border-bottom-width: $border-width;
-  }
-  &.is-boxed {
     a {
-      border-width: $border-width;
+        border-bottom-width: $border-width;
+        margin-bottom: -$border-width;
     }
-  }
-  &.is-toggle {
-    li a {
-      border-width: $border-width;
-      margin-bottom: 0;
+
+    ul {
+        border-bottom-width: $border-width;
     }
-    li + li {
-      margin-left: -$border-width;
+
+    &.is-boxed {
+        a {
+            border-width: $border-width;
+        }
     }
-  }
+
+    &.is-toggle {
+        li a {
+            border-width: $border-width;
+            margin-bottom: 0;
+        }
+
+        li + li {
+            margin-left: -$border-width;
+        }
+    }
+}
+
+.hero {
+    // Colors
+    .nav {
+        background-color: $primary;
+    }
+    @each $name, $pair in $colors {
+        $color: nth($pair, 1);
+        $color-invert: nth($pair, 2);
+
+        &.is-#{$name} {
+            .nav {
+              background-color: $color;
+            }
+            .nav-item a:not(.button),
+            a.nav-item {
+                color: $color-invert;
+
+                &.is-active,
+                &:hover {
+                    background-color: darken($color, 10);
+                    color: $color-invert;
+                }
+            }
+        }
+    }
 }
