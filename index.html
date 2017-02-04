@@ -11,7 +11,7 @@ route: home
       <div class="column is-6">
         <div class="box has-text-centered">
           <figure class="iframe image is-4by3 is-unselectable">
-            <iframe src="{{ site.baseurl }}/thumb?{{theme.name | slugify}}"></iframe>
+            <iframe src="{{ site.url }}{{ site.baseurl }}/thumb?{{theme.name | slugify}}"></iframe>
           </figure>
           <br>
           <h5>{{ theme.subtitle }}</h5>
