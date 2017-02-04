@@ -29,6 +29,10 @@ h6 {
     background-color: $grey-dark;
 }
 
+a {
+  transition: all 200ms ease;
+}
+
 .button {
     transition: all 200ms ease;
     border-width: $border-width;
@@ -78,6 +82,7 @@ h6 {
 
 .input,
 .textarea {
+    transition: all 200ms ease;
     box-shadow: none;
     border-width: $border-width;
     padding-left: 1em;
@@ -145,6 +150,20 @@ h6 {
     }
 }
 
+.notification {
+    @each $name, $pair in $colors {
+        $color: nth($pair, 1);
+        $color-invert: nth($pair, 2);
+
+        &.is-#{$name} {
+            a {
+                color: $color-invert;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
 .tag {
     border-radius: $radius;
 }
@@ -205,6 +224,11 @@ h6 {
             background-color: $white;
         }
     }
+}
+
+.hero .nav,
+body > .nav {
+    border-radius: 0;
 }
 
 .pagination-link,
@@ -289,7 +313,7 @@ h6 {
 .hero {
     // Colors
     .nav {
-      background-color: $primary;
+        background-color: $primary;
     }
     @each $name, $pair in $colors {
         $color: nth($pair, 1);
@@ -297,8 +321,9 @@ h6 {
 
         &.is-#{$name} {
             .nav {
-              background-color: $color;
+                background-color: $color;
             }
+
             .nav-item a:not(.button),
             a.nav-item {
                 color: $color-invert;
