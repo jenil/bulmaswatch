@@ -6,9 +6,9 @@ route: home
 
 <section class="section themes">
   <div class="container content">
-    <div class="columns">
+    <div class="columns is-multiline">
       {% for theme in site.themes %}
-      <div class="column is-6">
+      <div class="column is-half-tablet is-one-third-desktop">
         <div class="box has-text-centered">
           <figure class="iframe image is-4by3 is-unselectable">
             <iframe src="{{ site.url }}{{ site.baseurl }}/thumb/?{{theme.name | slugify}}"></iframe>
