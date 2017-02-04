@@ -10,8 +10,8 @@ gulp.task('jekyll-build', function(done) {
   cp.exec('bundle exec jekyll build --config _config.yml,_config.local.yml', function(err, stdout, stderr) {
     console.log(stdout);
   }).on('exit', function(code) {
-        done(code === 0 ? null : 'ERROR: Jekyll process exited with code: '+code);
-    });
+    done(code === 0 ? null : 'ERROR: Jekyll process exited with code: ' + code);
+  });
 });
 
 gulp.task('jekyll-rebuild', ['jekyll-build'], function() {

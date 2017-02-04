@@ -22,6 +22,6 @@
     },
     "scripts": {
         "build": "gulp sass",
-        "serve": "gulp"
+        "start": "gulp"
     }
 }
