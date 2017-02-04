@@ -4,30 +4,31 @@ layout: home
 route: home
 ---
 
-<section class="hero">
-  <div class="hero-body">
-    <div class="container has-text-centered">
-      <h1 class="title">
-        {{ site.title }}
-      </h1>
-      <h2 class="subtitle">
-        Free themes for <a href="//bulma.io">Bulma</a>
-      </h2>
-    </div>
-  </div>
-</section>
-<section class="section">
-  <div class="container">
+<section class="section themes">
+  <div class="container content">
     <div class="columns">
+      {% for theme in site.themes %}
       <div class="column is-6">
-        <a href="{{"preview?flatly" | absolute_url}}" class="image is-3by2">
-          <img src="{{"flatly/thumbnail.png" | absolute_url }}" alt="Flatly">
-        </a>
+        <div class="box has-text-centered">
+          <figure class="iframe image is-4by3 is-unselectable">
+            <iframe src="{{ site.baseurl}}thumb?{{theme.name | slugify}}" sandbox="allow-scripts allow-top-navigation"></iframe>
+          </figure>
+          <br>
+          <h5>{{ theme.subtitle }}</h5>
+          <div class="block">
+            <a class="button" href="{{ site.baseurl }}{{theme.name | slugify}}">Preview</a>
+            <a class="button is-primary" href="{{ site.baseurl }}{{theme.name | slugify}}/bulmaswatch.min.css">Download</a>
+          </div>
+        </div>
       </div>
+      {% endfor %}
+    </div>
+    <br>
+    <div class="columns is-centered">
       <div class="column is-6">
-        <a href="{{"preview?darkly" | absolute_url}}" class="image is-3by2">
-          <img src="{{"darkly/thumbnail.png" | absolute_url }}" alt="Darkly">
-        </a>
+          <p class="has-text-centered notification is-info">
+            More themes coming soon, check the <a href="{{ site.repo_url }}">Github repository</a> to keep a track.
+          </p>
       </div>
     </div>
   </div>

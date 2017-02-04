@@ -7,37 +7,60 @@ nav.main-nav {
         color: #fff;
         font-weight: bold;
     }
+
+    .nav-item {
+        margin: 0.75rem 0.25rem;
+        border-radius: $radius;
+    }
 }
 
 .home-page {
+    .main-nav {
+        background-color: transparent !important;
+
+        .nav-item {
+            &.is-active,
+            &:hover {
+                background-color: rgba($black, 0.05) !important;
+            }
+        }
+    }
+
     .hero-body {
-        padding-top: 5rem;
-        padding-bottom: 5rem;
-        background: $grey-lighter;
-        /* fallback for old browsers */
-        background: -webkit-linear-gradient(to left, $grey-lighter, #f1f1f1);
-        /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(to left, $grey-lighter, #f1f1f1);
-        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
         .title {
             font-weight: 200;
             font-size: 3rem;
             margin-bottom: 2rem;
-            // color: #fff;
         }
 
         .subtitle {
             font-weight: 700;
-            // color: $grey-lighter;
+        }
+
+        a {
+            text-decoration: underline;
         }
     }
+
     .iframe > * {
-      bottom: 0;
-      left: 0;
-      position: absolute;
-      right: 0;
-      top: 0;
-      height: 100%;
-      width: 100%;
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+    }
+
+    .section.themes {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+        .box {
+            padding: 3px;
+
+            .block {
+                margin: 1rem 0;
+            }
+        }
     }
 }

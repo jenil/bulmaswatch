@@ -5,7 +5,11 @@ baseurl: "/bulmaswatch" # the subpath of your site, e.g. /blog
 url: "https://jgog.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: geekGogari
 github_username:  jgog
-
+repo_url: //github.com/jgog/bulmaswatch
+collections:
+ themes:
+    output: true
+    permalink: /:name/
 # Build settings
 markdown: kramdown
 exclude:

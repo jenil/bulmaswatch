@@ -1,3 +1,6 @@
+---
+permalink: /thumb/
+---
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,53 +9,46 @@
   <title> Test </title>
   <meta name="viewport" content="width=device-width, minimum-scale=1.0">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" />
-  <link href="{{ site.url }}{{ site.baseurl }}/flatly/bulmaswatch.min.css" id="stylesheet" rel="stylesheet" type="text/css" />
+  <link href="{{ site.baseurl }}flatly/bulmaswatch.min.css" id="stylesheet" rel="stylesheet" type="text/css" />
   <style type="text/css">
-
-  body {
-    width: 500px;
-    height: 333px;
-  }
-
   .switcher {
     position: fixed;
     top: 0;
     right: 0;
+    z-index: 5;
+  }
+  .nav h1 {
+    font-weight: bold;
   }
   </style>
 </head>
 
 <body>
-  <nav class="nav has-shadow">
-    <div class="container">
-      <div class="nav-left">
-        <a class="nav-item is-active">Home</a>
-        <a class="nav-item">Features</a </div>
-        <span class="nav-toggle">
-          <span></span>
-          <span></span>
-          <span></span>
-        </span>
-      </div>
-  </nav>
-  <section class="hero">
+  <section class="hero is-fullheight">
+    <div class="hero-head">
+      <nav class="nav has-shadow">
+        <div class="container">
+          <div class="nav-left">
+            <h1 class="nav-item" id="title"> Hero title </h1>
+            <a class="nav-item is-active">Home</a>
+            <a class="nav-item">Features</a>
+            <span class="nav-item">
+              <button class="button" type="button" id="open-preview">Preview</button>
+            </span>
+          </div>
+        </div>
+      </nav>
+    </div>
     <div class="hero-body">
       <div class="container has-text-centered">
-        <br>
-        <h1 class="title" id="title"> Hero title </h1>
-        <h2 class="subtitle" id="subtitle"> Hero subtitle </h2>
-        <br>
-        <br>
-        <div class="block">
-          <a class="button">Button</a>
-          <a class="button is-primary">Primary</a>
-          <a class="button is-info">Info</a>
-        <!-- </div>
-        <div class="block"> -->
-          <a class="button is-success">Success</a>
-          <a class="button is-warning">Warning</a>
-          <a class="button is-danger">Danger</a>
-        </div>
+        <a class="button">Button</a>
+        <a class="button is-primary">Primary</a>
+        <a class="button is-info">Info</a>
+        <br class="is-hidden-tablet">
+        <br class="is-hidden-tablet">
+        <a class="button is-success">Success</a>
+        <a class="button is-warning">Warning</a>
+        <a class="button is-danger">Danger</a>
       </div>
     </div>
   </section>
@@ -85,7 +81,9 @@
     $('.modal-background, .modal-close').click(function() {
       $(this).parent().removeClass('is-active');
     });
-
+    $('#open-preview').on('click', function(e) {
+      window.top.location.href = '{{ site.baseurl }}' + window.location.search.substring(1);
+    });
   });
   </script>
 </body>

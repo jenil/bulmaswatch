@@ -6,11 +6,22 @@
   <title> {{ page.title }} &bull; {{ site.title }} - {{ site.description }} </title>
   <meta name="viewport" content="width=device-width, minimum-scale=1.0">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" />
-  <link href="{{ site.url }}{{ site.baseurl }}/assets/styles.min.css" rel="stylesheet" />
+  <link href="{{ site.baseurl }}assets/styles.min.css" rel="stylesheet" />
 </head>
 
 <body class="{{page.route}}-page">
-  {% include nav.html %}
+  <section class="hero is-medium is-light is-bold">
+    <div class="hero-head">
+      {% include nav.html %}
+    </div>
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <h1 class="title">
+          Free themes for <a href="//bulma.io">Bulma</a>
+        </h1>
+      </div>
+    </div>
+  </section>
   {{ content }}
   {% include footer.html %}
 </body>

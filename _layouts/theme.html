@@ -1,30 +1,30 @@
----
-permalink: /preview/
----
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="utf-8">
-  <title> Test </title>
+  <title> {{ page.title }} &bull; {{ site.title }} - {{ site.description }} </title>
   <meta name="viewport" content="width=device-width, minimum-scale=1.0">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" />
-  <link href="{{ site.url }}{{ site.baseurl }}/flatly/bulmaswatch.min.css" id="stylesheet" rel="stylesheet" type="text/css" />
-  <style type="text/css">
-  .switcher {
-    position: fixed;
-    top: 0;
-    right: 0;
-  }
-  </style>
+  <link href="{{ site.baseurl }}{{ page.name | slugify}}/bulmaswatch.min.css" rel="stylesheet" />
 </head>
 
-<body>
+<body class="theme-page">
   <section class="hero is-primary">
+    <!-- Hero header: will stick at the top -->
+    <div class="hero-head">
+      {% include nav.html %}
+    </div>
+    <!-- Hero content: will be in the middle -->
     <div class="hero-body">
       <div class="container">
-        <h1 class="title"> Flatly </h1>
-        <h2 class="subtitle"> Theme preview </h2> </div>
+        <h1 class="title">
+          {{ page.name }}
+        </h1>
+        <h2 class="subtitle">
+          {{ page.subtitle }}
+        </h2>
+      </div>
     </div>
   </section>
   <div class="columns">
@@ -718,19 +718,19 @@ permalink: /preview/
         <div class="columns">
           <div class="column">
             <div class="notification">
-              <button class="delete"> </button> Lorem ipsum dolor sit amet, consectetur adipiscing elit lorem ipsum dolor sit amet, consectetur adipiscing elit </div>
+              <button class="delete"> </button> Lorem ipsum dolor sit amet, <a href="#">consectetur</a> adipiscing elit lorem ipsum dolor sit amet, consectetur adipiscing elit </div>
             <div class="notification is-primary">
-              <button class="delete"> </button> Primar lorem ipsum dolor sit amet, consectetur adipiscing elit lorem ipsum dolor sit amet, consectetur adipiscing elit </div>
+              <button class="delete"> </button> Primar lorem ipsum dolor sit amet, <a href="#">consectetur</a> adipiscing elit lorem ipsum dolor sit amet, consectetur adipiscing elit </div>
             <div class="notification is-info">
-              <button class="delete"> </button> Info lorem ipsum dolor sit amet, consectetur adipiscing elit lorem ipsum dolor sit amet, consectetur adipiscing elit </div>
+              <button class="delete"> </button> Info lorem ipsum dolor sit amet, <a href="#">consectetur</a> adipiscing elit lorem ipsum dolor sit amet, consectetur adipiscing elit </div>
           </div>
           <div class="column">
             <div class="notification is-success">
-              <button class="delete"> </button> Success lorem ipsum dolor sit amet, consectetur adipiscing elit lorem ipsum dolor sit amet, consectetur adipiscing elit </div>
+              <button class="delete"> </button> Success lorem ipsum dolor sit amet, <a href="#">consectetur</a> adipiscing elit lorem ipsum dolor sit amet, consectetur adipiscing elit </div>
             <div class="notification is-warning">
-              <button class="delete"> </button> Warning lorem ipsum dolor sit amet, consectetur adipiscing elit lorem ipsum dolor sit amet, consectetur adipiscing elit </div>
+              <button class="delete"> </button> Warning lorem ipsum dolor sit amet, <a href="#">consectetur</a> adipiscing elit lorem ipsum dolor sit amet, consectetur adipiscing elit </div>
             <div class="notification is-danger">
-              <button class="delete"> </button> Danger lorem ipsum dolor sit amet, consectetur adipiscing elit lorem ipsum dolor sit amet, consectetur adipiscing elit </div>
+              <button class="delete"> </button> Danger lorem ipsum dolor sit amet, <a href="#">consectetur</a> adipiscing elit lorem ipsum dolor sit amet, consectetur adipiscing elit </div>
           </div>
         </div>
       </section>
@@ -1313,9 +1313,7 @@ permalink: /preview/
           <!-- Hero content: will be in the middle -->
           <div class="hero-body">
             <div class="container has-text-centered">
-              <h1 class="title">
-                Title
-              </h1>
+              <h1 class="title">Flatly</h1>
               <h2 class="subtitle">
                 Subtitle
               </h2>
@@ -1943,7 +1941,7 @@ permalink: /preview/
               <a class="pagination-link">1</a>
             </li>
             <li>
-              <span class="pagination-ellipsis">&hellip;</span>
+              <span class="pagination-ellipsis">…</span>
             </li>
             <li>
               <a class="pagination-link">45</a>
@@ -1955,7 +1953,7 @@ permalink: /preview/
               <a class="pagination-link">47</a>
             </li>
             <li>
-              <span class="pagination-ellipsis">&hellip;</span>
+              <span class="pagination-ellipsis">…</span>
             </li>
             <li>
               <a class="pagination-link">86</a>
@@ -2243,38 +2241,8 @@ permalink: /preview/
       </section>
     </div>
   </div>
+  {{ content }}
   {% include footer.html %}
-  <div class="switcher select">
-    <select>
-      <option selected="" value="flatly"> Flatly </option>
-      <option value="darkly"> Darkly </option>
-    </select>
-  </div>
-  <script crossorigin="anonymous" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" src="https://code.jquery.com/jquery-3.1.1.min.js">
-  </script>
-  <script type="text/javascript">
-  function switchTheme(t) {
-    var theme = t || 'flatly';
-    $('#stylesheet').attr('href', '../' + theme + '/bulmaswatch.min.css');
-    var title = theme.charAt(0).toUpperCase() + theme.substring(1);
-    window.history.replaceState(theme, title, '?' + theme);
-    $('.hero .title').text(title);
-    document.title = title;
-  }
-  $(function() {
-    $('.switcher select').change(function(e) {
-      switchTheme(e.target.value);
-    });
-    if (window.location.search) {
-      $('.switcher select').val(window.location.search.substring(1));
-      $('.switcher select').trigger('change');
-    }
-    $('.modal-background, .modal-close').click(function() {
-      $(this).parent().removeClass('is-active');
-    });
-
-  });
-  </script>
 </body>
 
 </html>
