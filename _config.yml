@@ -11,6 +11,13 @@ collections:
  themes:
     output: true
     permalink: /:name/
+defaults:
+  - scope:
+      path: ""
+      type: themes
+    values:
+      layout: theme
+      order: 1
 # Build settings
 markdown: kramdown
 exclude:
