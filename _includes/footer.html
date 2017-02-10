@@ -2,13 +2,11 @@
   <div class="container">
     <div class="content has-text-centered">
       <p>
-        <a class="icon" href="{{ site.repo_url }}" target="_blank"
-          onclick="ga('send', 'event', 'footer', 'click', 'github');">
+        <a class="icon" href="{{ site.repo_url }}" target="_blank" onclick="ga('send', 'event', 'footer', 'click', 'github');">
           <i class="fa fa-github"></i>
         </a>
         &nbsp;
-        <a class="icon" href="//twitter.com/geekGogari" target="_blank"
-          onclick="ga('send', 'event', 'footer', 'click', 'twitter');">
+        <a class="icon" href="//twitter.com/geekGogari" target="_blank" onclick="ga('send', 'event', 'footer', 'click', 'twitter');">
           <i class="fa fa-twitter"></i>
         </a>
       </p>
@@ -48,5 +46,9 @@ if (document.location.hostname !== 'localhost') {
 
   ga('create', 'UA-91125324-1', 'auto');
   ga('send', 'pageview');
+} else {
+  window.ga = function ga() {
+    console.log('[ga]', arguments); // mock GA to prevent errors
+  }
 }
 </script>
