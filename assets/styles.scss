@@ -17,6 +17,7 @@ nav.main-nav {
 .home-page {
     .main-nav {
         background-color: transparent !important;
+        box-shadow: none !important;
 
         .nav-item {
             &.is-active,

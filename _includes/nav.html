@@ -12,13 +12,16 @@
       <span></span>
     </span>
     <div class="nav-right nav-menu">
-      <a class="nav-item" href="{{ site.repo_url }}/issues" target="_blank">
+      <a class="nav-item" href="{{ site.repo_url }}/issues" target="_blank"
+      onclick="ga('send', 'event', 'nav', 'click', 'issue');">
         <small>Report an issue</small>
       </a>
-      <a class="nav-item" href="{{ site.repo_url }}" target="_blank">
+      <a class="nav-item" href="{{ site.repo_url }}" target="_blank"
+      onclick="ga('send', 'event', 'nav', 'click', 'github');">
         <span class="icon"> <i class="fa fa-github"></i> </span>
       </a>
-      <a class="nav-item" href="//twitter.com/geekGogari" target="_blank">
+      <a class="nav-item" href="//twitter.com/geekGogari" target="_blank"
+      onclick="ga('send', 'event', 'nav', 'click', 'twitter');">
         <span class="icon"> <i class="fa fa-twitter"></i> </span>
       </a>
     </div>

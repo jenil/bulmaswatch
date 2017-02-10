@@ -2,11 +2,13 @@
   <div class="container">
     <div class="content has-text-centered">
       <p>
-        <a class="icon" href="{{ site.repo_url }}" target="_blank">
+        <a class="icon" href="{{ site.repo_url }}" target="_blank"
+          onclick="ga('send', 'event', 'footer', 'click', 'github');">
           <i class="fa fa-github"></i>
         </a>
         &nbsp;
-        <a class="icon" href="//twitter.com/geekGogari" target="_blank">
+        <a class="icon" href="//twitter.com/geekGogari" target="_blank"
+          onclick="ga('send', 'event', 'footer', 'click', 'twitter');">
           <i class="fa fa-twitter"></i>
         </a>
       </p>
@@ -14,9 +16,9 @@
         <strong>Bulmaswatch</strong> by
         <a href="http://jgog.in" target="_blank">Jenil Gogari</a>.
         <br> Based on
-        <a href="http://bulma.io" target="_blank">Bulma</a>. Icons from
-        <a href="http://fontawesome.io/" target="_blank">Font Awesome</a>. Web Fonts from
-        <a href="https://fonts.google.com/" target="_blank">Google</a>.
+        <a href="http://bulma.io" target="_blank" onclick="ga('send', 'event', 'footer', 'click', 'bulma');">Bulma</a>. Icons from
+        <a href="http://fontawesome.io/" target="_blank" onclick="ga('send', 'event', 'footer', 'click', 'font-awesome');">Font Awesome</a>. Web Fonts from
+        <a href="https://fonts.google.com/" target="_blank" onclick="ga('send', 'event', 'footer', 'click', 'google');">Google</a>.
         <br> The source code is licensed
         <a href="http://opensource.org/licenses/mit-license.php" target="_blank">MIT</a>.
       </p>
