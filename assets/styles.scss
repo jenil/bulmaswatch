@@ -8,6 +8,10 @@ nav.main-nav {
         font-weight: bold;
     }
 
+    .logo {
+      padding-right: 10px;
+    }
+
     .nav-item {
         margin: 0.75rem 0.25rem;
         border-radius: $radius;
@@ -32,6 +36,7 @@ nav.main-nav {
             font-weight: 200;
             font-size: 3rem;
             margin-bottom: 2rem;
+            margin-top: 1rem;
         }
 
         .subtitle {
