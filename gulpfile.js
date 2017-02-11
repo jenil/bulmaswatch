@@ -53,6 +53,7 @@ gulp.task('sass:dev', ['clean'], function() {
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('_site/'))
     .pipe(browserSync.stream());
+    .pipe(gulp.dest('.'));
 });
 
 gulp.task('sass', ['clean'], function() {
