@@ -1,0 +1,35 @@
+////////////////////////////////////////////////
+// COSMO
+////////////////////////////////////////////////
+$grey-darker: #333;
+$black-ter: #222;
+
+$orange:       #FF7518;
+$yellow:       #f4db00;
+$green:        #3FB618;
+$turquoise:    #00ABA9;
+$blue:         #1FAEFF;
+$purple:       #AA40FF;
+$red:          #FF2E12;
+
+$primary: #2780E3;
+$primary-dark: darken(#2780E3, 20);
+$warning: $orange;
+$info: $purple;
+
+$orange-invert: #fff;
+$warning-invert: $orange-invert;
+
+$family-sans-serif: "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
+
+$radius: 0;
+$radius-small: 0;
+$radius-large: 0;
+
+$link-hover: $primary-dark;
+$link-focus: $primary-dark;
+$link-active: $primary-dark;
+
+$button-hover: $grey-darker;
+$button-focus: $black-ter;
+$button-active: $black-ter;
