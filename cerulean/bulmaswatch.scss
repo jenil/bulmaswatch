@@ -10,10 +10,6 @@
 }
 
 .button {
-    &.is-active,
-    &.is-focused,
-    &:active,
-    &:focus {}
     @each $name, $pair in $colors {
         $color: nth($pair, 1);
         $color-invert: nth($pair, 2);
@@ -22,11 +18,6 @@
             &:not(.is-outlined):not(.is-inverted) {
                 @include btn-shadow($color);
             }
-
-            &.is-active,
-            &.is-focused,
-            &:active,
-            &:focus {}
         }
     }
 }

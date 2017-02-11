@@ -1,6 +1,8 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
+var autoprefixer = require('gulp-autoprefixer');
+var cssnano = require('gulp-cssnano');
 var rename = require('gulp-rename');
 var browserSync = require('browser-sync').create();
 var cp = require('child_process');
@@ -38,12 +40,13 @@ gulp.task('sass', function() {
   return gulp.src('*/*.scss')
     .pipe(sourcemaps.init())
     .pipe(sass({
-      outputStyle: 'compressed',
       includePaths: 'node_modules/bulma'
     }).on('error', sass.logError))
     .pipe(rename({
       suffix: '.min'
     }))
+    .pipe(autoprefixer())
+    .pipe(cssnano())
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('_site/'))
     .pipe(browserSync.stream())
