@@ -30,7 +30,12 @@ gulp.task('serve', ['sass:dev', 'jekyll-build'], function() {
   browserSync.init({
     server: {
       baseDir: '_site'
-    }
+    },
+    ghostMode: {
+      clicks: false,
+      forms: false
+    },
+    reloadDelay: 2000
   });
 
   gulp.watch(['*/*.scss', '!_site/**'], ['sass:dev']).on('change', function(event) {
@@ -41,7 +46,7 @@ gulp.task('serve', ['sass:dev', 'jekyll-build'], function() {
   });
 });
 
-gulp.task('sass:dev', ['clean'], function() {
+gulp.task('sass:dev', function() {
   return gulp.src('*/*.scss')
     .pipe(sourcemaps.init())
     .pipe(sass({
@@ -52,7 +57,7 @@ gulp.task('sass:dev', ['clean'], function() {
     }))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('_site/'))
-    .pipe(browserSync.stream())
+    .pipe(browserSync.reload({stream: true}))
     .pipe(gulp.dest('.'));
 });
 
