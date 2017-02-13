@@ -52,3 +52,12 @@ if (document.location.hostname !== 'localhost') {
   }
 }
 </script>
+<script crossorigin="anonymous" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" src="https://code.jquery.com/jquery-3.1.1.min.js">
+</script>
+<script type="text/javascript">
+$(function() {
+  $('.modal-background, .modal-close').click(function() {
+    $(this).parent().removeClass('is-active');
+  });
+});
+</script>
