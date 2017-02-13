@@ -11,7 +11,7 @@
 .pagination-previous,
 .select select,
 .textarea {
-    height: 2.338em;
+    height: 2.5em;
 }
 
 .button {
@@ -40,7 +40,7 @@ h6,
         $color-invert: nth($pair, 2);
 
         &.is-#{$name} {
-            a {
+            a:not(.button) {
                 color: $color-invert;
                 text-decoration: underline;
             }
