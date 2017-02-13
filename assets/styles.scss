@@ -10,7 +10,7 @@ nav.main-nav {
     }
 
     .logo {
-      padding-right: 10px;
+        padding-right: 10px;
     }
 
     .nav-item {
@@ -57,13 +57,18 @@ nav.main-nav {
         top: 0;
         height: 100%;
         width: 100%;
+        border-top-left-radius: $radius-large;
+        border-top-right-radius: $radius-large;
     }
 
     .section.themes {
-      padding-top: 5rem;
-      padding-bottom: 5rem;
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+
         .box {
-            padding: 3px;
+            padding: 0 0 1rem;
+            border-top-left-radius: $radius-large;
+            border-top-right-radius: $radius-large;
 
             .block {
                 margin: 1rem 0;

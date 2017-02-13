@@ -7,6 +7,12 @@ API
 -----
 Coming soon...
 
+
+Credits
+-----
+@jgthms for [Bulma](http://bulma.io)
+@thomaspark for [Bootswatch](http://bootswatch.com/)
+
 ## Copyright and License
 -----
 
