@@ -1,0 +1,125 @@
+/*! bulmaswatch v0.3.1 | MIT License */
+@import "https://fonts.googleapis.com/css?family=Raleway:400,700";
+@import "variables";
+@import "bulma";
+
+a {
+    transition: all 200ms ease;
+}
+.button, .input, .pagination-ellipsis, .pagination-link, .pagination-next, .pagination-previous,// .select select,
+
+.textarea {
+    height: 2.273em;
+}
+
+.select select {
+    height: 2.5em;
+}
+
+.modal-card-title,
+.subtitle,
+.title,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+    font-family: $family-heading;
+}
+
+.box {
+    box-shadow: 0 0 1px $grey-light;
+}
+
+.button {
+    padding-left: 1em;
+    padding-right: 1em;
+    border-radius: 50px;
+
+    &.is-small {
+        border-radius: 40px;
+        font-size: 0.85rem;
+    }
+}
+
+.button {
+    transition: all 200ms ease;
+
+    &.is-active,
+    &.is-focused,
+    &:active,
+    &:focus {
+        box-shadow: 0 0 0 2px rgba($button-active-border, 0.3);
+    }
+    @each $name, $pair in $colors {
+        $color: nth($pair, 1);
+        $color-invert: nth($pair, 2);
+
+        &.is-#{$name} {
+            &.is-active,
+            &.is-focused,
+            &:active,
+            &:focus {
+                box-shadow: 0 0 0 2px rgba($color, 0.3);
+            }
+        }
+    }
+}
+
+.content,
+p:not(.control):not(.panel-tabs):not(.menu-label):not(.heading):not(.level-item):not(.title):not(.subtitle) {
+    font-size: $size-5;
+    font-family: $family-serif;
+
+    .button {
+        font-family: $family-sans-serif;
+    }
+}
+
+blockquote {
+    font-style: italic;
+}
+
+.input,
+.textarea {
+    transition: all 200ms ease;
+    box-shadow: none;
+}
+
+.notification {
+    @each $name, $pair in $colors {
+        $color: nth($pair, 1);
+        $color-invert: nth($pair, 2);
+
+        &.is-#{$name} {
+            a:not(.button) {
+                color: $color-invert;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.nav {
+    min-height: 5rem;
+    border: 1px solid $grey-lighter;
+}
+
+.hero {
+    .nav {
+        border: none;
+        box-shadow: 0 1px 0 rgba($border, 0.5);
+    }
+}
+
+.card {
+    $card-border: $grey-darker;
+    box-shadow: 0 0 1px $grey-light;
+
+    .card-header {
+        box-shadow: none;
+        border-bottom: 1px solid $grey-lighter;
+    }
+}
