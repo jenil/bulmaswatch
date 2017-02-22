@@ -80,13 +80,6 @@ html {
         color: $white;
     }
 
-    .nav-item a,
-    a.nav-item {
-        &:hover {
-            color: $white;
-        }
-    }
-
     .nav-item a:not(.button),
     a.nav-item:not(.button) {
         color: $white;
