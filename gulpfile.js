@@ -8,6 +8,8 @@ var browserSync = require('browser-sync').create();
 var cp = require('child_process');
 var del = require('del');
 
+var changedTheme = '';
+
 gulp.task('clean', function() {
   return del(['*/*.css', '*/*.css.map']);
 });
@@ -40,6 +42,7 @@ gulp.task('serve', ['sass:dev', 'jekyll-build'], function() {
 
   gulp.watch(['*/*.scss', '!_site/**'], ['sass:dev']).on('change', function(event) {
     console.log('SCSS: File ' + event.path + ' was ' + event.type + ', running tasks...');
+    changedTheme = event.path.split('/')[event.path.split('/').length - 2]
   });
   gulp.watch(['**/*.{html,md}', '!_site/**'], ['jekyll-rebuild']).on('change', function(event) {
     console.log('HTML: File ' + event.path + ' was ' + event.type + ', running tasks...');
@@ -47,7 +50,8 @@ gulp.task('serve', ['sass:dev', 'jekyll-build'], function() {
 });
 
 gulp.task('sass:dev', function() {
-  return gulp.src('*/*.scss')
+  console.log('Building', changedTheme);
+  return gulp.src(changedTheme ? changedTheme + '/*.scss' : '*/*.scss')
     .pipe(sourcemaps.init())
     .pipe(sass({
       includePaths: 'node_modules/bulma'
@@ -57,7 +61,9 @@ gulp.task('sass:dev', function() {
     }))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('_site/'))
-    .pipe(browserSync.reload({stream: true}))
+    .pipe(browserSync.reload({
+      stream: true
+    }))
     .pipe(gulp.dest('.'));
 });
 
