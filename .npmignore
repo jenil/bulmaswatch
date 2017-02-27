@@ -1,0 +1,7 @@
+_layouts
+_includes
+_themes
+assets
+*.yml
+gulpfile.js
+*.html
