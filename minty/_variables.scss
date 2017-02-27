@@ -1,0 +1,31 @@
+////////////////////////////////////////////////
+// MINTY
+////////////////////////////////////////////////
+$grey:         #888;
+$grey-light:   #aaa;
+
+$orange:       #eea170;
+$yellow:       #FFCE67;
+$green:        #56cc90;
+$blue:         #6CC3D5;
+$red:          #e07f7d;
+
+$primary: #6abfb0;
+$danger: $orange;
+
+$text: darken($grey, 10);
+$subtitle: $grey;
+
+$size-1: 2.5rem;
+$size-2: 2rem;
+$size-3: 1.75rem;
+$size-4: 1.5rem;
+$size-5: 1.25rem;
+$size-6: 15px;
+$size-7: 0.75rem;
+
+$radius-small: 4px;
+$radius: 6px;
+$radius-large: 8px;
+
+$family-heading: "Montserrat", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
