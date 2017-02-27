@@ -6,8 +6,13 @@
 a {
     transition: all 200ms ease;
 }
-.button, .input, .pagination-ellipsis, .pagination-link, .pagination-next, .pagination-previous,// .select select,
 
+.button,
+.input,
+.pagination-ellipsis,
+.pagination-link,
+.pagination-next,
+.pagination-previous,
 .textarea {
     height: 2.273em;
 }
@@ -108,8 +113,8 @@ blockquote {
 }
 
 .nav-toggle {
-  width: 5rem;
-  height: 5rem;
+    width: 5rem;
+    height: 5rem;
 }
 
 .hero {
