@@ -21,19 +21,6 @@ a {
     height: 2.5em;
 }
 
-.modal-card-title,
-.subtitle,
-.title,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-weight: 700;
-    font-family: $family-heading;
-}
-
 .box {
     box-shadow: 0 0 1px $grey-light;
 }
@@ -73,14 +60,30 @@ h6 {
     }
 }
 
-.content,
-p:not(.control):not(.panel-tabs):not(.menu-label):not(.heading):not(.level-item):not(.title):not(.subtitle) {
+.content {
     font-size: $size-5;
     font-family: $family-serif;
 
     .button {
         font-family: $family-sans-serif;
     }
+}
+
+.card-header-title,
+.menu-label,
+.message-header,
+.modal-card-title,
+.panel-heading,
+.subtitle,
+.title,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+    font-family: $family-heading;
 }
 
 blockquote {
