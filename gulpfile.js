@@ -51,7 +51,7 @@ gulp.task('serve', ['sass:dev', 'jekyll-build'], function() {
 
 gulp.task('sass:dev', function() {
   console.log('Building', changedTheme);
-  return gulp.src(changedTheme ? changedTheme + '/*.scss' : '*/*.scss')
+  return gulp.src(changedTheme ? `${changedTheme}/*.scss` : '*/*.scss')
     .pipe(sourcemaps.init())
     .pipe(sass({
       includePaths: 'node_modules/bulma'
@@ -59,12 +59,12 @@ gulp.task('sass:dev', function() {
     .pipe(rename({
       suffix: '.min'
     }))
-    .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest('_site/'))
+    .pipe(sourcemaps.write(changedTheme ? `${changedTheme}` : './'))
+    .pipe(gulp.dest(changedTheme ? `_site/${changedTheme}` : '_site/'))
     .pipe(browserSync.reload({
       stream: true
     }))
-    .pipe(gulp.dest('.'));
+    .pipe(gulp.dest(changedTheme ? `_site/${changedTheme}` : '.'));
 });
 
 gulp.task('sass', ['clean'], function() {
