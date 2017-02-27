@@ -5,3 +5,8 @@ assets
 *.yml
 gulpfile.js
 *.html
+_site
+.sass-cache
+.jekyll-metadata
+node_modules
+*.lock
