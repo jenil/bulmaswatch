@@ -278,6 +278,8 @@ hr {
     }
 
     .nav-toggle {
+        width: 4rem;
+        height: 4rem;
         &:hover {
             background-color: $link-hover;
         }
