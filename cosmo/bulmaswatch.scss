@@ -23,7 +23,6 @@ html {
     &.is-focused,
     &:active,
     &:focus {
-        box-shadow: none;
         box-shadow: inset 1px 1px 4px rgba($grey-darker, 0.3);
     }
     @each $name, $pair in $colors {
