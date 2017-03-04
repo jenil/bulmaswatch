@@ -5,10 +5,10 @@
     "author": "Jenil Gogari <i@jgog.in>",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/jgog/bulmaswatch.git"
+        "url": "git+https://github.com/jenil/bulmaswatch.git"
     },
     "bugs": {
-        "url": "https://github.com/jgog/bulmaswatch/issues"
+        "url": "https://github.com/jenil/bulmaswatch/issues"
     },
     "license": "MIT",
     "keywords": [
