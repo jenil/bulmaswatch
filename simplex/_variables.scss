@@ -1,0 +1,24 @@
+////////////////////////////////////////////////
+// SIMPLEX
+////////////////////////////////////////////////
+$grey-darker:  #373a3c ;
+$grey-dark:    #444 ;
+$grey:         #777 ;
+$grey-light:   #bbb ;
+$grey-lighter: #ddd ;
+
+$orange:       #D9831F;
+$green:        #469408;
+$blue:         #029ACF;
+$purple:       #9B479F;
+$red:          #D9230F;
+
+$primary: $red;
+$primary-dark: darken($primary, 10);
+$warning: $purple;
+$danger: $orange;
+
+$orange-invert: #fff;
+$warning-invert: $orange-invert;
+
+$family-sans-serif: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
