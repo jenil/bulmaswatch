@@ -157,7 +157,7 @@ a {
         $color-invert: nth($pair, 2);
 
         &.is-#{$name} {
-            a {
+            a:not(.button) {
                 color: $color-invert;
                 text-decoration: underline;
             }
