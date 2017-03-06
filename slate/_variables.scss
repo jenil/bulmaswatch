@@ -12,7 +12,9 @@ $green: #62c462;
 $blue: #5bc0de;
 $red: #ee5f5b;
 
-$primary: $grey-light;
+$primary: $grey;
+
+$dark: darken($grey-darker, 3);
 
 $border: $grey;
 
