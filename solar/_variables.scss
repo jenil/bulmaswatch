@@ -1,0 +1,80 @@
+////////////////////////////////////////////////
+// DARKLY
+////////////////////////////////////////////////
+$grey-lighter: #FDF6E3;
+$grey-light:   #eee8d5;
+$grey:         #839496;
+$grey-alt:     #586e75;
+$grey-dark:    #073642;
+$grey-darker:  #002B36;
+
+$orange       : #cb4b16;
+$yellow       : #b58900;
+$green        : #859900;
+$turquoise    : #2aa198;
+$blue         : #268bd2;
+$purple       : #6c71c4;
+$red          : #d33682;
+
+$primary      : $yellow;
+$warning      : $orange;
+$yellow-invert: #fff;
+
+$light: $grey-lighter;
+$dark : darken($grey-darker, 3);
+
+$family-sans-serif: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+$family-monospace: "Inconsolata", "Consolas", "Monaco", monospace;
+
+$radius-small: 3px;
+$radius: .4em;
+$radius-large: 8px;
+$size-6: 15px;
+$size-7: .85em;
+$title-weight: 500;
+$subtitle-weight: 400;
+$subtitle: $grey-dark;
+
+$border-width: 2px;
+$border: $grey-dark;
+
+$body-background: $grey-darker;
+$background: $grey-dark;
+
+$title: $grey;
+$subtitle: $grey-alt;
+$subtitle-strong: $grey-light;
+
+$text       : $grey;
+$text-light : lighten($text, 10);
+$text-strong: darken($text, 5);
+
+$link             : $primary;
+$link-hover       : $grey-light;
+$link-hover-border: $grey-light;
+$link-focus       : darken($grey-light, 5);
+$link-focus-border: $grey-light;
+$link-active      : darken($grey-light, 5);
+
+$button           : $grey;
+$button-background: $background;
+$button-border    : $grey;
+
+$input                    : $grey;
+$input-icon               : darken($grey-light, 5);
+$input-background         : $grey-lighter;
+$input-border             : darken($grey-light, 5);
+$input-hover              : $grey-light;
+$input-disabled-background: $grey-dark;
+$input-disabled-border    : $grey-dark;
+
+$table            : $text;
+$table-head       : $grey-lighter;
+$table-background : $grey-dark;
+$table-border     : $grey;
+
+$table-row-hover-background     : $grey-darker;
+$table-row-even-background      : $grey-darker;
+$table-row-even-hover-background: lighten($grey-darker, 4);
+
+$pagination-border: $border;
