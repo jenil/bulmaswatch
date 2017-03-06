@@ -310,7 +310,7 @@ body > .nav {
 .hero {
     // Colors
     .nav {
-        background-color: $primary;
+        background-color: $grey-darker;
     }
     @each $name, $pair in $colors {
         $color: nth($pair, 1);
