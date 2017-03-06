@@ -1,0 +1,59 @@
+////////////////////////////////////////////////
+// SLATE
+////////////////////////////////////////////////
+$grey-lighter: #98a4ad;
+$grey-light:   #7A8288;
+$grey:         #52575C;
+$grey-dark:    #3A3F44;
+$grey-darker:  #272B30;
+
+$orange: #f89406;
+$green: #62c462;
+$blue: #5bc0de;
+$red: #ee5f5b;
+
+$primary: $grey-light;
+
+$border: $grey;
+
+$size-7: 0.85rem;
+
+$body-background: $grey-darker;
+$background: $grey-dark;
+$button-background: $background;
+$button-border: lighten($button-background, 15);
+
+$title: #aaa;
+$subtitle: $grey-light;
+$subtitle-strong: $grey-light;
+
+$text: #aaa;
+$text-light: lighten($text, 10);
+$text-strong: darken($text, 5);
+
+$link: #fafafa;
+$link-invert: $grey;
+$link-hover: lighten($link, 5);
+$link-focus: darken($link, 5);
+$link-active: darken($link, 15);
+$link-focus-border: darken($link, 5);
+$link-active-border: $link-focus-border;
+
+$button: #fafafa;
+
+$input-hover: $grey-light;
+$input-disabled-background: $grey-lighter;
+$input-disabled-border: $grey-lighter;
+
+$table: $text;
+$table-head: $grey-lighter;
+$table-background: $grey-dark;
+$table-border: $grey;
+
+$table-row-hover-background: $grey-darker;
+$table-row-even-background: $grey-darker;
+$table-row-even-hover-background: lighten($grey-darker, 4);
+
+$pagination-border: $border;
+
+$nav-height: 4rem;
