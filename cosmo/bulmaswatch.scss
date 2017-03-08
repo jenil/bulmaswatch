@@ -32,18 +32,28 @@ html {
         &.is-#{$name} {
             &.is-hovered,
             &:hover {
-              background-color: darken($color, 10);
+                background-color: darken($color, 10);
             }
 
             &.is-active,
             &.is-focused,
             &:active,
             &:focus {
-                box-shadow: inset 1px 0px 3px rgba($grey-darker, 0.3);
+                box-shadow: inset 1px 0 3px rgba($grey-darker, 0.3);
                 background-color: darken($color, 10);
             }
         }
     }
+}
+
+.input,
+.textarea {
+    box-shadow: none;
+}
+
+.box,
+.card {
+    box-shadow: 0 0 0 1px $border;
 }
 
 .notification {
@@ -61,12 +71,12 @@ html {
 }
 
 .progress {
-  height: $size-small;
+    height: $size-small;
 }
 
 .progress,
 .tag {
-  border-radius: $radius;
+    border-radius: $radius;
 }
 
 .nav {
