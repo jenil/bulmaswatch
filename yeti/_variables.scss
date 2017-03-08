@@ -1,0 +1,30 @@
+////////////////////////////////////////////////
+// YETI
+////////////////////////////////////////////////
+$grey-darker:  #222;
+$grey-dark:    #333;
+$grey:         #888;
+$grey-light:   #ccc;
+$grey-lighter: #e9e9e9;
+
+$orange:       #E99002;
+$green:        #43ac6a;
+$blue:         #5bc0de;
+$red:          #F04124;
+
+$primary: #008cba;
+$warning: $orange;
+
+$orange-invert: #fff;
+$warning-invert: $orange-invert;
+
+$family-sans-serif: "Open Sans", "Helvetica Neue", Arial, sans-serif;
+
+$radius: 0;
+$radius-small: 0;
+$radius-large: 0;
+
+$subtitle: $grey;
+
+$button-background: $grey-lighter;
+$button-border: darken($button-background, 5);
