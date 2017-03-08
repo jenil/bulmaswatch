@@ -59,5 +59,8 @@ $(function() {
   $('.modal-background, .modal-close').click(function() {
     $(this).parent().removeClass('is-active');
   });
+  $('.theme-switcher').change(function(e) {
+    window.location.href = '{{ site.baseurl }}/' + e.target.value;
+  });
 });
 </script>

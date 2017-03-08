@@ -6,6 +6,19 @@
         <h1 class="title is-5">{{ site.title }}</h1>
       </a>
       <a class="nav-item {% if page.route == 'home' %}is-active{% endif %}" href="{{ site.url }}{{ site.baseurl }}/">Home</a>
+      {% assign themes = (site.themes | sort: 'order') %}
+      <div class="nav-item">
+        <span class="theme-switcher select">
+          <select>
+            <option selected>Themes</option>
+            <option disabled>───</option>
+            {% for t in themes %}
+              <option value="{{ t.name | slugify }}">{{ t.name }}</option>
+            {% endfor %}
+          </select>
+        </span>
+      </div>
+      <a class="nav-item {% if page.route == 'help' %}is-active{% endif %}" href="{{ site.url }}{{ site.baseurl }}/help/">Help</a>
     </div>
     <span class="nav-toggle">
       <span></span>

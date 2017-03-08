@@ -59,7 +59,7 @@ gulp.task('sass:dev', function() {
     .pipe(rename({
       suffix: '.min'
     }))
-    .pipe(sourcemaps.write(changedTheme ? `${changedTheme}` : './'))
+    .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(changedTheme ? `_site/${changedTheme}` : '_site/'))
     .pipe(browserSync.reload({
       stream: true

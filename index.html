@@ -21,18 +21,14 @@ route: home
               onclick="ga('send', 'event', 'theme', 'preview', '{{theme.name}}');">Preview</a>
             <a class="button is-primary" href="{{ site.baseurl }}/{{theme.name | slugify}}/bulmaswatch.min.css"
               target="_blank" onclick="ga('send', 'event', 'theme', 'download', '{{theme.name}}');">Download</a>
+            <a class="button is-dark" href="{{ site.repo_url }}/tree/gh-pages/{{theme.name | slugify}}"
+              target="_blank" onclick="ga('send', 'event', 'theme', 'github', '{{theme.name}}');" title="Download from Github">
+                <span class="icon"> <i class="fa fa-github"> </i> </span>
+              </a>
           </div>
         </div>
       </div>
       {% endfor %}
-    </div>
-    <br>
-    <div class="columns is-centered">
-      <div class="column is-6">
-          <p class="has-text-centered notification is-info">
-            More themes coming soon, check the <a href="{{ site.repo_url }}">Github repository</a> to keep a track.
-          </p>
-      </div>
     </div>
   </div>
 </section>

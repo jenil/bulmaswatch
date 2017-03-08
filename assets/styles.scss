@@ -30,6 +30,11 @@ nav.main-nav {
                 background-color: rgba($black, 0.05) !important;
             }
         }
+
+        .select select {
+            background-color: transparent;
+            box-shadow: none;
+        }
     }
 
     .hero-body {
