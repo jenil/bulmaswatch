@@ -1,0 +1,28 @@
+////////////////////////////////////////////////
+// UNITED
+////////////////////////////////////////////////
+$grey-darker:  #222;
+$grey-dark:    #333;
+$grey:         #777;
+$grey-light:   #AEA79F;
+$grey-lighter: #ddd;
+
+$orange:       #E95420;
+$yellow:       #EFB73E;
+$green:        #38B44A;
+$purple:       #772953;
+$red:          #DF382C;
+
+$primary: $orange;
+$primary-dark: darken($primary, 10);
+$info: $purple;
+$warning: $yellow;
+
+$yellow-invert: #fff;
+$warning-invert: $yellow-invert;
+
+$family-sans-serif: "Ubuntu", Tahoma, "Helvetica Neue", Arial, sans-serif;
+
+$size-7: 0.8575rem;
+
+$subtitle: $grey;

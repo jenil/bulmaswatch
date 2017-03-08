@@ -1,0 +1,131 @@
+/*! bulmaswatch v0.3.2 | MIT License */
+@import "https://fonts.googleapis.com/css?family=Ubuntu:400,700";
+@import "variables";
+@import "bulma";
+
+.button,
+.input,
+.pagination-ellipsis,
+.pagination-link,
+.pagination-next,
+.pagination-previous,
+.select select,
+.textarea {
+    height: 2.572em;
+}
+
+.button {
+    &.is-active,
+    &:active {
+        box-shadow: inset 1px 1px 4px rgba($grey-darker, 0.3);
+    }
+    @each $name, $pair in $colors {
+        $color: nth($pair, 1);
+        $color-invert: nth($pair, 2);
+
+        &.is-#{$name} {
+            &.is-hovered,
+            &:hover {
+                background-color: darken($color, 10);
+            }
+
+            &.is-active,
+            &:active {
+                box-shadow: inset 1px 0 3px rgba($grey-darker, 0.3);
+                background-color: darken($color, 10);
+            }
+        }
+    }
+}
+
+.input,
+.textarea {
+    box-shadow: none;
+}
+
+.notification {
+    @each $name, $pair in $colors {
+        $color: nth($pair, 1);
+        $color-invert: nth($pair, 2);
+
+        &.is-#{$name} {
+            a:not(.button) {
+                color: $color-invert;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.nav {
+    background-color: $primary;
+    border-radius: $radius;
+    color: rgba($white, 0.6);
+
+    .subtitle,
+    .title {
+        color: $white;
+    }
+
+    .nav-item a:not(.button),
+    a.nav-item:not(.button) {
+        color: rgba($white, 0.6);
+
+        &:hover {
+            color: $white;
+        }
+        // Modifiers
+        &.is-active {
+            color: $white;
+
+            &.is-tab {
+                border-bottom-color: $white;
+            }
+        }
+    }
+
+    .nav-toggle {
+        &:hover {
+            background-color: rgba($white, 0.1);
+            span {
+                background-color: $white;
+            }
+        }
+
+        span {
+            background-color: rgba($white, 0.6);
+        }
+    }
+}
+
+.hero .nav,
+body > .nav {
+    border-radius: 0;
+}
+
+.hero {
+    // Colors
+    .nav {
+        background-color: $primary;
+    }
+    @each $name, $pair in $colors {
+        $color: nth($pair, 1);
+        $color-invert: nth($pair, 2);
+
+        &.is-#{$name} {
+            .nav {
+                background: none;
+            }
+
+            .nav-item a:not(.button),
+            a.nav-item {
+                color: rgba($color-invert, 0.6);
+
+                &.is-active,
+                &:hover {
+                    color: $color-invert;
+                }
+            }
+        }
+    }
+}
