@@ -31,6 +31,10 @@
             }
         }
     }
+
+    &.is-loading:after {
+        border-color: transparent transparent $grey-light $grey-light;
+    }
 }
 
 .label {
