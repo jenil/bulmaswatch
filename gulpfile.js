@@ -7,7 +7,14 @@ var rename = require('gulp-rename');
 var browserSync = require('browser-sync').create();
 var cp = require('child_process');
 var del = require('del');
+var data = require('gulp-data');
+var pluck = require('gulp-pluck');
+var frontMatter = require('gulp-front-matter');
 
+const pkg = require('./package.json');
+const VERSION = pkg.version;
+const HOME = pkg.homepage;
+const CDN = 'https://cdn.rawgit.com/jenil/bulmaswatch/gh-pages';
 var changedTheme = '';
 
 gulp.task('clean', function() {
@@ -36,8 +43,7 @@ gulp.task('serve', ['sass:dev', 'jekyll-build'], function() {
     ghostMode: {
       clicks: false,
       forms: false
-    },
-    reloadDelay: 2000
+    }
   });
 
   gulp.watch(['*/*.scss', '!_site/**'], ['sass:dev']).on('change', function(event) {
@@ -80,6 +86,34 @@ gulp.task('sass', ['clean'], function() {
     .pipe(cssnano())
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('.'));
+});
+
+gulp.task('api', function() {
+  var API = {
+    version: VERSION,
+    themes: []
+  };
+
+  del(['api/*']);
+
+  return gulp.src('./_themes/*.md')
+    .pipe(frontMatter({
+      property: 'meta'
+    }))
+    .pipe(data(function(file) {
+      delete file.meta.order;
+      file.meta.preview = HOME + '/' + file.meta.name.toLowerCase() + '/';
+      file.meta.thumb = HOME + '/thumb/?' + file.meta.name.toLowerCase();
+      file.meta.css = CDN + '/' + file.meta.name.toLowerCase() + '/bulmaswatch.min.css';
+      file.meta.scss = CDN + '/' + file.meta.name.toLowerCase() + '/bulmaswatch.scss';
+      file.meta.scssVariables = CDN + '/' + file.meta.name.toLowerCase() + '/_variables.scss';
+    }))
+    .pipe(pluck('meta', 'themes.json'))
+    .pipe(data(function(file) {
+      API.themes = file.meta;
+      file.contents = new Buffer(JSON.stringify(API));
+    }))
+    .pipe(gulp.dest('api'));
 });
 
 gulp.task('default', ['serve']);

@@ -3,9 +3,9 @@ Bulmaswatch
 
 Themes for [Bulma](http://bulma.io), inspired by [Bootswatch](http://bootswatch.com/).
 
-API
+Get started
 -----
-Coming soon...
+Read the intructions [here](https://jenil.github.io/bulmaswatch/help/).
 
 
 Credits

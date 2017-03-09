@@ -24,7 +24,21 @@ route: help
       </ol>
       <hr>
       <h3 class="title">API</h3>
-      <p>Coming soon...</p>
+      <p>You can use the API to integrate the themes with your platform.</p>
+      <div class="block">
+        <pre><code>GET {{ site.url }}{{site.baseurl}}/api/themes.json</code></pre>
+      </div>
+      <p>This returns all the themes with important URLs. Here is how a sample theme looks:</p>
+      {% highlight json %}
+{
+  "name": "Cosmo",
+  "description": "An ode to Metro",
+  "preview": "https://jenil.github.io/bulmaswatch/cosmo/",
+  "thumb": "https://jenil.github.io/bulmaswatch/thumb/?cosmo",
+  "css": "https://cdn.rawgit.com/jenil/bulmaswatch/gh-pages/cosmo/bulmaswatch.min.css",
+  "scss": "https://cdn.rawgit.com/jenil/bulmaswatch/gh-pages/cosmo/bulmaswatch.scss",
+  "scssVariables": "https://cdn.rawgit.com/jenil/bulmaswatch/gh-pages/cosmo/_variables.scss"
+}{% endhighlight %}
     </div>
   </div>
 </section>

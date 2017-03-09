@@ -57,6 +57,7 @@ if (document.location.hostname !== 'localhost') {
 <script type="text/javascript">
 $(function() {
   $('.modal-background, .modal-close').click(function() {
+    $('html').removeClass('is-clipped');
     $(this).parent().removeClass('is-active');
   });
   $('.theme-switcher').change(function(e) {
