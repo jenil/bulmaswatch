@@ -10,10 +10,11 @@
       <div class="nav-item">
         <span class="theme-switcher select">
           <select>
-            <option selected>Themes</option>
+            <option value="" disabled selected>Themes</option>
             <option disabled>───</option>
             {% for t in themes %}
-              <option value="{{ t.name | slugify }}">{{ t.name }}</option>
+              {% capture theme %}/{{ t.name | slugify }}{% endcapture %}
+              <option value="{{ t.name | slugify }}" {% if theme == page.id %}selected{% endif %}>{{ t.name }}</option>
             {% endfor %}
           </select>
         </span>

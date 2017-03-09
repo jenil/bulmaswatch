@@ -61,7 +61,9 @@ $(function() {
     $(this).parent().removeClass('is-active');
   });
   $('.theme-switcher').change(function(e) {
-    window.location.href = '{{ site.baseurl }}/' + e.target.value;
+    if (e.target.value) {
+      window.location.href = '{{ site.baseurl }}/' + e.target.value;
+    }
   });
 });
 </script>
