@@ -1,4 +1,4 @@
 ---
 name: Minty
-subtitle: A fresh feel
+description: A fresh feel
 ---

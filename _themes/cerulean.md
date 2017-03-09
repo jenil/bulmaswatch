@@ -1,4 +1,4 @@
 ---
 name: Cerulean
-subtitle: A calm blue sky
+description: A calm blue sky
 ---

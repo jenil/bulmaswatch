@@ -15,7 +15,7 @@ route: home
             <iframe src="{{ site.url }}{{ site.baseurl }}/thumb/?{{theme.name | slugify}}"></iframe>
           </figure>
           <br>
-          <h5>{{ theme.subtitle }}</h5>
+          <h5>{{ theme.description }}</h5>
           <div class="block">
             <a class="button" href="{{ site.baseurl }}/{{theme.name | slugify}}"
               onclick="ga('send', 'event', 'theme', 'preview', '{{theme.name}}');">Preview</a>

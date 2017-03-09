@@ -1,4 +1,4 @@
 ---
 name: Darkly
-subtitle: Flatly in night-mode
+description: Flatly in night-mode
 ---

@@ -1,4 +1,4 @@
 ---
 name: Slate
-subtitle: Shades of gunmetal gray
+description: Shades of gunmetal gray
 ---

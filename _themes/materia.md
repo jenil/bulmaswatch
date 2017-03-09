@@ -1,4 +1,4 @@
 ---
 name: Materia
-subtitle: Material is the metaphor
+description: Material is the metaphor
 ---

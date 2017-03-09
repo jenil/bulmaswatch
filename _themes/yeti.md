@@ -1,4 +1,4 @@
 ---
 name: Yeti
-subtitle: A friendly foundation
+description: A friendly foundation
 ---

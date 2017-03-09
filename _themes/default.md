@@ -1,5 +1,5 @@
 ---
 name: Default
-subtitle: Bulma as-is
+description: Bulma as-is
 order: 0
 ---

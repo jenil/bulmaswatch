@@ -1,4 +1,4 @@
 ---
 name: Flatly
-subtitle: Flat and thick
+description: Flat and thick
 ---

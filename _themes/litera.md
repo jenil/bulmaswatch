@@ -1,4 +1,4 @@
 ---
 name: Litera
-subtitle: The medium is the message
+description: The medium is the message
 ---

@@ -1,4 +1,4 @@
 ---
 name: Simplex
-subtitle: Mini and minimalist
+description: Mini and minimalist
 ---

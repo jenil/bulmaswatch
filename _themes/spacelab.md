@@ -1,4 +1,4 @@
 ---
 name: Spacelab
-subtitle: Silvery and sleek
+description: Silvery and sleek
 ---

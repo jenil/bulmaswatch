@@ -1,4 +1,4 @@
 ---
 name: Pulse
-subtitle: A trace of purple
+description: A trace of purple
 ---

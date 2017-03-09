@@ -1,4 +1,4 @@
 ---
 name: Sandstone
-subtitle: A touch of warmth
+description: A touch of warmth
 ---

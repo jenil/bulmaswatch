@@ -1,4 +1,4 @@
 ---
 name: Cosmo
-subtitle: An ode to Metro
+description: An ode to Metro
 ---

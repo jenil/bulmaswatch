@@ -1,4 +1,4 @@
 ---
 name: Lux
-subtitle: A touch of class
+description: A touch of class
 ---

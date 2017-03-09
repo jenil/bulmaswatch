@@ -1,4 +1,4 @@
 ---
 name: Lumen
-subtitle: Light and shadow
+description: Light and shadow
 ---

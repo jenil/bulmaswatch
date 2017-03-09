@@ -1,4 +1,4 @@
 ---
 name: Cyborg
-subtitle: Jet black and electric blue
+description: Jet black and electric blue
 ---
