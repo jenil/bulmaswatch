@@ -13,7 +13,7 @@ $blue:         #029ACF;
 $purple:       #9B479F;
 $red:          #D9230F;
 
-$primary: $red;
+$primary: $red !default;
 $primary-dark: darken($primary, 10);
 $warning: $purple;
 $danger: $orange;

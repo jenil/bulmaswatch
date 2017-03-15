@@ -8,7 +8,7 @@ $turquoise: #009688;
 $blue: #03A9F4;
 $purple: #9C27B0;
 $red: #F44336;
-$primary: #2196F3;
+$primary: #2196F3 !default;
 
 $link-hover: darken($primary, 10);
 $button-hover: #363636;

@@ -16,7 +16,7 @@ $blue         : #268bd2;
 $purple       : #6c71c4;
 $red          : #d33682;
 
-$primary      : $yellow;
+$primary: $yellow !default;
 $warning      : $orange;
 $yellow-invert: #fff;
 

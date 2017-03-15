@@ -12,7 +12,7 @@ $blue:         #1FAEFF;
 $purple:       #AA40FF;
 $red:          #FF2E12;
 
-$primary: #2780E3;
+$primary: #2780E3 !default;
 $primary-dark: darken(#2780E3, 20);
 $warning: $orange;
 $info: $purple;

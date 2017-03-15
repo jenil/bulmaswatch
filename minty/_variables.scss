@@ -10,7 +10,7 @@ $green:        #56cc90;
 $blue:         #6CC3D5;
 $red:          #e07f7d;
 
-$primary: #6abfb0;
+$primary: #6abfb0 !default;
 $danger: $orange;
 
 $text: darken($grey, 10);

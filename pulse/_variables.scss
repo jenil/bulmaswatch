@@ -9,7 +9,7 @@ $blue:         #3498db;
 $purple:       #8e44ad;
 $red:          #e74c3c;
 
-$primary: $purple;
+$primary: $purple !default;
 $primary-dark: darken($primary, 10);
 $warning: $orange;
 
