@@ -10,11 +10,10 @@ Read the intructions [here](https://jenil.github.io/bulmaswatch/help/).
 
 Credits
 -----
-@jgthms for [Bulma](http://bulma.io)
-@thomaspark for [Bootswatch](http://bootswatch.com/)
+- @jgthms for [Bulma](http://bulma.io)
+- @thomaspark for [Bootswatch](http://bootswatch.com/)
 
 ## Copyright and License
------
 
 Copyright 2017 [Jenil Gogari](https://jgog.in).
 
