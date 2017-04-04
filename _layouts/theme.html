@@ -22,6 +22,14 @@
         <h2 class="subtitle">
           {{ page.description }}
         </h2>
+        <p>
+          <a class="button is-primary is-inverted" href="{{ site.baseurl }}/{{page.name | slugify}}/bulmaswatch.min.css"
+              target="_blank" onclick="ga('send', 'event', 'theme', 'download', '{{page.name}}');">Download</a>
+          <a class="button is-dark" href="{{ site.repo_url }}/tree/gh-pages/{{page.name | slugify}}"
+            target="_blank" onclick="ga('send', 'event', 'theme', 'github', '{{page.name}}');" title="Download from Github">
+              <span class="icon"> <i class="fa fa-github"> </i> </span>
+            </a>
+        </p>
       </div>
     </div>
   </section>
