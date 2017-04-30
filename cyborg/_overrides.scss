@@ -1,0 +1,91 @@
+/*! bulmaswatch v0.3.2 | MIT License */
+
+.section,
+html {
+    background-color: #000;
+}
+
+.hero {
+    background-color: $black-ter;
+}
+
+.box {
+    box-shadow: none;
+    background-color: $black-ter;
+}
+
+.delete {
+    background-color: rgba(255, 255, 255, 0.2);
+
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+}
+
+.label {
+    color: $grey-lighter;
+}
+
+.notification {
+    @each $name, $pair in $colors {
+        $color: nth($pair, 1);
+        $color-invert: nth($pair, 2);
+
+        &.is-#{$name} {
+            a:not(.button) {
+                color: $color-invert;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.card {
+    $card-border: lighten($grey-darker, 5);
+    box-shadow: none;
+    background-color: $grey-darker;
+
+    .card-header {
+        box-shadow: none;
+        background-color: rgba($black-bis, .2);
+    }
+
+    .card-footer {
+        background-color: rgba($black-bis, .2);
+    }
+
+    .card-footer,
+    .card-footer-item {
+        border-color: $card-border;
+    }
+}
+
+.message-header {
+    background-color: $black-ter;
+    color: $white;
+}
+
+.message-body {
+    border-color: $black-ter;
+}
+
+.modal-card-body {
+    background-color: $black-ter;
+}
+
+.modal-card-foot,
+.modal-card-head {
+    border-color: $black-ter;
+}
+
+.nav {
+    background-color: #000;
+    border: 1px solid $grey-darker;
+}
+
+.hero {
+    .nav {
+        border: none;
+        box-shadow: 0 1px 0 rgba($border, 0.5);
+    }
+}

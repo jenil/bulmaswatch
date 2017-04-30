@@ -1,0 +1,109 @@
+/*! bulmaswatch v0.3.2 | MIT License */
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700);
+
+.button,
+.input,
+.select select,
+.textarea {
+  height: 2.572em;
+}
+
+.button {
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  height: 2.858em;
+}
+
+.notification {
+  @each $name, $pair in $colors {
+    $color: nth($pair, 1);
+    $color-invert: nth($pair, 2);
+
+    &.is-#{$name} {
+      a:not(.button) {
+        color: $color-invert;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.card {
+  box-shadow: 0 2px 3px rgba($grey-dark, 0.1), 0 0 0 1px rgba($grey-dark, 0.1);
+}
+
+.nav {
+  background-color: $grey-dark;
+  border-radius: $radius;
+  color: $white;
+
+  .subtitle,
+  .title {
+    color: $white;
+  }
+
+  .nav-item a:not(.button),
+  a.nav-item:not(.button) {
+    color: $grey-light;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    &:hover {
+      color: $white-bis;
+    }
+    // Modifiers
+    &.is-active {
+      color: $white;
+
+      &.is-tab {
+        border-bottom-color: $white;
+      }
+    }
+  }
+
+  .nav-toggle {
+    &:hover {
+      background-color: $button-active;
+    }
+
+    span {
+      background-color: $grey-light;
+    }
+  }
+}
+
+.hero {
+  // Colors
+  .nav {
+    background-color: $grey-dark;
+  }
+  @each $name, $pair in $colors {
+    $color: nth($pair, 1);
+    $color-invert: nth($pair, 2);
+
+    &.is-#{$name} {
+      .nav {
+        background: none;
+      }
+
+      .nav-item a:not(.button),
+      a.nav-item {
+        color: $color-invert;
+
+        &.is-active,
+        &:hover {
+          background-color: darken($color, 10);
+          color: $color-invert;
+        }
+      }
+    }
+  }
+}
+
+.pagination-link,
+.pagination-next,
+.pagination-previous {
+  color: $primary;
+  background-color: $pagination-background;
+}

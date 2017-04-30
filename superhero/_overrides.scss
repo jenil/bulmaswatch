@@ -1,0 +1,141 @@
+/*! bulmaswatch v0.3.2 | MIT License */
+@import url(https://fonts.googleapis.com/css?family=Lato:300,400,700);
+
+
+
+.section {
+    background-color: $body-background;
+}
+
+.hero {
+    background-color: $body-background;
+}
+
+.box {
+    background-color: $background;
+}
+
+.button {
+    &.is-hovered,
+    &:hover {
+        background-color: darken($button-background, 3%);
+    }
+    @each $name, $pair in $colors {
+        $color: nth($pair, 1);
+        $color-invert: nth($pair, 2);
+
+        &.is-#{$name} {
+            &.is-hovered,
+            &:hover {
+                background-color: darken($color, 3%);
+            }
+        }
+    }
+
+    &.is-loading:after {
+        border-color: transparent transparent $grey-light $grey-light;
+    }
+}
+
+.label {
+    color: $grey-lighter;
+}
+
+.notification {
+    @each $name, $pair in $colors {
+        $color: nth($pair, 1);
+        $color-invert: nth($pair, 2);
+
+        &.is-#{$name} {
+            a:not(.button) {
+                color: $color-invert;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.card {
+    box-shadow: none;
+    border: 1px solid $border;
+    background-color: darken($body-background, 1);
+    border-radius: $radius;
+
+    .card-image {
+        img {
+            border-radius: $radius $radius 0 0;
+        }
+    }
+
+    .card-header {
+        box-shadow: none;
+        background-color: darken($body-background, 3);
+        border-radius: $radius $radius 0 0;
+    }
+
+    .card-footer {
+        background-color: darken($body-background, 3);
+    }
+
+    .card-footer,
+    .card-footer-item {
+        border-width: 1px;
+        border-color: $border;
+    }
+}
+
+.modal-card-body {
+    background-color: $body-background;
+}
+
+.nav {
+    background-color: $background;
+
+    .nav-item a:not(.button),
+    a.nav-item:not(.button) {
+        color: $grey-lighter;
+
+        &:hover {
+            color: $link;
+        }
+
+        &.is-active {
+            color: $primary;
+        }
+    }
+}
+
+.hero {
+    .nav {
+        background-color: $background;
+    }
+    @each $name, $pair in $colors {
+        $color: nth($pair, 1);
+        $color-invert: nth($pair, 2);
+
+        &.is-#{$name} {
+            .nav {
+                background-color: $color;
+            }
+
+            .nav-item a:not(.button),
+            a.nav-item {
+                color: $color-invert;
+
+                &.is-active,
+                &:hover {
+                    background-color: darken($color, 10);
+                    color: $color-invert;
+                }
+            }
+        }
+    }
+}
+
+.tabs {
+    &.is-boxed {
+        li.is-active a {
+            background-color: $background;
+        }
+    }
+}

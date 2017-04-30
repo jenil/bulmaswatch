@@ -1,0 +1,152 @@
+/*! bulmaswatch v0.3.2 | MIT License */
+@import url(https://fonts.googleapis.com/css?family=Nunito+Sans);
+
+body {
+  font-weight: 200;
+  letter-spacing: 1px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+a {
+  color: $grey;
+}
+
+.box {
+  box-shadow: 0 0 0 1px $grey-lighter;
+}
+
+.button {
+  transition: all 200ms ease;
+  text-transform: uppercase;
+  font-weight: 700;
+
+  &.is-active,
+  &.is-focused,
+  &:active,
+  &:focus {
+    box-shadow: 0 0 0 2px rgba($button-focus-border, 0.25);
+  }
+  @each $name, $pair in $colors {
+    $color: nth($pair, 1);
+    $color-invert: nth($pair, 2);
+
+    &.is-#{$name} {
+      &.is-active,
+      &.is-focused,
+      &:active,
+      &:focus {
+        border-color: $color;
+        box-shadow: 0 0 0 2px rgba($color, 0.25);
+      }
+    }
+  }
+}
+
+.button,
+.input,
+.pagination-ellipsis,
+.pagination-link,
+.pagination-next,
+.pagination-previous,
+.select select,
+.textarea {
+  height: 2.572em;
+}
+
+.input,
+.textarea {
+  transition: all 200ms ease;
+  box-shadow: none;
+}
+
+.progress,
+.tag {
+  border-radius: $radius;
+}
+
+.card {
+  box-shadow: 0 0 0 1px $grey-lighter;
+
+  .card-header {
+    box-shadow: 0 1px 0 0 $grey-lighter;
+  }
+}
+
+.nav {
+  background-color: $primary;
+  border-radius: $radius;
+  color: $grey;
+  min-height: 5rem;
+
+  .subtitle,
+  .title {
+    color: $grey;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  .nav-item a:not(.button),
+  a.nav-item:not(.button) {
+    color: $grey;
+    text-transform: uppercase;
+    font-weight: bold;
+
+    &:hover {
+      color: $white;
+    }
+    // Modifiers
+    &.is-active {
+      color: $white;
+
+      &.is-tab {
+        border-bottom-color: $grey;
+      }
+    }
+  }
+
+  .nav-toggle {
+    width: 5rem;
+    height: 5rem;
+
+    &:hover {
+      background-color: rgba($white, 0.1);
+
+      span {
+        background-color: $white;
+      }
+    }
+
+    span {
+      background-color: $grey;
+    }
+  }
+}
+
+.hero {
+  .nav {
+    background-color: $primary;
+  }
+}
+
+.notification {
+  @each $name, $pair in $colors {
+    $color: nth($pair, 1);
+    $color-invert: nth($pair, 2);
+
+    &.is-#{$name} {
+      a:not(.button) {
+        color: $color-invert;
+        text-decoration: underline;
+      }
+    }
+  }
+}

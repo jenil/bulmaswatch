@@ -20,7 +20,10 @@ route: help
       <h3 class="title">Use NPM</h3>
       <ol>
         <li>Install package <code>npm install bulmaswatch</code></li>
-        <li>Import the respective theme from <code>node_modules/bulmaswatch/&lt;themename&gt;</code></li>
+        <li>Each theme consist of two files - <code>_variables.scss</code> &amp; <code>_overrides.scss</code></li>
+        <li>Import the respective theme files from <code>node_modules/bulmaswatch/&lt;themename&gt;/&lt;filename&gt;</code></li>
+        <li>Make sure you import <code>bulma</code> before the <code>_overrides.scss</code> for the theme to work properly</li>
+        <li>An example of your custom theme file is the <a href="https://github.com/jenil/bulmaswatch/blob/gh-pages/default/bulmaswatch.scss" target="_blank">bulmaswatch.scss</a> for each theme</li>
       </ol>
       <hr>
       <h3 class="title">API</h3>

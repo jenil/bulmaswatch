@@ -1,0 +1,202 @@
+/*! bulmaswatch v0.3.2 | MIT License */
+@mixin btn-shadow($color) {
+  background-image: linear-gradient(180deg, lighten($color, 6%) 0%, $color 60%, darken($color, 4%) 100%);
+  filter: none;
+}
+@mixin btn-shadow-inverse($color) {
+  background-image: linear-gradient(180deg, darken($color, 8%) 0%, darken($color, 4%) 40%, darken($color, 0%) 100%);
+  filter: none;
+}
+
+.section {
+  background-color: $body-background;
+}
+
+.hero {
+  background-color: $grey-dark;
+}
+
+.box {
+  box-shadow: none;
+  background-color: $grey-dark;
+}
+
+.button,
+.input,
+.pagination-ellipsis,
+.pagination-link,
+.pagination-next,
+.pagination-previous,
+.select select,
+.textarea {
+  height: 2.5em;
+}
+
+.button {
+  transition: all 200ms ease;
+  @each $name, $pair in $colors {
+    $color: nth($pair, 1);
+    $color-invert: nth($pair, 2);
+
+    &.is-#{$name} {
+      &:not(.is-outlined):not(.is-inverted) {
+        @include btn-shadow($color);
+
+        &.is-hovered,
+        &:hover {
+          @include btn-shadow-inverse($color);
+          text-shadow: 1px 1px 1px rgba($black, 0.3);
+        }
+      }
+    }
+  }
+}
+
+.label {
+  color: $text;
+}
+
+.notification {
+  @each $name, $pair in $colors {
+    $color: nth($pair, 1);
+    $color-invert: nth($pair, 2);
+
+    &.is-#{$name} {
+      a:not(.button) {
+        color: $color-invert;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.card {
+  box-shadow: none;
+  border: 1px solid $border;
+  background-color: $grey-darker;
+  border-radius: $radius;
+
+  .card-image {
+    img {
+      border-radius: $radius $radius 0 0;
+    }
+  }
+
+  .card-header {
+    box-shadow: none;
+    background-color: rgba($black-bis, .2);
+    border-radius: $radius $radius 0 0;
+  }
+
+  .card-footer {
+    background-color: rgba($black-bis, .2);
+  }
+
+  .card-footer,
+  .card-footer-item {
+    border-width: 1px;
+    border-color: $border;
+  }
+}
+
+.nav {
+  background-color: $background;
+  color: $white;
+
+  .subtitle,
+  .title {
+    color: $white-bis;
+  }
+
+  .nav-item a:not(.button),
+  a.nav-item:not(.button) {
+    color: rgba($white, 0.75);
+    border-left: 1px solid rgba($white, 0.1);
+    border-right: 1px solid rgba($black, 0.2);
+
+    &:hover {
+      color: $white;
+      border-left: 1px solid rgba($black, 0.2);
+      background-color: rgba($black, 0.2);
+    }
+    // Modifiers
+    &.is-active {
+      color: $white;
+      background-color: rgba($black, 0.2);
+
+      &.is-tab {
+        border-bottom-color: $white;
+      }
+    }
+  }
+
+  .nav-toggle {
+    &:hover {
+      background-color: rgba($black, 0.075);
+    }
+
+    span {
+      background-color: rgba($white, 0.75);
+    }
+  }
+}
+
+.hero {
+  .nav {
+    background-color: $background;
+  }
+  @each $name, $pair in $colors {
+    $color: nth($pair, 1);
+    $color-invert: nth($pair, 2);
+
+    &.is-#{$name} {
+      .nav {
+        background: none;
+      }
+
+      .nav-item a:not(.button),
+      a.nav-item:not(.button) {
+        color: rgba($color-invert, 0.75);
+        border-right: 1px solid darken($color, 15);
+
+        &.is-active,
+        &:hover {
+          background-color: darken($color, 10);
+          color: $color-invert;
+          border-left: 1px solid darken($color, 15);
+        }
+      }
+    }
+  }
+}
+
+.tabs {
+  a {
+    &:hover {
+      color: $link-hover;
+      border-bottom-color: $link-hover;
+    }
+  }
+
+  li {
+    &.is-active {
+      a {
+        color: $primary-invert;
+        border-bottom-color: $primary-invert;
+      }
+    }
+  }
+
+  &.is-boxed {
+    li.is-active a {
+      background-color: $primary;
+      color: $primary-invert;
+    }
+  }
+}
+
+.modal {
+  .modal-card-body {
+    background-color: $body-background;
+  }
+}
