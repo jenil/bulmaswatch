@@ -1,0 +1,136 @@
+/*! bulmaswatch v0.3.2 | MIT License */
+@mixin btn-shadow($color) {
+  background-image: linear-gradient(180deg, lighten($color, 8%) 0%, $color 60%, darken($color, 4%) 100%);
+}
+
+.box {
+  box-shadow: 0 0 0 1px $border;
+}
+
+.button {
+  @each $name, $pair in $colors {
+    $color: nth($pair, 1);
+    $color-invert: nth($pair, 2);
+
+    &.is-#{$name} {
+      &:not(.is-outlined):not(.is-inverted) {
+        @include btn-shadow($color);
+      }
+    }
+  }
+}
+
+.button,
+.input,
+.pagination-ellipsis,
+.pagination-link,
+.pagination-next,
+.pagination-previous,
+.select select,
+.textarea {
+  height: 2.43em;
+}
+
+.input,
+.textarea {
+  box-shadow: none;
+}
+
+.card {
+  box-shadow: 0 0 0 1px $border;
+  background-color: $white-bis;
+
+  .card-header {
+    box-shadow: none;
+    border-bottom: 1px solid $border;
+  }
+}
+
+.notification {
+  @each $name, $pair in $colors {
+    $color: nth($pair, 1);
+    $color-invert: nth($pair, 2);
+
+    &.is-#{$name} {
+      background-color: rgba($color, .1);
+      color: $color;
+      border: 1px solid rgba($color, .2);
+    }
+  }
+}
+
+.nav {
+  background-color: $primary;
+  @include btn-shadow($primary);
+  color: $white;
+
+  .subtitle,
+  .title {
+    color: $white-bis;
+  }
+
+  .nav-item a,
+  a.nav-item {
+    &:hover {
+      color: $button-hover;
+    }
+  }
+
+  .nav-item a:not(.button),
+  a.nav-item:not(.button) {
+    color: $white-bis;
+
+    &:hover {
+      background-color: rgba($black, 0.05);
+      color: $white-bis;
+    }
+    // Modifiers
+    &.is-active {
+      color: $white-bis;
+      background-color: rgba($black, 0.075);
+
+      &.is-tab {
+        border-bottom-color: $white-bis;
+      }
+    }
+  }
+
+  .nav-toggle {
+    &:hover {
+      background-color: rgba($black, 0.075);
+    }
+
+    span {
+      background-color: $white-bis;
+    }
+  }
+}
+
+.hero {
+  // Colors
+  .nav {
+    background-color: $primary;
+    @include btn-shadow($primary);
+  }
+  @each $name, $pair in $colors {
+    $color: nth($pair, 1);
+    $color-invert: nth($pair, 2);
+
+    &.is-#{$name} {
+      .nav {
+        background: none;
+      }
+
+      .nav-item a:not(.button),
+      a.nav-item {
+        color: $color-invert;
+
+        &.is-active,
+        &:hover {
+          background-color: darken($color, 10);
+          color: $color-invert;
+        }
+      }
+    }
+  }
+}

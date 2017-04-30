@@ -12,5 +12,5 @@
         "preserve_newlines": true,
         "unformatted": ["img", "code", "pre", "sub", "sup", "em", "strong", "b", "i", "u", "strike", "big", "small", "pre", "h1", "h2", "h3", "h4", "h5", "h6"],
         "wrap_line_length": 0
-    },
+    }
 }
