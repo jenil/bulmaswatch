@@ -32,10 +32,9 @@ nav.main-nav {
         }
     }
     .hero-body {
+        padding-bottom: 0;
         .title {
             font-weight: 200;
-            font-size: 3rem;
-            margin-bottom: 2rem;
             margin-top: 1rem;
         }
         .subtitle {
@@ -43,6 +42,9 @@ nav.main-nav {
         }
         a {
             text-decoration: underline;
+        }
+        img {
+            display: block;
         }
     }
     .iframe>* {
