@@ -14,7 +14,7 @@ var frontMatter = require('gulp-front-matter');
 const pkg = require('./package.json');
 const VERSION = pkg.version;
 const HOME = pkg.homepage;
-const CDN = 'https://cdn.rawgit.com/jenil/bulmaswatch/gh-pages';
+const CDN = 'https://unpkg.com/bulmaswatch';
 var changedTheme = '';
 
 gulp.task('clean', function() {
