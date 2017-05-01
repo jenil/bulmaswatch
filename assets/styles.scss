@@ -1,19 +1,15 @@
 @import '../materia/bulmaswatch';
 @import "highlight";
-
 nav.main-nav {
     border-radius: 0;
     min-height: 4rem;
-
     .title {
         color: #fff;
         font-weight: bold;
     }
-
     .logo {
         padding-right: 10px;
     }
-
     .nav-item {
         margin: 0.75rem 0.25rem;
         border-radius: $radius;
@@ -24,20 +20,17 @@ nav.main-nav {
     .main-nav {
         background-color: transparent !important;
         box-shadow: none !important;
-
         .nav-item {
             &.is-active,
             &:hover {
                 background-color: rgba($black, 0.05) !important;
             }
         }
-
         .select select {
             background-color: transparent;
             box-shadow: none;
         }
     }
-
     .hero-body {
         .title {
             font-weight: 200;
@@ -45,17 +38,14 @@ nav.main-nav {
             margin-bottom: 2rem;
             margin-top: 1rem;
         }
-
         .subtitle {
             font-weight: 700;
         }
-
         a {
             text-decoration: underline;
         }
     }
-
-    .iframe > * {
+    .iframe>* {
         bottom: 0;
         left: 0;
         position: absolute;
@@ -66,17 +56,14 @@ nav.main-nav {
         border-top-left-radius: $radius-large;
         border-top-right-radius: $radius-large;
     }
-
     .section.themes {
         padding-top: 5rem;
         padding-bottom: 5rem;
-
         .box {
             background-color: #fafafa;
             padding: 0 0 1rem;
             border-top-left-radius: $radius-large;
             border-top-right-radius: $radius-large;
-
             .block {
                 margin: 1rem 0;
             }
