@@ -1,4 +1,4 @@
-/*! bulmaswatch v0.3.2 | MIT License */
+// Overrides
 @mixin btn-shadow($color) {
   background-image: linear-gradient(180deg, lighten($color, 8%) 0%, $color 60%, darken($color, 4%) 100%);
 }
@@ -26,9 +26,12 @@
 .pagination-link,
 .pagination-next,
 .pagination-previous,
+.select,
 .select select,
-.textarea {
-  height: 2.43em;
+.textarea,
+.control.has-icons-left .icon,
+.control.has-icons-right .icon {
+  height: 2.375em;
 }
 
 .input,

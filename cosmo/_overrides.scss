@@ -1,9 +1,5 @@
-/*! bulmaswatch v0.3.2 | MIT License */
+// Overrides
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700);
-
-html {
-  font-size: 15px;
-}
 
 .button,
 .input,
@@ -11,8 +7,11 @@ html {
 .pagination-link,
 .pagination-next,
 .pagination-previous,
+.select,
 .select select,
-.textarea {
+.textarea,
+.control.has-icons-left .icon,
+.control.has-icons-right .icon {
   height: 2.6667em;
 }
 

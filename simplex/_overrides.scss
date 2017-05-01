@@ -1,4 +1,4 @@
-/*! bulmaswatch v0.3.2 | MIT License */
+// Overrides
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
 @mixin btn-shadow($color) {
   background-image: linear-gradient(180deg, lighten($color, 3%) 0%, $color 60%, darken($color, 3%) 100%);
@@ -7,6 +7,20 @@
 
 .box {
   box-shadow: 0 0 0 1px $border;
+}
+
+.button,
+.input,
+.pagination-ellipsis,
+.pagination-link,
+.pagination-next,
+.pagination-previous,
+.select,
+.select select,
+.textarea,
+.control.has-icons-left .icon,
+.control.has-icons-right .icon {
+  height: 2.286em;
 }
 
 .button {

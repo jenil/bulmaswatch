@@ -1,4 +1,4 @@
-/*! bulmaswatch v0.3.2 | MIT License */
+// Overrides
 @import url(https://fonts.googleapis.com/css?family=Nunito+Sans);
 
 body {
@@ -57,9 +57,12 @@ a {
 .pagination-link,
 .pagination-next,
 .pagination-previous,
+.select,
 .select select,
-.textarea {
-  height: 2.572em;
+.textarea,
+.control.has-icons-left .icon,
+.control.has-icons-right .icon {
+  height: 2.5em;
 }
 
 .input,

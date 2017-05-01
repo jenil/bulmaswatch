@@ -33,6 +33,9 @@ $subtitle: $grey-dark;
 $border-width: 2px;
 $border: $grey;
 
+$body-background: darken($grey-darker, 4);
+$body-size: 15px;
+
 $background: $grey-darker;
 $button-background: $background;
 $button-border: lighten($button-background, 15);

@@ -1,4 +1,4 @@
-/*! bulmaswatch v0.3.2 | MIT License */
+// Overrides
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,700);
 
 a {
@@ -11,7 +11,11 @@ a {
 .pagination-link,
 .pagination-next,
 .pagination-previous,
-.textarea {
+.select,
+.select select,
+.textarea,
+.control.has-icons-left .icon,
+.control.has-icons-right .icon {
   height: 2.273em;
 }
 
@@ -59,7 +63,7 @@ a {
 }
 
 .content {
-  font-size: $size-5;
+  font-size: 1.1rem;
   font-family: $family-serif;
 
   .button {
