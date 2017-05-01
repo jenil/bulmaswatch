@@ -14,6 +14,10 @@ nav.main-nav {
         margin: 0.75rem 0.25rem;
         border-radius: $radius;
     }
+
+    .select select {
+        padding-right: 2.5em !important;
+    }
 }
 
 .home-page {
