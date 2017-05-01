@@ -16,6 +16,21 @@ permalink: /test/
     top: 0;
     right: 0;
   }
+
+  .control .control,
+  .control .help,
+  .control.has-addons,
+  .control.is-grouped,
+  .control.is-horizontal,
+  .control-label,
+   :not(.field)>.control {
+    background-color: red;
+    box-shadow: 3px 3px 3px 3px red;
+  }
+
+  .hero .container {
+    width: 95%;
+  }
   </style>
 </head>
 
@@ -223,7 +238,7 @@ permalink: /test/
               <a class="button is-warning is-loading"> Loading </a>
               <a class="button is-danger is-loading"> Loading </a>
             </div>
-            <p class="control">
+            <p class="field">
               <a class="button">
                 <span class="icon is-small"> <i class="fa fa-bold"> </i> </span>
               </a>
@@ -250,8 +265,8 @@ permalink: /test/
                 <span class="icon is-small"> <i class="fa fa-times"> </i> </span>
               </a>
             </p>
-            <div class="control is-grouped">
-              <p class="control has-addons">
+            <div class="field is-grouped">
+              <p class="field has-addons">
                 <a class="button">
                   <span class="icon is-small"> <i class="fa fa-bold"> </i> </span>
                   <span> Bold </span>
@@ -265,7 +280,7 @@ permalink: /test/
                   <span> Underline </span>
                 </a>
               </p>
-              <p class="control has-addons">
+              <p class="field has-addons">
                 <a class="button">
                   <span class="icon is-small"> <i class="fa fa-align-left"> </i> </span>
                   <span> Left </span>
@@ -307,7 +322,7 @@ permalink: /test/
               <a class="button is-success is-inverted"> Inverted </a>
               <a class="button is-danger is-inverted"> Inverted </a>
             </div>
-            <p class="control">
+            <p class="field">
               <a class="button is-small">
                 <span class="icon is-small"> <i class="fa fa-github"> </i> </span>
                 <span> GitHub </span>
@@ -325,12 +340,12 @@ permalink: /test/
                 <span> GitHub </span>
               </a>
             </p>
-            <p class="control">
+            <p class="field">
               <a class="button is-small">
                 <span class="icon is-small"> <i class="fa fa-header"> </i> </span>
               </a>
             </p>
-            <p class="control">
+            <p class="field">
               <a class="button">
                 <span class="icon is-small"> <i class="fa fa-header"> </i> </span>
               </a>
@@ -338,7 +353,7 @@ permalink: /test/
                 <span class="icon"> <i class="fa fa-header"> </i> </span>
               </a>
             </p>
-            <p class="control">
+            <p class="field">
               <a class="button is-medium">
                 <span class="icon is-small"> <i class="fa fa-header"> </i> </span>
               </a>
@@ -349,7 +364,7 @@ permalink: /test/
                 <span class="icon is-medium"> <i class="fa fa-header"> </i> </span>
               </a>
             </p>
-            <p class="control">
+            <p class="field">
               <a class="button is-large">
                 <span class="icon is-small"> <i class="fa fa-header"> </i> </span>
               </a>
@@ -462,79 +477,112 @@ permalink: /test/
         <hr>
         <div class="columns">
           <div class="column">
-            <label class="label"> Name </label>
-            <p class="control">
-              <input class="input" placeholder="Text input" type="text">
-            </p>
-            <label class="label"> Username </label>
-            <p class="control has-icon has-icon-right">
-              <input class="input is-success" placeholder="Text input" type="text" value="bulma">
-              <span class="icon is-small"> <i class="fa fa-check"> </i> </span>
-              <span class="help is-success"> This username is available </span>
-            </p>
-            <label class="label"> Email </label>
-            <p class="control has-icon has-icon-right">
-              <input class="input is-danger" placeholder="Email input" type="text" value="hello@">
-              <span class="icon is-small"> <i class="fa fa-warning"> </i> </span>
-              <span class="help is-danger"> This email is invalid </span>
-            </p>
-            <label class="label"> Subject </label>
-            <p class="control">
-              <span class="select">
-                <select>
-                  <option> Select dropdown </option>
-                  <option> With options </option>
-                </select>
-              </span>
-            </p>
-            <label class="label"> Message </label>
-            <p class="control">
-              <textarea class="textarea" placeholder="Textarea"> </textarea>
-            </p>
-            <p class="control">
-              <label class="checkbox">
-                <input type="checkbox"> Remember me
-              </label>
-            </p>
-            <p class="control">
-              <label class="radio">
-                <input name="question" type="radio"> Yes
-              </label>
-              <label class="radio">
-                <input name="question" type="radio"> No
-              </label>
-            </p>
-            <div class="control is-grouped">
+            <div class="field">
+              <label class="label">Name</label>
               <p class="control">
-                <button class="button is-primary"> Submit </button>
+                <input class="input" type="text" placeholder="Text input">
+              </p>
+            </div>
+            <div class="field">
+              <label class="label">Username</label>
+              <p class="control has-icons-left has-icons-right">
+                <input class="input is-success" type="text" placeholder="Text input" value="bulma">
+                <span class="icon is-small is-left">
+                  <i class="fa fa-user"></i>
+                </span>
+                <span class="icon is-small is-right">
+                  <i class="fa fa-check"></i>
+                </span>
+              </p>
+              <p class="help is-success">This username is available</p>
+            </div>
+            <div class="field">
+              <label class="label">Email</label>
+              <p class="control has-icons-left has-icons-right">
+                <input class="input is-danger" type="text" placeholder="Email input" value="hello@">
+                <span class="icon is-small is-left">
+                  <i class="fa fa-envelope"></i>
+                </span>
+                <span class="icon is-small is-right">
+                  <i class="fa fa-warning"></i>
+                </span>
+              </p>
+              <p class="help is-danger">This email is invalid</p>
+            </div>
+            <div class="field">
+              <label class="label">Subject</label>
+              <p class="control">
+                <span class="select">
+                  <select>
+                    <option>Select dropdown</option>
+                    <option>With options</option>
+                  </select>
+                </span>
+              </p>
+            </div>
+            <div class="field">
+              <label class="label">Message</label>
+              <p class="control">
+                <textarea class="textarea" placeholder="Textarea"></textarea>
+              </p>
+            </div>
+            <div class="field">
+              <p class="control">
+                <label class="checkbox">
+                  <input type="checkbox"> I agree to the
+                  <a href="#">terms and conditions</a>
+                </label>
+              </p>
+            </div>
+            <div class="field">
+              <p class="control">
+                <label class="radio">
+                  <input type="radio" name="question"> Yes
+                </label>
+                <label class="radio">
+                  <input type="radio" name="question"> No
+                </label>
+              </p>
+            </div>
+            <div class="field is-grouped">
+              <p class="control">
+                <button class="button is-primary">Submit</button>
               </p>
               <p class="control">
-                <button class="button is-link"> Cancel </button>
+                <button class="button is-link">Cancel</button>
               </p>
             </div>
             <br>
             <h4 class="subtitle"> Disabled </h4>
             <hr>
-            <p class="control">
-              <input class="input" disabled="" placeholder="Disabled input" type="text">
-            </p>
-            <p class="control">
-              <textarea class="textarea" disabled="" placeholder="Disabled textarea"> </textarea>
-            </p>
-            <p class="control">
-              <label class="checkbox is-disabled">
-                <input disabled="" type="checkbox"> Remember me
-              </label>
-            </p>
-            <p class="control">
-              <label class="radio is-disabled">
-                <input disabled="" name="question" type="radio"> Yes
-              </label>
-              <label class="radio is-disabled">
-                <input disabled="" name="question" type="radio"> No
-              </label>
-            </p>
-            <div class="control is-grouped">
+            <div class="field">
+              <p class="control">
+                <input class="input" disabled="" placeholder="Disabled input" type="text">
+              </p>
+            </div>
+            <div class="field">
+              <p class="control">
+                <textarea class="textarea" disabled="" placeholder="Disabled textarea"> </textarea>
+              </p>
+            </div>
+            <div class="field">
+              <p class="control">
+                <label class="checkbox is-disabled">
+                  <input disabled="" type="checkbox"> Remember me
+                </label>
+              </p>
+            </div>
+            <div class="field">
+              <p class="control">
+                <label class="radio is-disabled">
+                  <input disabled="" name="question" type="radio"> Yes
+                </label>
+                <label class="radio is-disabled">
+                  <input disabled="" name="question" type="radio"> No
+                </label>
+              </p>
+            </div>
+            <div class="field is-grouped">
               <p class="control">
                 <button class="button is-primary" disabled=""> Submit </button>
               </p>
@@ -545,37 +593,107 @@ permalink: /test/
             <br>
             <h3 class="title"> Horizontal Form </h3>
             <hr>
-            <div class="control is-horizontal">
-              <div class="control-label">
-                <label class="label"> From </label>
+            <div class="field is-horizontal">
+              <div class="field-label is-normal">
+                <label class="label">From</label>
               </div>
-              <div class="control is-grouped">
-                <p class="control is-expanded">
-                  <input class="input" placeholder="Name" type="text">
-                </p>
-                <p class="control is-expanded">
-                  <input class="input" placeholder="Email" type="email">
-                </p>
-              </div>
-            </div>
-            <div class="control is-horizontal">
-              <div class="control-label">
-                <label class="label"> Subject </label>
-              </div>
-              <div class="control">
-                <div class="select is-fullwidth">
-                  <select>
-                    <option> General enquiry </option>
-                  </select>
+              <div class="field-body">
+                <div class="field is-grouped">
+                  <p class="control is-expanded has-icons-left">
+                    <input class="input" type="text" placeholder="Name">
+                    <span class="icon is-small is-left">
+                      <i class="fa fa-user"></i>
+                    </span>
+                  </p>
+                </div>
+                <div class="field">
+                  <p class="control is-expanded has-icons-left has-icons-right">
+                    <input class="input is-success" type="email" placeholder="Email" value="alex@smith.com">
+                    <span class="icon is-small is-left">
+                      <i class="fa fa-envelope"></i>
+                    </span>
+                    <span class="icon is-small is-right">
+                      <i class="fa fa-check"></i>
+                    </span>
+                  </p>
+                  <p class="help is-success">This email is correct</p>
                 </div>
               </div>
             </div>
-            <div class="control is-horizontal">
-              <div class="control-label">
-                <label class="label"> Question </label>
+            <div class="field is-horizontal">
+              <div class="field-label is-normal">
+                <label class="label">Department</label>
               </div>
-              <div class="control">
-                <textarea class="textarea" placeholder="Explain how we can help you"> </textarea>
+              <div class="field-body">
+                <div class="field is-narrow">
+                  <div class="control">
+                    <div class="select is-fullwidth">
+                      <select>
+                        <option>Business development</option>
+                        <option>Marketing</option>
+                        <option>Sales</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="field is-horizontal">
+              <div class="field-label">
+                <label class="label">Already a member?</label>
+              </div>
+              <div class="field-body">
+                <div class="field is-narrow">
+                  <div class="control">
+                    <label class="radio">
+                      <input type="radio" name="member"> Yes
+                    </label>
+                    <label class="radio">
+                      <input type="radio" name="member"> No
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="field is-horizontal">
+              <div class="field-label is-normal">
+                <label class="label">Subject</label>
+              </div>
+              <div class="field-body">
+                <div class="field">
+                  <div class="control">
+                    <input class="input is-danger" type="text" placeholder="e.g. Partnership opportunity">
+                  </div>
+                  <p class="help is-danger">
+                    This field is required
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="field is-horizontal">
+              <div class="field-label is-normal">
+                <label class="label">Question</label>
+              </div>
+              <div class="field-body">
+                <div class="field">
+                  <div class="control">
+                    <textarea class="textarea" placeholder="Explain how we can help you"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="field is-horizontal">
+              <div class="field-label">
+                <!-- Left empty for spacing -->
+              </div>
+              <div class="field-body">
+                <div class="field">
+                  <div class="control">
+                    <button class="button is-primary">
+                      Send message
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -583,117 +701,316 @@ permalink: /test/
             <br>
             <h3 class="subtitle"> Colors </h3>
             <hr>
-            <p class="control">
-              <input class="input is-primary" placeholder="Primary input" type="text">
-            </p>
-            <p class="control">
-              <input class="input is-info" placeholder="Info input" type="text">
-            </p>
-            <p class="control">
-              <input class="input is-success" placeholder="Success input" type="text">
-            </p>
-            <p class="control">
-              <input class="input is-warning" placeholder="Warning input" type="text">
-            </p>
-            <p class="control">
-              <input class="input is-danger" placeholder="Danger input" type="text">
-            </p>
+            <div class="field">
+              <p class="control">
+                <input class="input is-primary" type="text" placeholder="Primary input">
+              </p>
+            </div>
+            <div class="field">
+              <p class="control">
+                <input class="input is-info" type="text" placeholder="Info input">
+              </p>
+            </div>
+            <div class="field">
+              <p class="control">
+                <input class="input is-success" type="text" placeholder="Success input">
+              </p>
+            </div>
+            <div class="field">
+              <p class="control">
+                <input class="input is-warning" type="text" placeholder="Warning input">
+              </p>
+            </div>
+            <div class="field">
+              <p class="control">
+                <input class="input is-danger" type="text" placeholder="Danger input">
+              </p>
+            </div>
             <br>
             <h3 class="subtitle"> Sizes </h3>
             <hr>
-            <p class="control">
-              <input class="input is-small" placeholder="Small input" type="text">
-            </p>
-            <p class="control">
-              <input class="input" placeholder="Normal input" type="text">
-            </p>
-            <p class="control">
-              <input class="input is-medium" placeholder="Medium input" type="text">
-            </p>
-            <p class="control">
-              <input class="input is-large" placeholder="Large input" type="text">
-            </p>
-            <p class="control">
-              <span class="select is-small">
-                <select>
-                  <option> Select dropdown </option>
-                  <option> With options </option>
-                </select>
-              </span>
-            </p>
-            <p class="control">
-              <span class="select">
-                <select>
-                  <option> Select dropdown </option>
-                  <option> With options </option>
-                </select>
-              </span>
-            </p>
-            <p class="control">
-              <span class="select is-medium">
-                <select>
-                  <option> Select dropdown </option>
-                  <option> With options </option>
-                </select>
-              </span>
-            </p>
-            <p class="control">
-              <span class="select is-large">
-                <select>
-                  <option> Select dropdown </option>
-                  <option> With options </option>
-                </select>
-              </span>
-            </p>
+            <div class="field">
+              <p class="control">
+                <input class="input is-small" type="text" placeholder="Small input">
+              </p>
+            </div>
+            <div class="field">
+              <p class="control">
+                <input class="input" type="text" placeholder="Normal input">
+              </p>
+            </div>
+            <div class="field">
+              <p class="control">
+                <input class="input is-medium" type="text" placeholder="Medium input">
+              </p>
+            </div>
+            <div class="field">
+              <p class="control">
+                <input class="input is-large" type="text" placeholder="Large input">
+              </p>
+            </div>
+            <div class="field">
+              <p class="control">
+                <span class="select is-small">
+                  <select>
+                    <option>Select dropdown</option>
+                    <option>With options</option>
+                  </select>
+                </span>
+              </p>
+            </div>
+            <div class="field">
+              <p class="control">
+                <span class="select">
+                  <select>
+                    <option>Select dropdown</option>
+                    <option>With options</option>
+                  </select>
+                </span>
+              </p>
+            </div>
+            <div class="field">
+              <p class="control">
+                <span class="select is-medium">
+                  <select>
+                    <option>Select dropdown</option>
+                    <option>With options</option>
+                  </select>
+                </span>
+              </p>
+            </div>
+            <div class="field">
+              <p class="control">
+                <span class="select is-large">
+                  <select>
+                    <option>Select dropdown</option>
+                    <option>With options</option>
+                  </select>
+                </span>
+              </p>
+            </div>
+            <div class="field">
+              <label class="label is-small">Small input</label>
+              <p class="control has-icons-left has-icons-right">
+                <input class="input is-small" type="email" placeholder="Email">
+                <span class="icon is-small is-left">
+                  <i class="fa fa-envelope"></i>
+                </span>
+                <span class="icon is-small is-right">
+                  <i class="fa fa-check"></i>
+                </span>
+              </p>
+            </div>
+            <div class="field">
+              <label class="label">Normal input</label>
+              <p class="control has-icons-left has-icons-right">
+                <input class="input" type="email" placeholder="Email">
+                <span class="icon is-small is-left">
+                  <i class="fa fa-envelope"></i>
+                </span>
+                <span class="icon is-small is-right">
+                  <i class="fa fa-check"></i>
+                </span>
+              </p>
+            </div>
+            <div class="field">
+              <p class="control has-icons-left has-icons-right">
+                <input class="input" type="email" placeholder="Email">
+                <span class="icon is-left">
+                  <i class="fa fa-envelope"></i>
+                </span>
+                <span class="icon is-right">
+                  <i class="fa fa-check"></i>
+                </span>
+              </p>
+            </div>
+            <div class="field">
+              <label class="label is-medium">Medium input</label>
+              <p class="control has-icons-left has-icons-right">
+                <input class="input is-medium" type="email" placeholder="Email">
+                <span class="icon is-small is-left">
+                  <i class="fa fa-envelope"></i>
+                </span>
+                <span class="icon is-small is-right">
+                  <i class="fa fa-check"></i>
+                </span>
+              </p>
+            </div>
+            <div class="field">
+              <p class="control has-icons-left has-icons-right">
+                <input class="input is-medium" type="email" placeholder="Email">
+                <span class="icon is-left">
+                  <i class="fa fa-envelope"></i>
+                </span>
+                <span class="icon is-right">
+                  <i class="fa fa-check"></i>
+                </span>
+              </p>
+            </div>
+            <div class="field">
+              <p class="control has-icons-left has-icons-right">
+                <input class="input is-medium" type="email" placeholder="Email">
+                <span class="icon is-medium is-left">
+                  <i class="fa fa-envelope"></i>
+                </span>
+                <span class="icon is-medium is-right">
+                  <i class="fa fa-check"></i>
+                </span>
+              </p>
+            </div>
+            <div class="field">
+              <label class="label is-large">Large input</label>
+              <p class="control has-icons-left has-icons-right">
+                <input class="input is-large" type="email" placeholder="Email">
+                <span class="icon is-small is-left">
+                  <i class="fa fa-envelope"></i>
+                </span>
+                <span class="icon is-small is-right">
+                  <i class="fa fa-check"></i>
+                </span>
+              </p>
+            </div>
+            <div class="field">
+              <p class="control has-icons-left has-icons-right">
+                <input class="input is-large" type="email" placeholder="Email">
+                <span class="icon is-left">
+                  <i class="fa fa-envelope"></i>
+                </span>
+                <span class="icon is-right">
+                  <i class="fa fa-check"></i>
+                </span>
+              </p>
+            </div>
+            <div class="field">
+              <p class="control has-icons-left has-icons-right">
+                <input class="input is-large" type="email" placeholder="Email">
+                <span class="icon is-medium is-left">
+                  <i class="fa fa-envelope"></i>
+                </span>
+                <span class="icon is-medium is-right">
+                  <i class="fa fa-check"></i>
+                </span>
+              </p>
+            </div>
+            <div class="field">
+              <p class="control has-icons-left has-icons-right">
+                <input class="input is-large" type="email" placeholder="Email">
+                <span class="icon is-large is-left">
+                  <i class="fa fa-envelope"></i>
+                </span>
+                <span class="icon is-large is-right">
+                  <i class="fa fa-check"></i>
+                </span>
+              </p>
+            </div>
             <br>
             <h4 class="subtitle"> With Font Awesome icons </h4>
             <hr>
-            <p class="control has-icon">
-              <input class="input" placeholder="Email" type="email">
-              <span class="icon is-small"> <i class="fa fa-envelope"> </i> </span>
-            </p>
-            <p class="control has-icon">
-              <input class="input" placeholder="Password" type="password">
-              <span class="icon is-small"> <i class="fa fa-lock"> </i> </span>
-            </p>
-            <p class="control">
-              <button class="button is-success"> Login </button>
-            </p>
+            <div class="field">
+              <p class="control has-icons-left">
+                <input class="input" type="email" placeholder="Email">
+                <span class="icon is-small is-left">
+                  <i class="fa fa-envelope"></i>
+                </span>
+              </p>
+            </div>
+            <div class="field">
+              <p class="control has-icons-left">
+                <input class="input" type="password" placeholder="Password">
+                <span class="icon is-small is-left">
+                  <i class="fa fa-lock"></i>
+                </span>
+              </p>
+            </div>
+            <div class="field">
+              <p class="control">
+                <button class="button is-success">
+                  Login
+                </button>
+              </p>
+            </div>
             <br>
             <h3 class="title"> Form addons </h3>
             <hr>
-            <p class="control has-addons">
-              <input class="input" placeholder="Find a repository" type="text">
-              <a class="button is-info"> Search </a>
-            </p>
-            <p class="control has-addons">
-              <span class="select">
-                <select>
-                  <option> $ </option>
-                  <option> £ </option>
-                  <option> € </option>
-                </select>
-              </span>
-              <input class="input is-expanded" placeholder="Amount of money" type="text">
-              <a class="button"> Transfer </a>
-            </p>
-            <p class="control has-addons">
-              <span class="select">
-                <select>
-                  <option> $ </option>
-                  <option> £ </option>
-                  <option> € </option>
-                </select>
-              </span>
-              <input class="input is-expanded" placeholder="Amount of money" type="text">
-              <a class="button"> Transfer </a>
-            </p>
-            <div class="control is-grouped">
-              <p class="control is-expanded">
-                <input class="input" placeholder="Find a repository" type="text">
+            <div class="field has-addons">
+              <p class="control">
+                <input class="input" type="text" placeholder="Find a repository">
               </p>
               <p class="control">
-                <a class="button is-info"> Search </a>
+                <a class="button is-info">
+                  Search
+                </a>
+              </p>
+            </div>
+            <div class="field has-addons">
+              <p class="control">
+                <span class="select">
+                  <select>
+                    <option>$</option>
+                    <option>£</option>
+                    <option>€</option>
+                  </select>
+                </span>
+              </p>
+              <p class="control">
+                <input class="input" type="text" placeholder="Amount of money">
+              </p>
+              <p class="control">
+                <a class="button">
+                  Transfer
+                </a>
+              </p>
+            </div>
+            <div class="field has-addons">
+              <p class="control">
+                <span class="select">
+                  <select>
+                    <option>$</option>
+                    <option>£</option>
+                    <option>€</option>
+                  </select>
+                </span>
+              </p>
+              <p class="control is-expanded">
+                <input class="input" type="text" placeholder="Amount of money">
+              </p>
+              <p class="control">
+                <a class="button">
+                  Transfer
+                </a>
+              </p>
+            </div>
+            <div class="field has-addons">
+              <p class="control is-expanded">
+                <span class="select is-fullwidth">
+                  <select name="country">
+                    <option value="Argentina">Argentina</option>
+                    <option value="Bolivia">Bolivia</option>
+                    <option value="Brazil">Brazil</option>
+                    <option value="Chile">Chile</option>
+                    <option value="Colombia">Colombia</option>
+                    <option value="Ecuador">Ecuador</option>
+                    <option value="Guyana">Guyana</option>
+                    <option value="Paraguay">Paraguay</option>
+                    <option value="Peru">Peru</option>
+                    <option value="Suriname">Suriname</option>
+                    <option value="Uruguay">Uruguay</option>
+                    <option value="Venezuela">Venezuela</option>
+                  </select>
+                </span>
+              </p>
+              <p class="control">
+                <button type="submit" class="button is-primary">Choose</button>
+              </p>
+            </div>
+            <div class="field is-grouped">
+              <p class="control is-expanded">
+                <input class="input" type="text" placeholder="Find a repository">
+              </p>
+              <p class="control">
+                <a class="button is-info">
+                  Search
+                </a>
               </p>
             </div>
           </div>
@@ -719,19 +1036,25 @@ permalink: /test/
         <div class="columns">
           <div class="column">
             <div class="notification">
-              <button class="delete"> </button> Lorem ipsum dolor sit amet, <a href="#">consectetur</a> adipiscing elit lorem ipsum dolor sit amet, consectetur adipiscing elit </div>
+              <button class="delete"> </button> Lorem ipsum dolor sit amet,
+              <a href="#">consectetur</a> adipiscing elit lorem ipsum dolor sit amet, consectetur adipiscing elit </div>
             <div class="notification is-primary">
-              <button class="delete"> </button> Primar lorem ipsum dolor sit amet, <a href="#">consectetur</a> adipiscing elit lorem ipsum dolor sit amet, consectetur adipiscing elit </div>
+              <button class="delete"> </button> Primar lorem ipsum dolor sit amet,
+              <a href="#">consectetur</a> adipiscing elit lorem ipsum dolor sit amet, consectetur adipiscing elit </div>
             <div class="notification is-info">
-              <button class="delete"> </button> Info lorem ipsum dolor sit amet, <a href="#">consectetur</a> adipiscing elit lorem ipsum dolor sit amet, consectetur adipiscing elit </div>
+              <button class="delete"> </button> Info lorem ipsum dolor sit amet,
+              <a href="#">consectetur</a> adipiscing elit lorem ipsum dolor sit amet, consectetur adipiscing elit </div>
           </div>
           <div class="column">
             <div class="notification is-success">
-              <button class="delete"> </button> Success lorem ipsum dolor sit amet, <a href="#">consectetur</a> adipiscing elit lorem ipsum dolor sit amet, consectetur adipiscing elit </div>
+              <button class="delete"> </button> Success lorem ipsum dolor sit amet,
+              <a href="#">consectetur</a> adipiscing elit lorem ipsum dolor sit amet, consectetur adipiscing elit </div>
             <div class="notification is-warning">
-              <button class="delete"> </button> Warning lorem ipsum dolor sit amet, <a href="#">consectetur</a> adipiscing elit lorem ipsum dolor sit amet, consectetur adipiscing elit </div>
+              <button class="delete"> </button> Warning lorem ipsum dolor sit amet,
+              <a href="#">consectetur</a> adipiscing elit lorem ipsum dolor sit amet, consectetur adipiscing elit </div>
             <div class="notification is-danger">
-              <button class="delete"> </button> Danger lorem ipsum dolor sit amet, <a href="#">consectetur</a> adipiscing elit lorem ipsum dolor sit amet, consectetur adipiscing elit </div>
+              <button class="delete"> </button> Danger lorem ipsum dolor sit amet,
+              <a href="#">consectetur</a> adipiscing elit lorem ipsum dolor sit amet, consectetur adipiscing elit </div>
           </div>
         </div>
       </section>
@@ -1413,10 +1736,16 @@ permalink: /test/
               <p class="subtitle is-5"> <strong>123</strong> posts </p>
             </div>
             <div class="level-item">
-              <p class="control has-addons">
-                <input class="input" type="text" placeholder="Find a post">
-                <button class="button"> Search </button>
-              </p>
+              <div class="field has-addons">
+                <p class="control">
+                  <input class="input" type="text" placeholder="Find a post">
+                </p>
+                <p class="control">
+                  <button class="button">
+                    Search
+                  </button>
+                </p>
+              </div>
             </div>
           </div>
           <!-- Right side -->
@@ -1550,9 +1879,11 @@ permalink: /test/
             </p>
           </figure>
           <div class="media-content">
-            <p class="control">
-              <textarea class="textarea" placeholder="Add a comment..."></textarea>
-            </p>
+            <div class="field">
+              <p class="control">
+                <textarea class="textarea" placeholder="Add a comment..."></textarea>
+              </p>
+            </div>
             <nav class="level">
               <div class="level-left">
                 <div class="level-item">
@@ -1635,12 +1966,16 @@ permalink: /test/
             </p>
           </figure>
           <div class="media-content">
-            <p class="control">
-              <textarea class="textarea" placeholder="Add a comment..."></textarea>
-            </p>
-            <p class="control">
-              <button class="button">Post comment</button>
-            </p>
+            <div class="field">
+              <p class="control">
+                <textarea class="textarea" placeholder="Add a comment..."></textarea>
+              </p>
+            </div>
+            <div class="field">
+              <p class="control">
+                <button class="button">Post comment</button>
+              </p>
+            </div>
           </div>
         </article>
       </section>
@@ -1887,16 +2222,26 @@ permalink: /test/
             <a class="nav-item"> Home </a>
             <a class="nav-item"> Documentation </a>
             <a class="nav-item"> Blog </a>
-            <span class="nav-item">
-              <a class="button">
-                <span class="icon"> <i class="fa fa-twitter"></i> </span>
-                <span>Tweet</span>
-              </a>
-              <a class="button is-primary">
-                <span class="icon"> <i class="fa fa-download"></i> </span>
-                <span>Download</span>
-              </a>
-            </span>
+            <div class="nav-item">
+              <div class="field is-grouped">
+                <p class="control">
+                  <a class="button">
+                    <span class="icon">
+                      <i class="fa fa-twitter"></i>
+                    </span>
+                    <span>Tweet</span>
+                  </a>
+                </p>
+                <p class="control">
+                  <a class="button is-primary">
+                    <span class="icon">
+                      <i class="fa fa-download"></i>
+                    </span>
+                    <span>Download</span>
+                  </a>
+                </p>
+              </div>
+            </div>
           </div>
         </nav>
         <hr>
@@ -1971,9 +2316,11 @@ permalink: /test/
           <nav class="panel">
             <p class="panel-heading"> Repositories </p>
             <div class="panel-block">
-              <p class="control has-icon">
+              <p class="control has-icons-left">
                 <input class="input is-small" type="text" placeholder="Search">
-                <span class="icon is-small"> <i class="fa fa-search"></i> </span>
+                <span class="icon is-small is-left">
+                  <i class="fa fa-search"></i>
+                </span>
               </p>
             </div>
             <p class="panel-tabs">
@@ -2250,7 +2597,7 @@ permalink: /test/
       <option value="default" selected="">Default</option>
       <option disabled>───</option>
       {% for t in site.themes %}
-        <option value="{{ t.name | slugify }}">{{ loop.index }} {{ t.name }} </option>
+      <option value="{{ t.name | slugify }}">{{ loop.index }} {{ t.name }} </option>
       {% endfor %}
     </select>
   </div>

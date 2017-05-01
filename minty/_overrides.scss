@@ -1,4 +1,4 @@
-/*! bulmaswatch v0.3.2 | MIT License */
+// Overrides
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
 
 .modal-card-title,
@@ -24,8 +24,11 @@ h6 {
 .pagination-link,
 .pagination-next,
 .pagination-previous,
+.select,
 .select select,
-.textarea {
+.textarea,
+.control.has-icons-left .icon,
+.control.has-icons-right .icon {
   height: 2.534em;
 }
 
