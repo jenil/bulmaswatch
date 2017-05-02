@@ -35,7 +35,13 @@ nav.main-nav {
             box-shadow: none;
         }
     }
+    .hero {
+        overflow: hidden !important;
+    }
     .hero-body {
+        transform: translate3d(0, 0, 0);
+        will-change: transform;
+        transition: transform ease 1ms;
         padding-bottom: 0;
         .title {
             font-weight: 200;
