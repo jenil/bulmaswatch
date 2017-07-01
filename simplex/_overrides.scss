@@ -69,6 +69,12 @@
   background-color: $primary;
   color: $white;
 
+  @media screen and (max-width: $tablet - 1) {
+    .nav-menu {
+      background-color: $primary;
+    }
+  }
+
   .subtitle,
   .title {
     color: $white-bis;

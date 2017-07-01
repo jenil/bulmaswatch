@@ -90,6 +90,14 @@ a {
   color: $grey;
   min-height: 5rem;
 
+  @media screen and (max-width: $tablet - 1) {
+    .nav-menu {
+      background-color: $primary;
+      border-radius: $radius;
+    }
+  }
+
+
   .subtitle,
   .title {
     color: $grey;

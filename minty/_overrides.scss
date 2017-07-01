@@ -114,6 +114,14 @@ h6 {
   border-radius: $radius;
   color: rgba($white, 0.6);
 
+  @media screen and (max-width: $tablet - 1) {
+    .nav-menu {
+      background-color: $primary;
+      border-radius: $radius;
+    }
+  }
+
+
   .subtitle,
   .title {
     color: rgba($white, 0.6);
@@ -141,6 +149,7 @@ h6 {
   .nav-toggle {
     &:hover {
       background-color: rgba($white, 0.1);
+      border-radius: $radius;
 
       span {
         background-color: $white;

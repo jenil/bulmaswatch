@@ -2623,6 +2623,11 @@ permalink: /test/
     $('.modal-background, .modal-close').click(function() {
       $(this).parent().removeClass('is-active');
     });
+    
+    $('.nav-toggle').click(function() {
+        $(this).toggleClass('is-active');
+        $(this).siblings('.nav-menu').toggleClass('is-active');
+    });
 
   });
   </script>

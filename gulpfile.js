@@ -43,7 +43,8 @@ gulp.task('serve', ['sass:dev', 'jekyll-build'], function() {
         ghostMode: {
             clicks: false,
             forms: false
-        }
+        },
+        reloadDelay: 500
     });
 
     gulp.watch(['*/*.scss', '!_site/**'], ['sass:dev']).on('change', function(event) {

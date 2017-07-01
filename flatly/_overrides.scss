@@ -146,6 +146,13 @@ a {
   border-radius: $radius;
   color: $white;
 
+  @media screen and (max-width: $tablet - 1) {
+    .nav-menu {
+      background-color: $primary;
+      border-radius: $radius;
+    }
+  }
+
   .subtitle,
   .title {
     color: $white;
@@ -180,6 +187,7 @@ a {
   .nav-toggle {
     &:hover {
       background-color: $button-active;
+      border-radius: $radius;
     }
 
     span {

@@ -245,6 +245,14 @@ hr {
   color: $white;
   min-height: 4rem;
 
+  @media screen and (max-width: $tablet - 1) {
+    .nav-menu {
+      background-color: $primary;
+      border-radius: $radius;
+    }
+  }
+
+
   &.has-shadow {
     box-shadow: $shadow;
   }

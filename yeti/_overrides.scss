@@ -74,6 +74,12 @@
   border-radius: $radius;
   color: rgba($white, 0.6);
 
+  @media screen and (max-width: $tablet - 1) {
+    .nav-menu {
+      background-color: $primary;
+    }
+  }
+
   .subtitle,
   .title {
     color: $white;
