@@ -64,6 +64,8 @@ a {
 }
 
 .button,
+.control.has-icons-left .icon,
+.control.has-icons-right .icon,
 .input,
 .pagination-ellipsis,
 .pagination-link,
@@ -71,9 +73,7 @@ a {
 .pagination-previous,
 .select,
 .select select,
-.textarea,
-.control.has-icons-left .icon,
-.control.has-icons-right .icon {
+.textarea {
   height: 2.5em;
 }
 
@@ -194,7 +194,6 @@ a {
 .nav {
   background-color: $primary;
   border-radius: $radius;
-
   @media screen and (max-width: $tablet - 1) {
     .nav-menu {
       background-color: $primary;
@@ -227,6 +226,36 @@ a {
 
     span {
       background-color: $white;
+    }
+  }
+}
+
+.navbar {
+  border-radius: $radius;
+
+  .navbar-dropdown {
+    .navbar-item.is-active {
+      background-color: $link-active;
+
+      &:hover {
+        background-color: $link-hover;
+      }
+    }
+  }
+
+  .navbar-burger {
+    border-radius: $radius;
+
+    &:hover {
+      background-color: $link-hover;
+    }
+
+    &.is-active {
+      background-color: $link-active;
+
+      span {
+        background-color: #fff;
+      }
     }
   }
 }
