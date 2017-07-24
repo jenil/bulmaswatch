@@ -46,6 +46,8 @@ a {
 }
 
 .button,
+.control.has-icons-left .icon,
+.control.has-icons-right .icon,
 .input,
 .pagination-ellipsis,
 .pagination-link,
@@ -53,9 +55,7 @@ a {
 .pagination-previous,
 .select,
 .select select,
-.textarea,
-.control.has-icons-left .icon,
-.control.has-icons-right .icon {
+.textarea {
   height: 2.5em;
 }
 
@@ -145,7 +145,6 @@ a {
   background-color: $primary;
   border-radius: $radius;
   color: $white;
-
   @media screen and (max-width: $tablet - 1) {
     .nav-menu {
       background-color: $primary;
@@ -192,6 +191,68 @@ a {
 
     span {
       background-color: $white;
+    }
+  }
+}
+
+.navbar {
+  strong {
+    color: $grey-lighter;
+  }
+
+  .navbar-menu {
+    box-shadow: none;
+  }
+
+  &:not(.is-transparent) .navbar-burger {
+    &:hover {
+      background-color: $button-hover;
+    }
+
+    &.is-active {
+      background-color: $button-active;
+    }
+
+    span {
+      background-color: #fff;
+    }
+  }
+
+  &.is-transparent {
+    background-color: transparent;
+
+    .navbar-item,
+    .navbar-link {
+      color: $button;
+
+      &:hover {
+        color: $turquoise;
+        background-color: transparent;
+      }
+
+      &.is-active {
+        color: $turquoise;
+        background-color: transparent;
+      }
+    }
+
+    .navbar-link:after {
+      border-color: $button;
+    }
+
+    .navbar-dropdown {
+      background-color: $white-ter;
+      border-color: $grey-lighter;
+
+      .navbar-item {
+        &:hover {
+          background-color: transparent;
+        }
+      }
+    }
+
+    .navbar-divider {
+      background-color: $grey-lighter;
     }
   }
 }
