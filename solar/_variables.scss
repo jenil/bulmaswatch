@@ -80,3 +80,18 @@ $table-row-even-background      : $grey-darker;
 $table-row-even-hover-background: lighten($grey-darker, 4);
 
 $pagination-border: $border;
+
+$navbar-background: $grey-dark;
+$navbar-item: $grey;
+$navbar-item-hover: $grey-lighter;
+$navbar-item-active: $grey-lighter;
+$navbar-item-active-background: transparent;
+$navbar-item-hover-background: transparent;
+$navbar-dropdown-border: $grey-darker;
+$navbar-divider-background: $navbar-dropdown-border;
+$navbar-dropdown-arrow: #fff;
+$navbar-dropdown-background: $grey-dark;
+$navbar-dropdown-item-hover: $grey-lighter;
+$navbar-dropdown-item-hover-background: lighten($grey-darker, 4);
+$navbar-dropdown-item-active-background: lighten($grey-darker, 4);
+$navbar-dropdown-item-active: $grey-lighter;
