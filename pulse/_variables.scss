@@ -30,3 +30,11 @@ $radius-large: 0;
 $link-hover: $primary-dark;
 $link-focus: $primary-dark;
 $link-active: $primary-dark;
+
+$navbar-background: $primary;
+$navbar-item: #fff;
+$navbar-item-hover: $navbar-item;
+$navbar-item-active: $navbar-item;
+$navbar-item-hover-background: rgba(#000, 0.2);
+$navbar-item-active-background: rgba(#000, 0.2);
+$navbar-dropdown-arrow: $navbar-item;
