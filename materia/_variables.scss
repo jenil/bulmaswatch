@@ -29,3 +29,14 @@ $button-active-border: transparent;
 $input-disabled-background: transparent;
 
 $border-width: 2px;
+
+$navbar-height: 4rem;
+$navbar-background: $primary;
+$navbar-item: #fff;
+$navbar-item-hover: #fff;
+$navbar-item-active: #fff;
+$navbar-dropdown-arrow: $navbar-item;
+$navbar-item-active-background: $link-hover;
+$navbar-item-hover-background: $link-hover;
+$navbar-dropdown-item-active: #fff;
+$navbar-dropdown-item-active-background: $link-hover;
