@@ -16,3 +16,19 @@ $body-size: 14px;
 
 $radius: 0;
 $radius-small: $radius;
+
+$navbar-height: 5rem;
+$navbar-background: $primary;
+$navbar-item: $grey;
+$navbar-item-hover: #fff;
+$navbar-item-active: #fff;
+$navbar-item-hover-background: transparent;
+$navbar-item-active-background: transparent;
+$navbar-dropdown-arrow: #fff;
+$navbar-dropdown-background: $primary;
+$navbar-dropdown-border: lighten($primary, 10);
+$navbar-divider-background: lighten($primary, 10);
+$navbar-dropdown-item-active: #fff;
+$navbar-dropdown-item-hover: $grey-lighter;
+$navbar-dropdown-item-hover-background: transparent;
+$navbar-dropdown-item-active-background: transparent;

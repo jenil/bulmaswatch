@@ -60,3 +60,16 @@ $table-row-even-hover-background: lighten($grey-darker, 4);
 $pagination-border: $border;
 
 $nav-height: 4rem;
+
+$navbar-height: 4rem;
+$navbar-background: $background;
+$navbar-item: rgba($link, 0.5);
+$navbar-item-hover: $link;
+$navbar-item-active: $link;
+$navbar-item-hover-background: darken($grey-dark, 5);
+$navbar-item-active-background: darken($grey-dark, 5);
+$navbar-dropdown-background: $background;
+$navbar-dropdown-item-hover: $link;
+$navbar-dropdown-item-active: $link;
+$navbar-dropdown-item-hover-background: darken($grey-dark, 5);
+$navbar-dropdown-item-active-background: darken($grey-dark, 5);

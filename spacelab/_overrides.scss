@@ -48,7 +48,7 @@
   border-radius: $radius-large;
 }
 
-.nav {
+.nav, .navbar {
   @include btn-shadow($light);
 }
 

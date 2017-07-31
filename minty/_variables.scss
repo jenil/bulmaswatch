@@ -29,3 +29,10 @@ $radius: 6px;
 $radius-large: 8px;
 
 $family-heading: "Montserrat", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+$navbar-background: $primary;
+$navbar-item: rgba(#fff, 0.6);
+$navbar-item-hover: #fff;
+$navbar-item-active: #fff;
+$navbar-item-hover-background: rgba(#000, 0.1);
+$navbar-dropdown-arrow: $navbar-item;

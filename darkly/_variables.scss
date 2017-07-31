@@ -75,3 +75,15 @@ $table-row-even-hover-background: lighten($grey-darker, 4);
 $pagination-border: $border;
 
 $nav-height: 4rem;
+$navbar-height: 4rem;
+
+$navbar-background: $primary;
+$navbar-item: $text;
+$navbar-item-hover: $text;
+$navbar-item-hover-background: $link-hover;
+$navbar-dropdown-arrow: #fff;
+$navbar-dropdown-background: $primary;
+$navbar-dropdown-item-hover: $text;
+$navbar-dropdown-item-hover-background: $link-hover;
+$navbar-dropdown-item-active-background: $link-active;
+$navbar-dropdown-item-active: $grey-dark;

@@ -22,6 +22,14 @@ $family-heading: "Raleway", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans
 
 $body-size: 15px;
 
-// $size-normal: 1.1rem;
-
 $family-serif: Georgia, Cambria, "Times New Roman", Times, serif;
+
+$navbar-height: 5rem;
+$navbar-item-hover: $primary;
+$navbar-item-hover-background: transparent;
+$navbar-item-active: $primary;
+$navbar-item-active-background: transparent;
+
+$navbar-dropdown-item-hover: $primary;
+$navbar-dropdown-item-hover-background: transparent;
+$navbar-dropdown-item-active-background: transparent;

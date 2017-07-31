@@ -46,3 +46,19 @@ $button-focus: darken($primary, 5); // primary-dark
 $button-active: darken($primary, 5); // primary-dark
 
 $nav-height: 4rem;
+
+$navbar-height: 4rem;
+$navbar-background: $primary;
+$navbar-item: $white-ter;
+$navbar-item-hover: $white-ter;
+$navbar-item-active: $white-ter;
+$navbar-item-active-background: $button-active;
+$navbar-item-hover-background: $button-hover;
+$navbar-dropdown-border: $button-hover;
+$navbar-divider-background: $navbar-dropdown-border;
+$navbar-dropdown-arrow: #fff;
+$navbar-dropdown-background: $primary;
+$navbar-dropdown-item-hover: $white-ter;
+$navbar-dropdown-item-hover-background: $button-hover;
+$navbar-dropdown-item-active-background: $button-active;
+$navbar-dropdown-item-active: $turquoise;

@@ -21,6 +21,8 @@
 }
 
 .button,
+.control.has-icons-left .icon,
+.control.has-icons-right .icon,
 .input,
 .pagination-ellipsis,
 .pagination-link,
@@ -28,9 +30,7 @@
 .pagination-previous,
 .select,
 .select select,
-.textarea,
-.control.has-icons-left .icon,
-.control.has-icons-right .icon {
+.textarea {
   height: 2.375em;
 }
 
@@ -66,7 +66,6 @@
   background-color: $primary;
   @include btn-shadow($primary);
   color: $white;
-
   @media screen and (max-width: $tablet - 1) {
     .nav-menu {
       background-color: $primary;
@@ -112,6 +111,45 @@
 
     span {
       background-color: $white-bis;
+    }
+  }
+}
+
+.navbar:not(.is-transparent) {
+  @include btn-shadow($primary);
+
+  .navbar-item,
+  .navbar-link {
+    color: $white;
+
+    &.has-dropdown:hover .navbar-link,
+    &:hover {
+      background-color: rgba(#000, 0.05);
+    }
+
+    &.is-active,
+    &:active {
+      background-color: rgba(#000, 0.1);
+    }
+  }
+
+  .navbar-burger:hover {
+    background-color: rgba(#000, 0.05);
+  }
+
+  .navbar-link::after {
+    border-color: $white;
+  }
+
+  @include desktop {
+    .navbar-dropdown .navbar-item {
+      color: $grey-dark;
+    }
+  }
+
+  .navbar-burger {
+    span {
+      background-color: $white;
     }
   }
 }

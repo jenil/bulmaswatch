@@ -6,6 +6,8 @@ hr {
 }
 
 .button,
+.control.has-icons-left .icon,
+.control.has-icons-right .icon,
 .input,
 .pagination-ellipsis,
 .pagination-link,
@@ -13,9 +15,7 @@ hr {
 .pagination-previous,
 .select,
 .select select,
-.textarea,
-.control.has-icons-left .icon,
-.control.has-icons-right .icon {
+.textarea {
   height: 2.5em;
 }
 
@@ -239,19 +239,39 @@ hr {
   }
 }
 
+.navbar {
+  &:not(.is-transparent) {
+    box-shadow: $shadow;
+  }
+
+  .has-dropdown .navbar-item {
+    @include desktop {
+      color: $text;
+    }
+  }
+
+  .navbar-burger {
+    span {
+      background-color: $white;
+    }
+
+    &:hover {
+      background-color: $link-hover;
+    }
+  }
+}
+
 .nav {
   background-color: $primary;
   border-radius: $radius;
   color: $white;
   min-height: 4rem;
-
   @media screen and (max-width: $tablet - 1) {
     .nav-menu {
       background-color: $primary;
       border-radius: $radius;
     }
   }
-
 
   &.has-shadow {
     box-shadow: $shadow;

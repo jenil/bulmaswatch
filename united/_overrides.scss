@@ -58,6 +58,18 @@
   }
 }
 
+.navbar {
+  .navbar-dropdown .navbar-item {
+    @include desktop {
+      color: $text;
+
+      &.is-active {
+        background-color: $navbar-dropdown-item-hover-background;
+      }
+    }
+  }
+}
+
 .nav {
   background-color: $primary;
   border-radius: $radius;

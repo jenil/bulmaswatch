@@ -2,6 +2,8 @@
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700);
 
 .button,
+.control.has-icons-left .icon,
+.control.has-icons-right .icon,
 .input,
 .pagination-ellipsis,
 .pagination-link,
@@ -9,9 +11,7 @@
 .pagination-previous,
 .select,
 .select select,
-.textarea,
-.control.has-icons-left .icon,
-.control.has-icons-right .icon {
+.textarea {
   height: 2.6667em;
 }
 
@@ -80,7 +80,6 @@
   background-color: $black-ter;
   border-radius: $radius;
   color: $white;
-
   @media screen and (max-width: $tablet - 1) {
     .nav-menu {
       background-color: $black-ter;
@@ -119,6 +118,58 @@
     span {
       background-color: $white;
     }
+  }
+}
+
+.navbar:not(.is-transparent) {
+  background-color: $black-ter;
+
+  .navbar-item,
+  .navbar-link {
+    color: $white;
+
+    &.has-dropdown:hover .navbar-link,
+    &:hover {
+      background-color: rgba($white, 0.05);
+    }
+
+    &.is-active,
+    &:active {
+      background-color: rgba($white, 0.05);
+      color: $primary;
+    }
+  }
+
+  .navbar-burger:hover {
+    background-color: $button-hover;
+  }
+
+  .navbar-link::after {
+    border-color: $white;
+  }
+  @include desktop {
+    .navbar-dropdown .navbar-item {
+      color: $grey-dark;
+
+      &:hover {
+        background-color: rgba($black-ter, 0.05);
+      }
+
+      &.is-active,
+      &:active {
+        color: $primary;
+      }
+    }
+  }
+
+  .navbar-burger {
+    span {
+      background-color: $white;
+    }
+  }
+
+  strong {
+    color: $white-ter;
   }
 }
 
