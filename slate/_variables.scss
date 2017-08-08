@@ -73,3 +73,6 @@ $navbar-dropdown-item-hover: $link;
 $navbar-dropdown-item-active: $link;
 $navbar-dropdown-item-hover-background: darken($grey-dark, 5);
 $navbar-dropdown-item-active-background: darken($grey-dark, 5);
+
+$dropdown-content-background: $background;
+$dropdown-item: $text;

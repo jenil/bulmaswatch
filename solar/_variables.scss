@@ -95,3 +95,6 @@ $navbar-dropdown-item-hover: $grey-lighter;
 $navbar-dropdown-item-hover-background: lighten($grey-darker, 4);
 $navbar-dropdown-item-active-background: lighten($grey-darker, 4);
 $navbar-dropdown-item-active: $grey-lighter;
+
+$dropdown-content-background: $background;
+$dropdown-item: $text;
