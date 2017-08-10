@@ -59,7 +59,7 @@ $link-focus-border: $grey-light;
 $link-active      : darken($grey-light, 5);
 
 $button           : $grey;
-$button-background: $background;
+$button-background-color: $background;
 $button-border    : $grey;
 
 $input                    : $grey;
@@ -92,7 +92,7 @@ $navbar-divider-background: $navbar-dropdown-border;
 $navbar-dropdown-arrow: #fff;
 $navbar-dropdown-background: $grey-dark;
 $navbar-dropdown-item-hover: $grey-lighter;
-$navbar-dropdown-item-hover-background: lighten($grey-darker, 4);
+$navbar-dropdown-item-hover-background-color: lighten($grey-darker, 4);
 $navbar-dropdown-item-active-background: lighten($grey-darker, 4);
 $navbar-dropdown-item-active: $grey-lighter;
 

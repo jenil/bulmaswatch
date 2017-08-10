@@ -27,8 +27,8 @@ $radius-large: 0;
 
 $subtitle: $grey;
 
-$button-background: $grey-lighter;
-$button-border: darken($button-background, 5);
+$button-background-color: $grey-lighter;
+$button-border: darken($button-background-color, 5);
 
 $navbar-background: $primary;
 $navbar-item: rgba(#fff, 0.6);

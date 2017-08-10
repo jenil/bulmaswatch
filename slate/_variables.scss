@@ -22,8 +22,8 @@ $size-7: 0.85rem;
 
 $body-background: $grey-darker;
 $background: $grey-dark;
-$button-background: $background;
-$button-border: lighten($button-background, 15);
+$button-background-color: $background;
+$button-border: lighten($button-background-color, 15);
 
 $title: #aaa;
 $subtitle: $grey-light;
@@ -71,7 +71,7 @@ $navbar-item-active-background: darken($grey-dark, 5);
 $navbar-dropdown-background: $background;
 $navbar-dropdown-item-hover: $link;
 $navbar-dropdown-item-active: $link;
-$navbar-dropdown-item-hover-background: darken($grey-dark, 5);
+$navbar-dropdown-item-hover-background-color: darken($grey-dark, 5);
 $navbar-dropdown-item-active-background: darken($grey-dark, 5);
 
 $dropdown-content-background: $background;
