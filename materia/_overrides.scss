@@ -39,7 +39,7 @@ hr {
 
   &.is-hovered,
   &:hover {
-    background-color: darken($button-background, 5);
+    background-color: darken($button-background-color, 5);
   }
 
   &.is-active,
@@ -109,7 +109,7 @@ hr {
   &.is-focused,
   &:active,
   &:focus {
-    box-shadow: inset 0 -2px 0 $input-focus-border;
+    box-shadow: inset 0 -2px 0 $input-focus-border-color;
   }
   @each $name, $pair in $colors {
     $color: nth($pair, 1);
@@ -148,7 +148,7 @@ hr {
   &.is-focused,
   &:active,
   &:focus {
-    box-shadow: inset 0 -2px 0 $input-focus-border;
+    box-shadow: inset 0 -2px 0 $input-focus-border-color;
   }
 }
 

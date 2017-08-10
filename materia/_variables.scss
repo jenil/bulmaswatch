@@ -11,7 +11,7 @@ $red: #F44336;
 $primary: #2196F3 !default;
 
 $link-hover: darken($primary, 10);
-$button-hover: #363636;
+$button-hover-color: #363636;
 
 $family-sans-serif: "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 $title-weight: 400;
@@ -23,8 +23,8 @@ $shadow-large: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 
 
 $button-border: transparent;
 $button-hover-border: transparent;
-$button-focus-border: transparent;
-$button-active-border: transparent;
+$button-focus-border-color: transparent;
+$button-active-border-color: transparent;
 
 $input-disabled-background: transparent;
 

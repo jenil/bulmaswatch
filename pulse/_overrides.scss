@@ -74,7 +74,7 @@
       color: $text;
 
       &.is-active {
-        background-color: $navbar-dropdown-item-hover-background;
+        background-color: $navbar-dropdown-item-hover-background-color;
       }
     }
   }
@@ -131,7 +131,7 @@
 
   .nav-toggle {
     &:hover {
-      background-color: $button-active;
+      background-color: $button-active-color;
     }
 
     span {

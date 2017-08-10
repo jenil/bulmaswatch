@@ -41,9 +41,9 @@ $link-focus: darken($link, 10);
 $link-active: darken($link, 10);
 
 $button: $primary; // primary-darker
-$button-hover: darken($primary, 5); // primary-dark
+$button-hover-color: darken($primary, 5); // primary-dark
 $button-focus: darken($primary, 5); // primary-dark
-$button-active: darken($primary, 5); // primary-dark
+$button-active-color: darken($primary, 5); // primary-dark
 
 $nav-height: 4rem;
 
@@ -52,13 +52,13 @@ $navbar-background: $primary;
 $navbar-item: $white-ter;
 $navbar-item-hover: $white-ter;
 $navbar-item-active: $white-ter;
-$navbar-item-active-background: $button-active;
-$navbar-item-hover-background: $button-hover;
-$navbar-dropdown-border: $button-hover;
+$navbar-item-active-background: $button-active-color;
+$navbar-item-hover-background: $button-hover-color;
+$navbar-dropdown-border: $button-hover-color;
 $navbar-divider-background: $navbar-dropdown-border;
 $navbar-dropdown-arrow: #fff;
 $navbar-dropdown-background: $primary;
 $navbar-dropdown-item-hover: $white-ter;
-$navbar-dropdown-item-hover-background: $button-hover;
-$navbar-dropdown-item-active-background: $button-active;
+$navbar-dropdown-item-hover-background-color: $button-hover-color;
+$navbar-dropdown-item-active-background: $button-active-color;
 $navbar-dropdown-item-active: $turquoise;

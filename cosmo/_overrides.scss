@@ -96,7 +96,7 @@
     color: $white;
 
     &:hover {
-      background-color: $button-hover;
+      background-color: $button-hover-color;
       color: $white-bis;
     }
     // Modifiers
@@ -112,7 +112,7 @@
 
   .nav-toggle {
     &:hover {
-      background-color: $button-active;
+      background-color: $button-active-color;
     }
 
     span {
@@ -141,7 +141,7 @@
   }
 
   .navbar-burger:hover {
-    background-color: $button-hover;
+    background-color: $button-hover-color;
   }
 
   .navbar-link::after {

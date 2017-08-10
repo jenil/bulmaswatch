@@ -37,8 +37,8 @@ $body-background: darken($grey-darker, 4);
 $body-size: 15px;
 
 $background: $grey-darker;
-$button-background: $background;
-$button-border: lighten($button-background, 15);
+$button-background-color: $background;
+$button-border: lighten($button-background-color, 15);
 
 $title: #fff;
 $subtitle: $grey-light;
@@ -55,9 +55,9 @@ $link-active: darken($link, 5);
 $link-focus-border: $grey-light;
 
 $button: $primary;
-$button-hover: darken($text, 5); // text-dark
+$button-hover-color: darken($text, 5); // text-dark
 $button-focus: darken($text, 5); // text-dark
-$button-active: darken($text, 5); // text-dark
+$button-active-color: darken($text, 5); // text-dark
 
 $input-hover: $grey-light;
 $input-disabled-background: $grey-lighter;
@@ -84,7 +84,7 @@ $navbar-item-hover-background: $link-hover;
 $navbar-dropdown-arrow: #fff;
 $navbar-dropdown-background: $primary;
 $navbar-dropdown-item-hover: $text;
-$navbar-dropdown-item-hover-background: $link-hover;
+$navbar-dropdown-item-hover-background-color: $link-hover;
 $navbar-dropdown-item-active-background: $link-active;
 $navbar-dropdown-item-active: $grey-dark;
 

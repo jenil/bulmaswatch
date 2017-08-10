@@ -16,7 +16,7 @@
 .button {
   &.is-hovered,
   &:hover {
-    background-color: darken($button-background, 3%);
+    background-color: darken($button-background-color, 3%);
   }
   @each $name, $pair in $colors {
     $color: nth($pair, 1);

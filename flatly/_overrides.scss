@@ -27,7 +27,7 @@ a {
   &.is-focused,
   &:active,
   &:focus {
-    box-shadow: 0 0 0 2px rgba($button-focus-border, 0.25);
+    box-shadow: 0 0 0 2px rgba($button-focus-border-color, 0.25);
   }
   @each $name, $pair in $colors {
     $color: nth($pair, 1);
@@ -160,7 +160,7 @@ a {
   .nav-item a,
   a.nav-item {
     &:hover {
-      color: $button-hover;
+      color: $button-hover-color;
     }
   }
 
@@ -169,13 +169,13 @@ a {
     color: $white;
 
     &:hover {
-      background-color: $button-hover;
+      background-color: $button-hover-color;
       color: $turquoise;
     }
     // Modifiers
     &.is-active {
       color: $white;
-      background-color: $button-active;
+      background-color: $button-active-color;
 
       &.is-tab {
         border-bottom-color: $turquoise;
@@ -185,7 +185,7 @@ a {
 
   .nav-toggle {
     &:hover {
-      background-color: $button-active;
+      background-color: $button-active-color;
       border-radius: $radius;
     }
 
@@ -206,11 +206,11 @@ a {
 
   &:not(.is-transparent) .navbar-burger {
     &:hover {
-      background-color: $button-hover;
+      background-color: $button-hover-color;
     }
 
     &.is-active {
-      background-color: $button-active;
+      background-color: $button-active-color;
     }
 
     span {
@@ -291,10 +291,10 @@ body > .nav {
 
 .panel-block {
   &:hover {
-    color: $button-hover;
+    color: $button-hover-color;
 
     .panel-icon {
-      color: $button-hover;
+      color: $button-hover-color;
     }
   }
 }
