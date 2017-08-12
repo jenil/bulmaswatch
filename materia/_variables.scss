@@ -21,25 +21,25 @@ $radius: 0;
 $shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
 $shadow-large: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
 
-$button-border: transparent;
+$button-border-color: transparent;
 $button-hover-border: transparent;
 $button-focus-border-color: transparent;
 $button-active-border-color: transparent;
 
-$input-disabled-background: transparent;
+$input-disabled-background-color: transparent;
 
 $border-width: 2px;
 
 $navbar-height: 4rem;
-$navbar-background: $primary;
+$navbar-background-color: $primary;
 $navbar-item: #fff;
 $navbar-item-hover: #fff;
 $navbar-item-active: #fff;
 $navbar-dropdown-arrow: $navbar-item;
-$navbar-item-active-background: $link-hover;
-$navbar-item-hover-background: $link-hover;
+$navbar-item-active-background-color: $link-hover;
+$navbar-item-hover-background-color: $link-hover;
 $navbar-dropdown-item-active: #fff;
-$navbar-dropdown-item-active-background: $link-hover;
+$navbar-dropdown-item-active-background-color: $link-hover;
 
 $dropdown-content-shadow: $shadow-large;
 $dropdown-content-radius: 4px;

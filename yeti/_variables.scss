@@ -25,14 +25,14 @@ $radius: 0;
 $radius-small: 0;
 $radius-large: 0;
 
-$subtitle: $grey;
+$subtitle-color: $grey;
 
 $button-background-color: $grey-lighter;
-$button-border: darken($button-background-color, 5);
+$button-border-color: darken($button-background-color, 5);
 
-$navbar-background: $primary;
+$navbar-background-color: $primary;
 $navbar-item: rgba(#fff, 0.6);
 $navbar-item-hover: #fff;
 $navbar-item-active: #fff;
-$navbar-item-hover-background: rgba(#000, 0.1);
+$navbar-item-hover-background-color: rgba(#000, 0.1);
 $navbar-dropdown-arrow: $navbar-item;

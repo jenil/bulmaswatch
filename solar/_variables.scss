@@ -35,16 +35,16 @@ $size-7: .85em;
 
 $title-weight: 500;
 $subtitle-weight: 400;
-$subtitle: $grey-dark;
+$subtitle-color: $grey-dark;
 
 $border-width: 2px;
 $border: $grey-dark;
 
-$body-background: $grey-darker;
+$body-background-color: $grey-darker;
 $background: $grey-dark;
 
-$title: $grey;
-$subtitle: $grey-alt;
+$title-color: $grey;
+$subtitle-color: $grey-alt;
 $subtitle-strong: $grey-light;
 
 $text       : $grey;
@@ -67,7 +67,7 @@ $input-icon               : darken($grey-light, 5);
 $input-background         : $grey-lighter;
 $input-border             : darken($grey-light, 5);
 $input-hover              : $grey-light;
-$input-disabled-background: $grey-dark;
+$input-disabled-background-color: $grey-dark;
 $input-disabled-border    : $grey-dark;
 
 $table            : $text;
@@ -77,24 +77,24 @@ $table-border     : $grey;
 
 $table-row-hover-background     : $grey-darker;
 $table-row-even-background      : $grey-darker;
-$table-row-even-hover-background: lighten($grey-darker, 4);
+$table-striped-row-even-hover-background-color: lighten($grey-darker, 4);
 
-$pagination-border: $border;
+$pagination-border-color: $border;
 
-$navbar-background: $grey-dark;
+$navbar-background-color: $grey-dark;
 $navbar-item: $grey;
 $navbar-item-hover: $grey-lighter;
 $navbar-item-active: $grey-lighter;
-$navbar-item-active-background: transparent;
-$navbar-item-hover-background: transparent;
+$navbar-item-active-background-color: transparent;
+$navbar-item-hover-background-color: transparent;
 $navbar-dropdown-border: $grey-darker;
-$navbar-divider-background: $navbar-dropdown-border;
+$navbar-divider-background-color: $navbar-dropdown-border;
 $navbar-dropdown-arrow: #fff;
-$navbar-dropdown-background: $grey-dark;
+$navbar-dropdown-background-color: $grey-dark;
 $navbar-dropdown-item-hover: $grey-lighter;
 $navbar-dropdown-item-hover-background-color: lighten($grey-darker, 4);
-$navbar-dropdown-item-active-background: lighten($grey-darker, 4);
+$navbar-dropdown-item-active-background-color: lighten($grey-darker, 4);
 $navbar-dropdown-item-active: $grey-lighter;
 
-$dropdown-content-background: $background;
-$dropdown-item: $text;
+$dropdown-content-background-color: $background;
+$dropdown-item-color: $text;

@@ -16,7 +16,7 @@ $red:          #d9534f;
 $primary: #4582EC !default;
 $danger: $orange;
 
-$subtitle: $grey;
+$subtitle-color: $grey;
 
 $family-heading: "Raleway", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 
@@ -26,10 +26,10 @@ $family-serif: Georgia, Cambria, "Times New Roman", Times, serif;
 
 $navbar-height: 5rem;
 $navbar-item-hover: $primary;
-$navbar-item-hover-background: transparent;
+$navbar-item-hover-background-color: transparent;
 $navbar-item-active: $primary;
-$navbar-item-active-background: transparent;
+$navbar-item-active-background-color: transparent;
 
 $navbar-dropdown-item-hover: $primary;
 $navbar-dropdown-item-hover-background-color: transparent;
-$navbar-dropdown-item-active-background: transparent;
+$navbar-dropdown-item-active-background-color: transparent;

@@ -43,7 +43,7 @@ a {
   }
 
   &.is-loading:after {
-    border-color: transparent transparent $button-border $button-border;
+    border-color: transparent transparent $button-border $button-border-color;
   }
   @each $name, $pair in $colors {
     $color: nth($pair, 1);
@@ -121,9 +121,9 @@ a {
 }
 
 .card {
-  $card-border: lighten($grey-darker, 5);
+  $card-border-color: lighten($grey-darker, 5);
   box-shadow: none;
-  border: $border-width solid $card-border;
+  border: $border-width solid $card-border-color;
   background-color: $grey-darker;
   border-radius: $radius;
 
@@ -146,7 +146,7 @@ a {
   .card-footer,
   .card-footer-item {
     border-width: $border-width;
-    border-color: $card-border;
+    border-color: $card-border-color;
   }
 }
 

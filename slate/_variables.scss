@@ -20,13 +20,13 @@ $border: $grey;
 
 $size-7: 0.85rem;
 
-$body-background: $grey-darker;
+$body-background-color: $grey-darker;
 $background: $grey-dark;
 $button-background-color: $background;
-$button-border: lighten($button-background-color, 15);
+$button-border-color: lighten($button-background-color, 15);
 
-$title: #aaa;
-$subtitle: $grey-light;
+$title-color: #aaa;
+$subtitle-color: $grey-light;
 $subtitle-strong: $grey-light;
 
 $text: #aaa;
@@ -41,38 +41,38 @@ $link-active: darken($link, 15);
 $link-focus-border: darken($link, 5);
 $link-active-border: $link-focus-border;
 
-$button: #fafafa;
+$button-color: #fafafa;
 
 $input-hover: $grey-light;
-$input-disabled-background: $grey-lighter;
+$input-disabled-background-color: $grey-lighter;
 $input-disabled-border: $grey-lighter;
 $input-arrow: $primary;
 
-$table: $text;
+$table-color: $text;
 $table-head: $grey-lighter;
-$table-background: $grey-dark;
-$table-border: $grey;
+$table-background-color: $grey-dark;
+$table-cell-border: 1px solid $grey;
 
-$table-row-hover-background: $grey-darker;
-$table-row-even-background: $grey-darker;
-$table-row-even-hover-background: lighten($grey-darker, 4);
+$table-row-hover-background-color: $grey-darker;
+$table-striped-row-even-background-color: $grey-darker;
+$table-striped-row-even-hover-background-color: lighten($grey-darker, 4);
 
-$pagination-border: $border;
+$pagination-border-color: $border;
 
 $nav-height: 4rem;
 
 $navbar-height: 4rem;
-$navbar-background: $background;
+$navbar-background-color: $background;
 $navbar-item: rgba($link, 0.5);
 $navbar-item-hover: $link;
 $navbar-item-active: $link;
-$navbar-item-hover-background: darken($grey-dark, 5);
-$navbar-item-active-background: darken($grey-dark, 5);
-$navbar-dropdown-background: $background;
+$navbar-item-hover-background-color: darken($grey-dark, 5);
+$navbar-item-active-background-color: darken($grey-dark, 5);
+$navbar-dropdown-background-color: $background;
 $navbar-dropdown-item-hover: $link;
 $navbar-dropdown-item-active: $link;
 $navbar-dropdown-item-hover-background-color: darken($grey-dark, 5);
-$navbar-dropdown-item-active-background: darken($grey-dark, 5);
+$navbar-dropdown-item-active-background-color: darken($grey-dark, 5);
 
-$dropdown-content-background: $background;
-$dropdown-item: $text;
+$dropdown-content-background-color: $background;
+$dropdown-item-color: $text;

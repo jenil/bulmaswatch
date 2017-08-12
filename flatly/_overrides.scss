@@ -223,7 +223,7 @@ a {
 
     .navbar-item,
     .navbar-link {
-      color: $button;
+      color: $button-color;
 
       &:hover {
         color: $turquoise;
@@ -237,7 +237,7 @@ a {
     }
 
     .navbar-link:after {
-      border-color: $button;
+      border-color: $button-color;
     }
 
     .navbar-dropdown {

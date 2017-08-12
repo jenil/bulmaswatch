@@ -12,13 +12,13 @@ $primary-light: lighten($primary, 10);
 
 $white-ter:    #f5f5f5;
 
-$body-background: #000;
+$body-background-color: #000;
 $background: $grey-darker;
 
 $border: $grey-dark;
 
-$title: #fff;
-$subtitle: $white-ter;
+$title-color: #fff;
+$subtitle-color: $white-ter;
 $subtitle-strong: $white-ter;
 
 $text: #fff;
@@ -31,25 +31,25 @@ $link-active: $primary-light;
 $link-hover-border: $grey-dark;
 $link-active-border: $grey;
 
-$button: $text;
+$button-color: $text;
 $button-background-color: #111;
-$button-border: $grey-darker;
+$button-border-color: $grey-darker;
 $button-hover-color: $grey-lighter;
 $button-focus: $grey-light;
 $button-active-color: $grey-light;
 
-$table: $text;
+$table-color: $text;
 $table-head: $grey-lighter;
-$table-background: $grey-darker;
-$table-border: $grey-dark;
+$table-background-color: $grey-darker;
+$table-cell-border: 1px solid $grey-dark;
 
-$table-row-hover-background: $grey-dark;
-$table-row-even-background: $grey-dark;
-$table-row-even-hover-background: lighten($grey-dark, 4);
+$table-row-hover-background-color: $grey-dark;
+$table-striped-row-even-background-color: $grey-dark;
+$table-striped-row-even-hover-background-color: lighten($grey-dark, 4);
 
-$pagination-border: $grey-darker;
+$pagination-border-color: $grey-darker;
 $pagination-disabled: $grey-light;
-$pagination-disabled-background: $grey-dark;
+$pagination-disabled-background-color: $grey-dark;
 
-$dropdown-content-background: $background;
-$dropdown-item: $text;
+$dropdown-content-background-color: $background;
+$dropdown-item-color: $text;

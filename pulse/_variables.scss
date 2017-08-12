@@ -21,7 +21,7 @@ $background: lighten($primary, 50);
 $family-sans-serif: 'Muli', "Helvetica Neue", Arial, sans-serif;
 $body-size: 14px;
 
-$subtitle: $primary-dark;
+$subtitle-color: $primary-dark;
 
 $radius: 0;
 $radius-small: 0;
@@ -31,10 +31,10 @@ $link-hover: $primary-dark;
 $link-focus: $primary-dark;
 $link-active: $primary-dark;
 
-$navbar-background: $primary;
+$navbar-background-color: $primary;
 $navbar-item: #fff;
 $navbar-item-hover: $navbar-item;
 $navbar-item-active: $navbar-item;
-$navbar-item-hover-background: rgba(#000, 0.2);
-$navbar-item-active-background: rgba(#000, 0.2);
+$navbar-item-hover-background-color: rgba(#000, 0.2);
+$navbar-item-active-background-color: rgba(#000, 0.2);
 $navbar-dropdown-arrow: $navbar-item;

@@ -9,7 +9,7 @@
 }
 
 .section {
-  background-color: $body-background;
+  background-color: $body-background-color;
 }
 
 .hero {
@@ -223,6 +223,6 @@
 
 .modal {
   .modal-card-body {
-    background-color: $body-background;
+    background-color: $body-background-color;
   }
 }

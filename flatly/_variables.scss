@@ -25,7 +25,7 @@ $radius-large: 8px;
 $size-7: .85em;
 $title-weight: 500;
 $subtitle-weight: 400;
-$subtitle: darken($grey, 20);
+$subtitle-color: darken($grey, 20);
 
 $border-width: 2px;
 
@@ -40,7 +40,7 @@ $link-hover: darken($link, 10);
 $link-focus: darken($link, 10);
 $link-active: darken($link, 10);
 
-$button: $primary; // primary-darker
+$button-color: $primary; // primary-darker
 $button-hover-color: darken($primary, 5); // primary-dark
 $button-focus: darken($primary, 5); // primary-dark
 $button-active-color: darken($primary, 5); // primary-dark
@@ -48,17 +48,17 @@ $button-active-color: darken($primary, 5); // primary-dark
 $nav-height: 4rem;
 
 $navbar-height: 4rem;
-$navbar-background: $primary;
+$navbar-background-color: $primary;
 $navbar-item: $white-ter;
 $navbar-item-hover: $white-ter;
 $navbar-item-active: $white-ter;
-$navbar-item-active-background: $button-active-color;
-$navbar-item-hover-background: $button-hover-color;
+$navbar-item-active-background-color: $button-active-color;
+$navbar-item-hover-background-color: $button-hover-color;
 $navbar-dropdown-border: $button-hover-color;
-$navbar-divider-background: $navbar-dropdown-border;
+$navbar-divider-background-color: $navbar-dropdown-border;
 $navbar-dropdown-arrow: #fff;
-$navbar-dropdown-background: $primary;
+$navbar-dropdown-background-color: $primary;
 $navbar-dropdown-item-hover: $white-ter;
 $navbar-dropdown-item-hover-background-color: $button-hover-color;
-$navbar-dropdown-item-active-background: $button-active-color;
+$navbar-dropdown-item-active-background-color: $button-active-color;
 $navbar-dropdown-item-active: $turquoise;
