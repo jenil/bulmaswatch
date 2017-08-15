@@ -45,7 +45,7 @@ $background: $grey-dark;
 
 $title-color: $grey;
 $subtitle-color: $grey-alt;
-$subtitle-strong: $grey-light;
+$subtitle-strong-color: $grey-light;
 
 $text       : $grey;
 $text-light : lighten($text, 10);
@@ -54,47 +54,47 @@ $text-strong: darken($text, 5);
 $link             : $primary;
 $link-hover       : $grey-light;
 $link-hover-border: $grey-light;
-$link-focus       : darken($grey-light, 5);
+$link-focus       : darken($grey-light, 10);
 $link-focus-border: $grey-light;
-$link-active      : darken($grey-light, 5);
+$link-active      : darken($grey-light, 10);
 
-$button           : $grey;
+$button-color: $grey;
 $button-background-color: $background;
-$button-border    : $grey;
+$button-border-color: $grey;
 
-$input                    : $grey;
-$input-icon               : darken($grey-light, 5);
-$input-background         : $grey-lighter;
-$input-border             : darken($grey-light, 5);
-$input-hover              : $grey-light;
+$input-color: $grey;
+$input-icon-color: darken($grey-light, 10);
+$input-background-color: $grey-lighter;
+$input-border-color: darken($grey-light, 10);
+$input-hover-color: $grey-light;
 $input-disabled-background-color: $grey-dark;
-$input-disabled-border    : $grey-dark;
+$input-disabled-border-color: $grey-dark;
 
-$table            : $text;
-$table-head       : $grey-lighter;
-$table-background : $grey-dark;
-$table-border     : $grey;
+$table-color: $text;
+$table-head-color: $grey-lighter;
+$table-background-color: $grey-dark;
+$table-cell-border: 1px solid $grey;
 
-$table-row-hover-background     : $grey-darker;
-$table-row-even-background      : $grey-darker;
+$table-row-hover-background-color: $grey-darker;
+$table-striped-row-even-background-color: $grey-darker;
 $table-striped-row-even-hover-background-color: lighten($grey-darker, 4);
 
 $pagination-border-color: $border;
 
 $navbar-background-color: $grey-dark;
-$navbar-item: $grey;
-$navbar-item-hover: $grey-lighter;
-$navbar-item-active: $grey-lighter;
+$navbar-item-color: $grey;
+$navbar-item-hover-color: $grey-lighter;
+$navbar-item-active-color: $grey-lighter;
 $navbar-item-active-background-color: transparent;
 $navbar-item-hover-background-color: transparent;
-$navbar-dropdown-border: $grey-darker;
-$navbar-divider-background-color: $navbar-dropdown-border;
+$navbar-dropdown-border-top: 1px solid $grey-darker;
+$navbar-divider-background-color: $grey-darker;
 $navbar-dropdown-arrow: #fff;
 $navbar-dropdown-background-color: $grey-dark;
-$navbar-dropdown-item-hover: $grey-lighter;
+$navbar-dropdown-item-hover-color: $grey-lighter;
 $navbar-dropdown-item-hover-background-color: lighten($grey-darker, 4);
 $navbar-dropdown-item-active-background-color: lighten($grey-darker, 4);
-$navbar-dropdown-item-active: $grey-lighter;
+$navbar-dropdown-item-active-color: $grey-lighter;
 
 $dropdown-content-background-color: $background;
 $dropdown-item-color: $text;

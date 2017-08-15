@@ -32,13 +32,13 @@ $border-width: 2px;
 
 $navbar-height: 4rem;
 $navbar-background-color: $primary;
-$navbar-item: #fff;
-$navbar-item-hover: #fff;
-$navbar-item-active: #fff;
-$navbar-dropdown-arrow: $navbar-item;
+$navbar-item-color: #fff;
+$navbar-item-hover-color: #fff;
+$navbar-item-active-color: #fff;
+$navbar-dropdown-arrow: $navbar-item-color;
 $navbar-item-active-background-color: $link-hover;
 $navbar-item-hover-background-color: $link-hover;
-$navbar-dropdown-item-active: #fff;
+$navbar-dropdown-item-active-color: #fff;
 $navbar-dropdown-item-active-background-color: $link-hover;
 
 $dropdown-content-shadow: $shadow-large;

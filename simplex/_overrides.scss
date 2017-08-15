@@ -74,14 +74,14 @@
 
   .navbar-burger {
     span {
-      background-color: $navbar-item;
+      background-color: $navbar-item-color;
     }
 
     &:hover {
       background-color: $navbar-item-hover-background-color;
 
       span {
-        background-color: $navbar-item-active;
+        background-color: $navbar-item-active-color;
       }
     }
   }

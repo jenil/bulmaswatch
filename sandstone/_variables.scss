@@ -24,8 +24,8 @@ $link: $green;
 $pagination-background-color: $grey-lighter;
 
 $navbar-background-color: $grey-dark;
-$navbar-item: $grey-light;
-$navbar-item-hover: $white-ter;
-$navbar-item-active: $white-ter;
+$navbar-item-color: $grey-light;
+$navbar-item-hover-color: $white-ter;
+$navbar-item-active-color: $white-ter;
 $navbar-item-hover-background-color: $grey-darker;
-$navbar-dropdown-arrow: $navbar-item;
+$navbar-dropdown-arrow: $navbar-item-color;

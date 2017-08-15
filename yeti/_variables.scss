@@ -31,8 +31,8 @@ $button-background-color: $grey-lighter;
 $button-border-color: darken($button-background-color, 5);
 
 $navbar-background-color: $primary;
-$navbar-item: rgba(#fff, 0.6);
-$navbar-item-hover: #fff;
-$navbar-item-active: #fff;
+$navbar-item-color: rgba(#fff, 0.6);
+$navbar-item-hover-color: #fff;
+$navbar-item-active-color: #fff;
 $navbar-item-hover-background-color: rgba(#000, 0.1);
-$navbar-dropdown-arrow: $navbar-item;
+$navbar-dropdown-arrow: $navbar-item-color;

@@ -19,9 +19,9 @@ $dark: darken($grey-darker, 3);
 
 $title-color: $grey-lighter;
 $title-weight: 400;
-$subtitle-strong: $grey-lighter;
+$subtitle-strong-color: $grey-lighter;
 $subtitle-color: darken($grey-lighter, 10);
-$subtitle-strong: darken($grey-lighter, 10);
+$subtitle-strong-color: darken($grey-lighter, 10);
 
 $background: $grey-dark;
 $body-background-color: $grey-darker;
@@ -49,21 +49,21 @@ $button-active-border-color: transparent;
 $radius: 0;
 $radius-small: 0;
 
-$input-hover: $link-hover;
+$input-hover-color: $link-hover;
 
-$table            : $text;
-$table-head       : $grey-lighter;
-$table-background : $grey-dark;
-$table-border     : $grey;
-$table-row-hover-background     : $grey-darker;
-$table-row-even-background      : $grey-darker;
+$table-color: $text;
+$table-head-color: $grey-lighter;
+$table-background-color: $grey-dark;
+$table-cell-border: 1px solid $grey;
+$table-row-hover-background-color: $grey-darker;
+$table-striped-row-even-background-color: $grey-darker;
 $table-striped-row-even-hover-background-color: lighten($grey-darker, 4);
 
 $navbar-background-color: $background;
-$navbar-item: $text;
-$navbar-item-hover: $grey-light;
-$navbar-item-active: $primary;
-$navbar-dropdown-item-hover: $grey-light;
+$navbar-item-color: $text;
+$navbar-item-hover-color: $grey-light;
+$navbar-item-active-color: $primary;
+$navbar-dropdown-item-hover-color: $grey-light;
 $navbar-dropdown-background-color: $background;
 
 $dropdown-content-background-color: $background;
