@@ -43,7 +43,7 @@ a {
   }
 
   &.is-loading:after {
-    border-color: transparent transparent $button-border $button-border-color;
+    border-color: transparent transparent $button-border-color $button-border-color;
   }
   @each $name, $pair in $colors {
     $color: nth($pair, 1);
