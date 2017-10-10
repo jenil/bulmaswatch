@@ -21,9 +21,9 @@ route: home
       {% for theme in themes %}
       <div class="column is-half-tablet is-one-third-desktop">
         <div class="box has-text-centered">
-          <figure class="iframe image is-4by3 is-unselectable">
+          <div class="iframe image is-4by3 is-unselectable">
             <iframe src="{{ site.url }}{{ site.baseurl }}/thumb/?{{theme.name | slugify}}"></iframe>
-          </figure>
+          </div>
           <br>
           <h5>{{ theme.description }}</h5>
           <div class="block">
