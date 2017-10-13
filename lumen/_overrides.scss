@@ -134,6 +134,17 @@
   }
 }
 
+.navbar {
+  @each $name, $pair in $colors {
+    $color: nth($pair, 1);
+    $color-invert: nth($pair, 2);
+
+    &.is-#{$name} {
+      border-color: darken($color, 10);
+    }
+  }
+}
+
 .pagination-link,
 .pagination-next,
 .pagination-previous {
