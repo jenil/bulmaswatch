@@ -1,4 +1,4 @@
 ---
 name: Nuclear
-description: A dark theme with irriadiated highlights
+description: A dark theme with irradiated highlights
 ---

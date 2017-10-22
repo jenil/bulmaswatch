@@ -1,45 +1,64 @@
-@import url('https://fonts.googleapis.com/css?family=Varela+Round');
+@import url( 'https://fonts.googleapis.com/css?family=Varela+Round');
 
-html{
-  background-color:$white;
+html {
+  background-color: $white;
 }
 
-.card-header{
+.card-header {
   border-bottom: solid 1px $primary;
 }
-.card{
+
+.card {
   border: solid 1px $primary;
 }
 
-.progress::-webkit-progress-bar{
-    background: $grey-lighter !important;
-}
-.button,.title,.message-header,.card-header,.tabs,.menu-label,.content h1,.content h2,.content h3,.content h4,.content h5,.content h6{
-  font-family:'Varela Round', BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-  text-transform:uppercase;
-}
-.subtitle,.tag,th{
-  font-family:'Varela Round', BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+.progress::-webkit-progress-bar {
+  background: $grey-lighter !important;
 }
 
-.box{
-  border:solid 1px $primary;
-  background:$white-bis;
+.button,
+.card-header,
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6,
+.menu-label,
+.message-header,
+.tabs,
+.title {
+  font-family: 'Varela Round', BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  text-transform: uppercase;
 }
 
-.delete{
-  $c:rgba($grey-light,0.6);
-  background-color:$c;
-  &:hover{
-    background-color:rgba($c,0.85);
+.subtitle,
+.tag,
+th {
+  font-family: 'Varela Round', BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+.box {
+  border: solid 1px $primary;
+  background: $white-bis;
+}
+
+.delete {
+  $c: rgba($grey-light,0.6);
+  background-color: $c;
+
+  &:hover {
+    background-color: rgba($c,0.85);
   }
-  &::before,&::after{
-    background-color:$black;
+
+  &::after,
+  &::before {
+    background-color: $black;
   }
 }
 
-.button{
-  border-radius:4px;
+.button {
+  border-radius: 4px;
   @each $name, $pair in $colors {
     $color: nth($pair, 1);
     $color-invert: nth($pair, 2);
@@ -51,39 +70,43 @@ html{
     $transition: box-shadow 0.1s linear;
     padding-top: calc(0.375em + 1px);
 
-    &.is-#{$name}{
-      &:not(.is-outlined){
-        border-width:0;
+    &.is-#{$name} {
+      &:not(.is-outlined) {
+        border-width: 0;
       }
-      //box-shadow:0 0 5px 0 rgba(0,0,0,0.1) inset, 0 0 20px 0 rgba(0,0,0,0.4) inset, 0 0 0 0 $color;
       transition: $transition;
-      background:$color;
-      box-shadow:0 0px 3px 0 rgba(0,0,0,0.3) inset, 0 1px 25px 0 rgba(0,0,0,0.6) inset, 0 0 0 0 $color;
+      background: $color;
+      box-shadow: 0 0 3px 0 rgba(0,0,0,0.3) inset, 0 1px 15px 0 rgba(0,0,0,0.6) inset;
 
-      &:hover,&.is-hovered{
-        border-color:rgba(0,0,0,0.25);
+      &.is-hovered,
+      &:hover {
+        border-color: rgba(0,0,0,0.25);
         transition: $transition;
-        box-shadow:0 0px 3px 0 rgba(0,0,0,0.3) inset, 0 1px 25px 0 rgba(0,0,0,0.6) inset, 0 0 3px 0 $color;
+        box-shadow: 0 0 3px 0 rgba(0,0,0,0.3) inset, 0 1px 15px 0 rgba(0,0,0,0.6) inset, 0 0 3px 0 $color;
       }
-      &.is-focused,&:focus{
+
+      &.is-focused,
+      &:focus {
         transition: $transition;
-        border-color:$color;
-        box-shadow:0 0 0 0 rgba(0,0,0,0.2) inset, 0 0 0 0 rgba(0,0,0,0.5) inset,0 0 7px 1px $color;
+        border-color: $color;
+        box-shadow: 0 0 0 0 rgba(0,0,0,0.2) inset, 0 0 0 0 rgba(0,0,0,0.5) inset,0 0 7px 1px $color;
       }
-      &.is-active,&:active{
+
+      &.is-active,
+      &:active {
         transition: $transition;
-        border-color:rgba(0,0,0,0.47);
-        box-shadow:0 0px 3px 0 rgba(0,0,0,0.7) inset, 0 1px 25px 0 rgba(0,0,0,0.9) inset, 0 0 0 0 $color;
+        border-color: rgba(0,0,0,0.47);
+        box-shadow: 0 0 3px 0 rgba(0,0,0,0.7) inset, 0 1px 15px 0 rgba(0,0,0,0.9) inset;
       }
     }
-
-
   }
 }
 
-button.button, input[type="submit"].button{
+button.button,
+input[type="submit"].button {
   padding-top: calc(0.375em + 1px);
 }
+
 .message {
   background-color: $background;
   border-radius: $radius;
@@ -96,27 +119,37 @@ button.button, input[type="submit"].button{
     $color-luminance: colorLuminance($color);
     $darken-percentage: $color-luminance * 70%;
     $desaturate-percentage: $color-luminance * 30%;
+
     &.is-#{$name} {
       background-color: darken($color, $color-lightning);
+
       .message-header {
         background-color: $color;
-        color: $color-invert; }
+        color: $color-invert;
+      }
+
       .message-body {
         border-color: $color;
-        color: desaturate(lighten($color, $darken-percentage), $desaturate-percentage); } } } }
-
-
-.message.is-dark{
-  background:$white;
+        color: desaturate(lighten($color, $darken-percentage), $desaturate-percentage);
+      }
+    }
+  }
 }
 
-.input:focus,.select>*:focus,.textarea:focus{
-  box-shadow:0 0 7px 1px $primary;
+.message.is-dark {
+  background: $white;
+}
+
+.input:focus,
+.select > *:focus,
+.textarea:focus {
+  box-shadow: 0 0 7px 1px $primary;
   @each $name, $pair in $colors {
     $color: nth($pair, 1);
     $color-invert: nth($pair, 2);
-    &.is-#{$name}{
-      box-shadow:0 0 7px 0px $color;
+
+    &.is-#{$name} {
+      box-shadow: 0 0 7px 0 $color;
     }
   }
 }

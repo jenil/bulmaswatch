@@ -1,5 +1,5 @@
 ////////////////////////////////////////////////
-// NUUUUCLEAAAAR
+// NUCLEAR
 ////////////////////////////////////////////////
 
 @function inv($c){
@@ -7,24 +7,24 @@
 }
 
 $black:inv($black);
-$black-bis:	inv($black-bis);
-$black-ter:	inv($black-ter);
-$grey-darker:	inv($grey-darker);
-$grey-dark:	inv($grey-dark);
-$grey:	inv($grey);
-$grey-light:	inv($grey-light);
-$grey-lighter:	inv($grey-lighter);
-$white-ter:	inv($white-ter);
-$white-bis:	inv($white-bis);
-$white:	inv($white);
+$black-bis:  inv($black-bis);
+$black-ter:  inv($black-ter);
+$grey-darker:  inv($grey-darker);
+$grey-dark:  inv($grey-dark);
+$grey:  inv($grey);
+$grey-light:  inv($grey-light);
+$grey-lighter:  inv($grey-lighter);
+$white-ter:  inv($white-ter);
+$white-bis:  inv($white-bis);
+$white:  inv($white);
 
-$orange:	#FFAA00;
-$yellow:	#D9FF00;
-$green:	#00FF48;
-$turquoise:	#00FFFF;
+$orange:  #FFAA00;
+$yellow:  #D9FF00;
+$green:  #00FF48;
+$turquoise:  #00FFFF;
 $blue: #00FFFF;
 $purple: #8200ff;
-$red:	#f90000;
+$red:  #f90000;
 
 $primary: $yellow;
 $warning: $orange;
