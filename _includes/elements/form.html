@@ -1,0 +1,659 @@
+<section class="section" id="form">
+  <h1 class="title"> Form </h1>
+  <hr>
+  <div class="columns">
+    <div class="column">
+      <div class="field">
+        <label class="label">Name</label>
+        <p class="control">
+          <input class="input" type="text" placeholder="Text input">
+        </p>
+      </div>
+      <div class="field">
+        <label class="label">Username</label>
+        <p class="control has-icons-left has-icons-right">
+          <input class="input is-success" type="text" placeholder="Text input" value="bulma">
+          <span class="icon is-small is-left">
+            <i class="fa fa-user"></i>
+          </span>
+          <span class="icon is-small is-right">
+            <i class="fa fa-check"></i>
+          </span>
+        </p>
+        <p class="help is-success">This username is available</p>
+      </div>
+      <div class="field">
+        <label class="label">Email</label>
+        <p class="control has-icons-left has-icons-right">
+          <input class="input is-danger" type="text" placeholder="Email input" value="hello@">
+          <span class="icon is-small is-left">
+            <i class="fa fa-envelope"></i>
+          </span>
+          <span class="icon is-small is-right">
+            <i class="fa fa-warning"></i>
+          </span>
+        </p>
+        <p class="help is-danger">This email is invalid</p>
+      </div>
+      <div class="field">
+        <label class="label">Subject</label>
+        <p class="control">
+          <span class="select">
+            <select>
+              <option>Select dropdown</option>
+              <option>With options</option>
+            </select>
+          </span>
+        </p>
+      </div>
+      <div class="field">
+        <label class="label">Message</label>
+        <p class="control">
+          <textarea class="textarea" placeholder="Textarea"></textarea>
+        </p>
+      </div>
+      <div class="field">
+        <p class="control">
+          <label class="checkbox">
+            <input type="checkbox"> I agree to the
+            <a href="#">terms and conditions</a>
+          </label>
+        </p>
+      </div>
+      <div class="field">
+        <p class="control">
+          <label class="radio">
+            <input type="radio" name="question"> Yes
+          </label>
+          <label class="radio">
+            <input type="radio" name="question"> No
+          </label>
+        </p>
+      </div>
+      <div class="field is-grouped">
+        <p class="control">
+          <button class="button is-primary">Submit</button>
+        </p>
+        <p class="control">
+          <button class="button is-link">Cancel</button>
+        </p>
+      </div>
+      <br>
+      <h4 class="subtitle"> Disabled </h4>
+      <hr>
+      <div class="field">
+        <p class="control">
+          <input class="input" disabled="" placeholder="Disabled input" type="text">
+        </p>
+      </div>
+      <div class="field">
+        <p class="control">
+          <textarea class="textarea" disabled="" placeholder="Disabled textarea"> </textarea>
+        </p>
+      </div>
+      <div class="field">
+        <p class="control">
+          <label class="checkbox is-disabled">
+            <input disabled="" type="checkbox"> Remember me
+          </label>
+        </p>
+      </div>
+      <div class="field">
+        <p class="control">
+          <label class="radio is-disabled">
+            <input disabled="" name="question" type="radio"> Yes
+          </label>
+          <label class="radio is-disabled">
+            <input disabled="" name="question" type="radio"> No
+          </label>
+        </p>
+      </div>
+      <div class="field is-grouped">
+        <p class="control">
+          <button class="button is-primary" disabled=""> Submit </button>
+        </p>
+        <p class="control">
+          <button class="button" disabled=""> Cancel </button>
+        </p>
+      </div>
+      <br>
+      <h3 class="title"> Horizontal Form </h3>
+      <hr>
+      <div class="field is-horizontal">
+        <div class="field-label is-normal">
+          <label class="label">From</label>
+        </div>
+        <div class="field-body">
+          <div class="field is-grouped">
+            <p class="control is-expanded has-icons-left">
+              <input class="input" type="text" placeholder="Name">
+              <span class="icon is-small is-left">
+                <i class="fa fa-user"></i>
+              </span>
+            </p>
+          </div>
+          <div class="field">
+            <p class="control is-expanded has-icons-left has-icons-right">
+              <input class="input is-success" type="email" placeholder="Email" value="alex@smith.com">
+              <span class="icon is-small is-left">
+                <i class="fa fa-envelope"></i>
+              </span>
+              <span class="icon is-small is-right">
+                <i class="fa fa-check"></i>
+              </span>
+            </p>
+            <p class="help is-success">This email is correct</p>
+          </div>
+        </div>
+      </div>
+      <div class="field is-horizontal">
+        <div class="field-label is-normal">
+          <label class="label">Department</label>
+        </div>
+        <div class="field-body">
+          <div class="field is-narrow">
+            <div class="control">
+              <div class="select is-fullwidth">
+                <select>
+                  <option>Business development</option>
+                  <option>Marketing</option>
+                  <option>Sales</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="field is-horizontal">
+        <div class="field-label">
+          <label class="label">Already a member?</label>
+        </div>
+        <div class="field-body">
+          <div class="field is-narrow">
+            <div class="control">
+              <label class="radio">
+                <input type="radio" name="member"> Yes
+              </label>
+              <label class="radio">
+                <input type="radio" name="member"> No
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="field is-horizontal">
+        <div class="field-label is-normal">
+          <label class="label">Subject</label>
+        </div>
+        <div class="field-body">
+          <div class="field">
+            <div class="control">
+              <input class="input is-danger" type="text" placeholder="e.g. Partnership opportunity">
+            </div>
+            <p class="help is-danger">
+              This field is required
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="field is-horizontal">
+        <div class="field-label is-normal">
+          <label class="label">Question</label>
+        </div>
+        <div class="field-body">
+          <div class="field">
+            <div class="control">
+              <textarea class="textarea" placeholder="Explain how we can help you"></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="field is-horizontal">
+        <div class="field-label">
+          <!-- Left empty for spacing -->
+        </div>
+        <div class="field-body">
+          <div class="field">
+            <div class="control">
+              <button class="button is-primary">
+                Send message
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <h3 class="title">File</h3>
+      <hr>
+      <div class="field">
+        <div class="file">
+          <label class="file-label">
+            <input class="file-input" type="file" name="resume">
+            <span class="file-cta">
+              <span class="file-icon">
+                <i class="fa fa-upload"></i>
+              </span>
+              <span class="file-label">
+                Choose a file…
+              </span>
+            </span>
+          </label>
+        </div>
+      </div>
+      <div class="field">
+        <div class="file has-name">
+          <label class="file-label">
+            <input class="file-input" type="file" name="resume">
+            <span class="file-cta">
+              <span class="file-icon">
+                <i class="fa fa-upload"></i>
+              </span>
+              <span class="file-label">
+                Choose a file…
+              </span>
+            </span>
+            <span class="file-name">
+              Screen Shot 2017-07-29 at 15.54.25.png
+            </span>
+          </label>
+        </div>
+      </div>
+      <div class="field">
+        <div class="file is-primary">
+          <label class="file-label">
+            <input class="file-input" type="file" name="resume">
+            <span class="file-cta">
+              <span class="file-icon">
+                <i class="fa fa-upload"></i>
+              </span>
+              <span class="file-label">
+                Primary file…
+              </span>
+            </span>
+          </label>
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="file is-info has-name">
+          <label class="file-label">
+            <input class="file-input" type="file" name="resume">
+            <span class="file-cta">
+              <span class="file-icon">
+                <i class="fa fa-upload"></i>
+              </span>
+              <span class="file-label">
+                Info file…
+              </span>
+            </span>
+            <span class="file-name">
+              Screen Shot 2017-07-29 at 15.54.25.png
+            </span>
+          </label>
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="file is-warning is-boxed">
+          <label class="file-label">
+            <input class="file-input" type="file" name="resume">
+            <span class="file-cta">
+              <span class="file-icon">
+                <i class="fa fa-cloud-upload"></i>
+              </span>
+              <span class="file-label">
+                Warning file…
+              </span>
+            </span>
+          </label>
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="file is-danger has-name is-boxed">
+          <label class="file-label">
+            <input class="file-input" type="file" name="resume">
+            <span class="file-cta">
+              <span class="file-icon">
+                <i class="fa fa-cloud-upload"></i>
+              </span>
+              <span class="file-label">
+                Danger file…
+              </span>
+            </span>
+            <span class="file-name">
+              Screen Shot 2017-07-29 at 15.54.25.png
+            </span>
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="column">
+      <br>
+      <h3 class="subtitle"> Colors </h3>
+      <hr>
+      <div class="field">
+        <p class="control">
+          <input class="input is-primary" type="text" placeholder="Primary input">
+        </p>
+      </div>
+      <div class="field">
+        <p class="control">
+          <input class="input is-info" type="text" placeholder="Info input">
+        </p>
+      </div>
+      <div class="field">
+        <p class="control">
+          <input class="input is-success" type="text" placeholder="Success input">
+        </p>
+      </div>
+      <div class="field">
+        <p class="control">
+          <input class="input is-warning" type="text" placeholder="Warning input">
+        </p>
+      </div>
+      <div class="field">
+        <p class="control">
+          <input class="input is-danger" type="text" placeholder="Danger input">
+        </p>
+      </div>
+      <br>
+      <h3 class="subtitle"> Sizes </h3>
+      <hr>
+      <div class="field">
+        <p class="control">
+          <input class="input is-small" type="text" placeholder="Small input">
+        </p>
+      </div>
+      <div class="field">
+        <p class="control">
+          <input class="input" type="text" placeholder="Normal input">
+        </p>
+      </div>
+      <div class="field">
+        <p class="control">
+          <input class="input is-medium" type="text" placeholder="Medium input">
+        </p>
+      </div>
+      <div class="field">
+        <p class="control">
+          <input class="input is-large" type="text" placeholder="Large input">
+        </p>
+      </div>
+      <div class="field">
+        <p class="control">
+          <span class="select is-small">
+            <select>
+              <option>Select dropdown</option>
+              <option>With options</option>
+            </select>
+          </span>
+        </p>
+      </div>
+      <div class="field">
+        <p class="control">
+          <span class="select">
+            <select>
+              <option>Select dropdown</option>
+              <option>With options</option>
+            </select>
+          </span>
+        </p>
+      </div>
+      <div class="field">
+        <p class="control">
+          <span class="select is-medium">
+            <select>
+              <option>Select dropdown</option>
+              <option>With options</option>
+            </select>
+          </span>
+        </p>
+      </div>
+      <div class="field">
+        <p class="control">
+          <span class="select is-large">
+            <select>
+              <option>Select dropdown</option>
+              <option>With options</option>
+            </select>
+          </span>
+        </p>
+      </div>
+      <div class="field">
+        <label class="label is-small">Small input</label>
+        <p class="control has-icons-left has-icons-right">
+          <input class="input is-small" type="email" placeholder="Email">
+          <span class="icon is-small is-left">
+            <i class="fa fa-envelope"></i>
+          </span>
+          <span class="icon is-small is-right">
+            <i class="fa fa-check"></i>
+          </span>
+        </p>
+      </div>
+      <div class="field">
+        <label class="label">Normal input</label>
+        <p class="control has-icons-left has-icons-right">
+          <input class="input" type="email" placeholder="Email">
+          <span class="icon is-small is-left">
+            <i class="fa fa-envelope"></i>
+          </span>
+          <span class="icon is-small is-right">
+            <i class="fa fa-check"></i>
+          </span>
+        </p>
+      </div>
+      <div class="field">
+        <p class="control has-icons-left has-icons-right">
+          <input class="input" type="email" placeholder="Email">
+          <span class="icon is-left">
+            <i class="fa fa-envelope"></i>
+          </span>
+          <span class="icon is-right">
+            <i class="fa fa-check"></i>
+          </span>
+        </p>
+      </div>
+      <div class="field">
+        <label class="label is-medium">Medium input</label>
+        <p class="control has-icons-left has-icons-right">
+          <input class="input is-medium" type="email" placeholder="Email">
+          <span class="icon is-small is-left">
+            <i class="fa fa-envelope"></i>
+          </span>
+          <span class="icon is-small is-right">
+            <i class="fa fa-check"></i>
+          </span>
+        </p>
+      </div>
+      <div class="field">
+        <p class="control has-icons-left has-icons-right">
+          <input class="input is-medium" type="email" placeholder="Email">
+          <span class="icon is-left">
+            <i class="fa fa-envelope"></i>
+          </span>
+          <span class="icon is-right">
+            <i class="fa fa-check"></i>
+          </span>
+        </p>
+      </div>
+      <div class="field">
+        <p class="control has-icons-left has-icons-right">
+          <input class="input is-medium" type="email" placeholder="Email">
+          <span class="icon is-medium is-left">
+            <i class="fa fa-envelope"></i>
+          </span>
+          <span class="icon is-medium is-right">
+            <i class="fa fa-check"></i>
+          </span>
+        </p>
+      </div>
+      <div class="field">
+        <label class="label is-large">Large input</label>
+        <p class="control has-icons-left has-icons-right">
+          <input class="input is-large" type="email" placeholder="Email">
+          <span class="icon is-small is-left">
+            <i class="fa fa-envelope"></i>
+          </span>
+          <span class="icon is-small is-right">
+            <i class="fa fa-check"></i>
+          </span>
+        </p>
+      </div>
+      <div class="field">
+        <p class="control has-icons-left has-icons-right">
+          <input class="input is-large" type="email" placeholder="Email">
+          <span class="icon is-left">
+            <i class="fa fa-envelope"></i>
+          </span>
+          <span class="icon is-right">
+            <i class="fa fa-check"></i>
+          </span>
+        </p>
+      </div>
+      <div class="field">
+        <p class="control has-icons-left has-icons-right">
+          <input class="input is-large" type="email" placeholder="Email">
+          <span class="icon is-medium is-left">
+            <i class="fa fa-envelope"></i>
+          </span>
+          <span class="icon is-medium is-right">
+            <i class="fa fa-check"></i>
+          </span>
+        </p>
+      </div>
+      <div class="field">
+        <p class="control has-icons-left has-icons-right">
+          <input class="input is-large" type="email" placeholder="Email">
+          <span class="icon is-large is-left">
+            <i class="fa fa-envelope"></i>
+          </span>
+          <span class="icon is-large is-right">
+            <i class="fa fa-check"></i>
+          </span>
+        </p>
+      </div>
+      <br>
+      <h4 class="subtitle"> With Font Awesome icons </h4>
+      <hr>
+      <div class="field">
+        <p class="control has-icons-left">
+          <input class="input" type="email" placeholder="Email">
+          <span class="icon is-small is-left">
+            <i class="fa fa-envelope"></i>
+          </span>
+        </p>
+      </div>
+      <div class="field">
+        <p class="control has-icons-left">
+          <input class="input" type="password" placeholder="Password">
+          <span class="icon is-small is-left">
+            <i class="fa fa-lock"></i>
+          </span>
+        </p>
+      </div>
+      <div class="field">
+        <p class="control">
+          <button class="button is-success">
+            Login
+          </button>
+        </p>
+      </div>
+      <br>
+      <h3 class="title"> Form addons </h3>
+      <hr>
+      <div class="field has-addons">
+        <p class="control">
+          <input class="input" type="text" placeholder="Find a repository">
+        </p>
+        <p class="control">
+          <a class="button is-info">
+            Search
+          </a>
+        </p>
+      </div>
+      <div class="field has-addons">
+        <p class="control">
+          <input class="input is-large" type="text" placeholder="Find a repository">
+        </p>
+        <p class="control">
+          <a class="button is-info is-large">
+            Search
+          </a>
+        </p>
+      </div>
+      <div class="field has-addons">
+        <p class="control">
+          <span class="select">
+            <select>
+              <option>$</option>
+              <option>£</option>
+              <option>€</option>
+            </select>
+          </span>
+        </p>
+        <p class="control">
+          <input class="input" type="text" placeholder="Amount of money">
+        </p>
+        <p class="control">
+          <a class="button">
+            Transfer
+          </a>
+        </p>
+      </div>
+      <div class="field has-addons">
+        <p class="control">
+          <span class="select">
+            <select>
+              <option>$</option>
+              <option>£</option>
+              <option>€</option>
+            </select>
+          </span>
+        </p>
+        <p class="control is-expanded">
+          <input class="input" type="text" placeholder="Amount of money">
+        </p>
+        <p class="control">
+          <a class="button">
+            Transfer
+          </a>
+        </p>
+      </div>
+      <div class="field has-addons">
+        <p class="control is-expanded">
+          <span class="select is-fullwidth">
+            <select name="country">
+              <option value="Argentina">Argentina</option>
+              <option value="Bolivia">Bolivia</option>
+              <option value="Brazil">Brazil</option>
+              <option value="Chile">Chile</option>
+              <option value="Colombia">Colombia</option>
+              <option value="Ecuador">Ecuador</option>
+              <option value="Guyana">Guyana</option>
+              <option value="Paraguay">Paraguay</option>
+              <option value="Peru">Peru</option>
+              <option value="Suriname">Suriname</option>
+              <option value="Uruguay">Uruguay</option>
+              <option value="Venezuela">Venezuela</option>
+            </select>
+          </span>
+        </p>
+        <p class="control">
+          <button type="submit" class="button is-primary">Choose</button>
+        </p>
+      </div>
+      <div class="field is-grouped">
+        <p class="control is-expanded">
+          <input class="input" type="text" placeholder="Find a repository">
+        </p>
+        <p class="control">
+          <a class="button is-info">
+            Search
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
