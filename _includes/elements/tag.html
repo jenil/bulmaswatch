@@ -2,16 +2,9 @@
   <h1 class="title"> Tag </h1>
   <hr>
   <div class="tags">
-    <span class="tag is-black"> Black </span>
-    <span class="tag is-dark"> Dark </span>
-    <span class="tag is-light"> Light </span>
-    <span class="tag is-white"> White </span>
-    <span class="tag is-primary"> Primary </span>
-    <span class="tag is-info"> Info </span>
-    <span class="tag is-link"> Link </span>
-    <span class="tag is-success"> Success </span>
-    <span class="tag is-warning"> Warning </span>
-    <span class="tag is-danger"> Danger </span>
+    {% for m in page.modifiers offset:1 %}
+    <span class="tag {% if m != '' %}is-{{m}}{% endif %}"> {{m | capitalize}} </span>
+    {% endfor %}
     <span class="tag is-primary is-medium"> Medium </span>
     <span class="tag is-info is-large"> Large </span>
     <span class="tag is-success"> Bar
