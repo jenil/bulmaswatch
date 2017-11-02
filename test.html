@@ -172,10 +172,9 @@ modifiers:
   {% include footer.html %}
   <div class="switcher select">
     <select>
-      <option value="default" selected="">Default</option>
-      <option disabled>───</option>
-      {% for t in site.themes %}
-      <option value="{{ t.name | slugify }}">{{ loop.index }} {{ t.name }} </option>
+        {% assign themes = (site.themes | sort: 'order') %}
+      {% for t in themes %}
+      <option value="{{ t.name | slugify }}"> {{ t.name }} </option>
       {% endfor %}
     </select>
   </div>

@@ -1,44 +1,54 @@
-<nav class="main-nav nav has-shadow">
+<nav class="main-nav navbar ">
   <div class="container">
-    <div class="nav-left">
-      <a class="nav-item" href="{{ site.url }}{{ site.baseurl }}/">
+    <div class="navbar-start">
+      <a class="navbar-item" href="{{ site.url }}{{ site.baseurl }}/">
         <img src="{{ site.baseurl }}/assets/icons/apple-touch-icon-144x144.png" alt="" class="logo">
         <h1 class="title is-5">{{ site.title }}</h1>
       </a>
-      <a class="nav-item {% if page.route == 'home' %}is-active{% endif %}" href="{{ site.url }}{{ site.baseurl }}/">Home</a>
+      <a class="navbar-item {% if page.route == 'home' %}is-active{% endif %}" href="{{ site.url }}{{ site.baseurl }}/">Home</a>
       {% assign themes = (site.themes | sort: 'order') %}
-      <div class="nav-item">
-        <span class="theme-switcher select">
-          <select>
-            <option value="" disabled selected>Themes</option>
-            <option disabled>───</option>
-            {% for t in themes %}
-              {% capture theme %}/{{ t.name | slugify }}{% endcapture %}
-              <option value="{{ t.name | slugify }}" {% if theme == page.id %}selected{% endif %}>{{ t.name }}</option>
-            {% endfor %}
-          </select>
-        </span>
+      {% capture themesHalf %}{{site.themes.size | divided_by: 2}}{% endcapture %}
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          Themes
+        </a>
+        <div class="navbar-dropdown">
+          <div class="columns">
+            <div class="column">
+                {% for t in themes limit:themesHalf %}
+                {% capture theme %}/{{ t.name | slugify }}{% endcapture %}
+                <a class="navbar-item {% if theme == page.id %}is-active{% endif %}" href="{{ site.url }}{{ site.baseurl }}/{{ t.name | slugify }}"> {{ t.name }} </a>
+                {% endfor %}
+            </div>
+            <div class="column">
+                {% for t in themes offset:themesHalf %}
+                {% capture theme %}/{{ t.name | slugify }}{% endcapture %}
+                <a class="navbar-item {% if theme == page.id %}is-active{% endif %}" href="{{ site.url }}{{ site.baseurl }}/{{ t.name | slugify }}"> {{ t.name }} </a>
+                {% endfor %}
+            </div>
+          </div>
+        </div>
       </div>
-      <a class="nav-item {% if page.route == 'help' %}is-active{% endif %}" href="{{ site.url }}{{ site.baseurl }}/help/">Help</a>
+      <a class="navbar-item {% if page.route == 'help' %}is-active{% endif %}" href="{{ site.url }}{{ site.baseurl }}/help/">Help</a>
     </div>
-    <span class="nav-toggle">
+    <span class="navbar-toggle">
       <span></span>
       <span></span>
       <span></span>
     </span>
-    <div class="nav-right nav-menu">
-      <a href="https://github.com/jenil/bulmaswatch/stargazers" class="nav-item">
+    <div class="navbar-end navbar-menu">
+      <a href="https://github.com/jenil/bulmaswatch/stargazers" class="navbar-item">
       <img src="https://img.shields.io/github/stars/jenil/bulmaswatch.svg" alt="GitHub stars">
       </a>
-      <a class="nav-item" href="{{ site.repo_url }}/issues" target="_blank"
+      <a class="navbar-item" href="{{ site.repo_url }}/issues" target="_blank"
       onclick="ga('send', 'event', 'nav', 'click', 'issue');">
         <i class="fa fa-bug"></i>&nbsp;Report an issue
       </a>
-      <a class="nav-item" href="{{ site.repo_url }}" target="_blank"
+      <a class="navbar-item" href="{{ site.repo_url }}" target="_blank"
       onclick="ga('send', 'event', 'nav', 'click', 'github');">
         <span class="icon"> <i class="fa fa-github"></i> </span>
       </a>
-      <a class="nav-item" href="//twitter.com/geekGogari" target="_blank"
+      <a class="navbar-item" href="//twitter.com/geekGogari" target="_blank"
       onclick="ga('send', 'event', 'nav', 'click', 'twitter');">
         <span class="icon"> <i class="fa fa-twitter"></i> </span>
       </a>

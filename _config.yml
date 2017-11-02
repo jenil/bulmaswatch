@@ -17,7 +17,19 @@ defaults:
       type: themes
     values:
       layout: theme
-      order: 1
+      order: 1,
+      modifiers:
+        - ''
+        - primary
+        - link
+        - info
+        - success
+        - warning
+        - danger
+        - white
+        - black
+        - light
+        - dark
 # Build settings
 markdown: kramdown
 exclude:

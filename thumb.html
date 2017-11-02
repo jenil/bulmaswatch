@@ -20,19 +20,27 @@ permalink: /thumb/
   .nav h1 {
     font-weight: bold;
   }
+
+  .navbar-start, .navbar-item {
+    display: flex;
+  }
+
+  .navbar-item {
+    align-items: center;
+  }
   </style>
 </head>
 
 <body>
   <section class="hero is-fullheight">
     <div class="hero-head">
-      <nav class="nav has-shadow">
+      <nav class="navbar">
         <div class="container">
-          <div class="nav-left">
-            <h1 class="nav-item" id="title"> Hero title </h1>
-            <a class="nav-item is-active">Home</a>
-            <a class="nav-item">Features</a>
-            <span class="nav-item">
+          <div class="navbar-start">
+            <h1 class="navbar-item" id="title"> Hero title </h1>
+            <a class="navbar-item is-active">Home</a>
+            <a class="navbar-item">Features</a>
+            <span class="navbar-item">
               <button class="button" type="button" id="open-preview">Preview</button>
             </span>
           </div>
