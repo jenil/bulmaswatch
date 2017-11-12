@@ -1,7 +1,7 @@
 <section class="section" id="hero">
   <h1 class="title">Hero</h1>
   <hr>
-  {% for m in page.modifiers offset:1 %}
+  {% for m in page.modifiers %}
   <section class="hero {% if m != '' %}is-{{m}}{% endif %}">
     <!-- Hero head: will stick at the top -->
     <div class="hero-head">
@@ -11,13 +11,13 @@
             <a class="navbar-item">
               <img src="https://bulma.io/images/bulma-type-white.png" alt="Logo">
             </a>
-            <span class="navbar-burger burger" data-target="navbarMenuHeroA">
+            <span class="navbar-burger burger" data-target="navbarMenuHero{{forloop.index}}">
               <span></span>
               <span></span>
               <span></span>
             </span>
           </div>
-          <div id="navbarMenuHeroA" class="navbar-menu">
+          <div id="navbarMenuHero{{forloop.index}}" class="navbar-menu">
             <div class="navbar-end">
               <a class="navbar-item is-active">
                 Home
@@ -28,6 +28,26 @@
               <a class="navbar-item">
                 Documentation
               </a>
+              <div class="navbar-item has-dropdown is-hoverable">
+                  <div class="navbar-link">
+                    More
+                  </div>
+                  <div id="moreDropdown" class="navbar-dropdown ">
+                    <a class="navbar-item " href="#">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item">
+                            <p>
+                              <strong>Extensions</strong>
+                              <br>
+                              <small>Side projects to enhance Bulma</small>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
               <span class="navbar-item">
                 <a class="button is-primary is-inverted">
                   <span class="icon">
