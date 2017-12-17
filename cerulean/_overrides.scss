@@ -1,5 +1,5 @@
 // Overrides
-@mixin btn-shadow($color) {
+@mixin btn-gradient($color) {
   background-image: linear-gradient(180deg, lighten($color, 8%) 0%, $color 60%, darken($color, 4%) 100%);
 }
 
@@ -14,7 +14,7 @@
 
     &.is-#{$name} {
       &:not(.is-outlined):not(.is-inverted) {
-        @include btn-shadow($color);
+        @include btn-gradient($color);
       }
     }
   }
@@ -62,61 +62,8 @@
   }
 }
 
-.nav {
-  background-color: $primary;
-  @include btn-shadow($primary);
-  color: $white;
-  @media screen and (max-width: $tablet - 1) {
-    .nav-menu {
-      background-color: $primary;
-      @include btn-shadow($primary);
-    }
-  }
-
-  .subtitle,
-  .title {
-    color: $white-bis;
-  }
-
-  .nav-item a,
-  a.nav-item {
-    &:hover {
-      color: $button-hover-color;
-    }
-  }
-
-  .nav-item a:not(.button),
-  a.nav-item:not(.button) {
-    color: $white-bis;
-
-    &:hover {
-      background-color: rgba($black, 0.05);
-      color: $white-bis;
-    }
-    // Modifiers
-    &.is-active {
-      color: $white-bis;
-      background-color: rgba($black, 0.2);
-
-      &.is-tab {
-        border-bottom-color: $white-bis;
-      }
-    }
-  }
-
-  .nav-toggle {
-    &:hover {
-      background-color: rgba($black, 0.075);
-    }
-
-    span {
-      background-color: $white-bis;
-    }
-  }
-}
-
 .navbar:not(.is-transparent) {
-  @include btn-shadow($primary);
+  @include btn-gradient($primary);
 
   .navbar-item,
   .navbar-link {
@@ -141,6 +88,13 @@
     border-color: $white;
   }
 
+  @include touch {
+    .navbar-menu {
+      background-color: $primary;
+      @include btn-gradient($primary);
+    }
+  }
+
   @include desktop {
     .navbar-dropdown .navbar-item {
       color: $grey-dark;
@@ -152,30 +106,60 @@
       background-color: $white;
     }
   }
-}
 
-.hero {
-  // Colors
-  .nav {
-    background-color: $primary;
-    @include btn-shadow($primary);
-  }
   @each $name, $pair in $colors {
     $color: nth($pair, 1);
     $color-invert: nth($pair, 2);
 
     &.is-#{$name} {
-      .nav {
-        background: none;
+      @include btn-gradient($color);
+
+      .navbar-burger {
+        span {
+          background-color: $color-invert;
+        }
+      }
+    }
+  }
+}
+
+.hero {
+  .navbar:not(.is-transparent) {
+    @include btn-gradient($primary);
+  }
+
+  @each $name, $pair in $colors {
+    $color: nth($pair, 1);
+    $color-invert: nth($pair, 2);
+
+    &.is-#{$name} {
+      .navbar {
+        @include btn-gradient($color);
       }
 
-      .nav-item a:not(.button),
-      a.nav-item {
+      .navbar-item,
+      .navbar-link {
         color: $color-invert;
 
         &.is-active,
         &:hover {
           background-color: darken($color, 10);
+          color: $color-invert;
+        }
+
+        &:after {
+          border-color: $color-invert;
+        }
+      }
+
+      .navbar-burger {
+        span {
+          background-color: $color-invert;
+        }
+      }
+
+      @include desktop {
+        .navbar-dropdown a.navbar-item:hover {
           color: $color-invert;
         }
       }
