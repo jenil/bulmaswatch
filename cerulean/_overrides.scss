@@ -1,23 +1,23 @@
 // Overrides
 @mixin btn-gradient($color) {
-  background-image: linear-gradient(180deg, lighten($color, 8%) 0%, $color 60%, darken($color, 4%) 100%);
+    background-image: linear-gradient(180deg, lighten($color, 8%) 0%, $color 60%, darken($color, 4%) 100%);
 }
 
 .box {
-  box-shadow: 0 0 0 1px $border;
+    box-shadow: 0 0 0 1px $border;
 }
 
 .button {
-  @each $name, $pair in $colors {
-    $color: nth($pair, 1);
-    $color-invert: nth($pair, 2);
-
-    &.is-#{$name} {
-      &:not(.is-outlined):not(.is-inverted) {
-        @include btn-gradient($color);
-      }
+    @each $name,
+    $pair in $colors {
+        $color: nth($pair, 1);
+        $color-invert: nth($pair, 2);
+        &.is-#{$name} {
+            &:not(.is-outlined):not(.is-inverted) {
+                @include btn-gradient($color);
+            }
+        }
     }
-  }
 }
 
 .button,
@@ -31,138 +31,145 @@
 .select,
 .select select,
 .textarea {
-  height: 2.375em;
+    height: 2.375em;
 }
 
 .input,
 .textarea {
-  box-shadow: none;
+    box-shadow: none;
 }
 
 .card {
-  box-shadow: 0 0 0 1px $border;
-  background-color: $white-bis;
-
-  .card-header {
-    box-shadow: none;
-    border-bottom: 1px solid $border;
-  }
+    box-shadow: 0 0 0 1px $border;
+    background-color: $white-bis;
+    .card-header {
+        box-shadow: none;
+        border-bottom: 1px solid $border;
+    }
 }
 
 .notification {
-  @each $name, $pair in $colors {
-    $color: nth($pair, 1);
-    $color-invert: nth($pair, 2);
-
-    &.is-#{$name} {
-      background-color: rgba($color, .1);
-      color: $color;
-      border: 1px solid rgba($color, .2);
+    @each $name,
+    $pair in $colors {
+        $color: nth($pair, 1);
+        $color-invert: nth($pair, 2);
+        &.is-#{$name} {
+            background-color: rgba($color, .1);
+            color: $color;
+            border: 1px solid rgba($color, .2);
+        }
     }
-  }
 }
 
 .navbar:not(.is-transparent) {
-  @include btn-gradient($primary);
-
-  .navbar-item,
-  .navbar-link {
-    color: $white;
-
-    &.has-dropdown:hover .navbar-link,
-    &:hover {
-      background-color: rgba(#000, 0.05);
-    }
-
-    &.is-active,
-    &:active {
-      background-color: rgba(#000, 0.1);
-    }
-  }
-
-  .navbar-burger:hover {
-    background-color: rgba(#000, 0.05);
-  }
-
-  .navbar-link::after {
-    border-color: $white;
-  }
-
-  @include touch {
-    .navbar-menu {
-      background-color: $primary;
-      @include btn-gradient($primary);
-    }
-  }
-
-  @include desktop {
-    .navbar-dropdown .navbar-item {
-      color: $grey-dark;
-    }
-  }
-
-  .navbar-burger {
-    span {
-      background-color: $white;
-    }
-  }
-
-  @each $name, $pair in $colors {
-    $color: nth($pair, 1);
-    $color-invert: nth($pair, 2);
-
-    &.is-#{$name} {
-      @include btn-gradient($color);
-
-      .navbar-burger {
-        span {
-          background-color: $color-invert;
+    @include btn-gradient($primary);
+    .navbar-item,
+    .navbar-link {
+        color: $white;
+        &.has-dropdown:hover .navbar-link,
+        &:hover {
+            background-color: rgba(#000, 0.05);
         }
-      }
+        &.is-active,
+        &:active {
+            background-color: rgba(#000, 0.1);
+        }
     }
-  }
+    .navbar-burger:hover {
+        background-color: rgba(#000, 0.05);
+    }
+    .navbar-link::after {
+        border-color: $white;
+    }
+    @include mobile {
+        .navbar-menu {
+            background-color: $primary;
+            @include btn-gradient($primary);
+        }
+    }
+    @include desktop {
+        .navbar-dropdown .navbar-item {
+            color: $grey-dark;
+        }
+    }
+    .navbar-burger {
+        span {
+            background-color: $white;
+        }
+    }
+    @each $name,
+    $pair in $colors {
+        $color: nth($pair, 1);
+        $color-invert: nth($pair, 2);
+        &.is-#{$name} {
+            @include btn-gradient($color);
+            @include mobile {
+                .navbar-menu {
+                    background-color: $color;
+                    @include btn-gradient($color);
+                }
+                .navbar-item,
+                .navbar-link {
+                    color: $color-invert;
+                    &.is-active,
+                    &:hover {
+                        background-color: darken($color, 2);
+                        color: $color-invert;
+                    }
+                    &:after {
+                        border-color: $color-invert;
+                    }
+                }
+            }
+            .navbar-burger {
+                span {
+                    background-color: $color-invert;
+                }
+            }
+        }
+    }
 }
 
 .hero {
-  .navbar:not(.is-transparent) {
-    @include btn-gradient($primary);
-  }
-
-  @each $name, $pair in $colors {
-    $color: nth($pair, 1);
-    $color-invert: nth($pair, 2);
-
-    &.is-#{$name} {
-      .navbar {
-        @include btn-gradient($color);
-      }
-
-      .navbar-item,
-      .navbar-link {
-        color: $color-invert;
-
-        &.is-active,
-        &:hover {
-          background-color: darken($color, 10);
-          color: $color-invert;
-        }
-
-        &:after {
-          border-color: $color-invert;
-        }
-      }
-
-      .navbar-burger {
-        span {
-          background-color: $color-invert;
-        }
-      }
-
-      @include desktop {
-        .navbar-dropdown a.navbar-item:hover {
-          color: $color-invert;
-        }
-      }
+    .navbar:not(.is-transparent) {
+        @include btn-gradient($primary);
     }
-  }
+    @each $name,
+    $pair in $colors {
+        $color: nth($pair, 1);
+        $color-invert: nth($pair, 2);
+        &.is-#{$name} {
+            .navbar {
+                @include btn-gradient($color);
+            }
+            .navbar-item,
+            .navbar-link {
+                color: $color-invert;
+                &.is-active,
+                &:hover {
+                    background-color: darken($color, 2);
+                    color: $color-invert;
+                }
+                &:after {
+                    border-color: $color-invert;
+                }
+            }
+            .navbar-burger {
+                span {
+                    background-color: $color-invert;
+                }
+            }
+            @include touch {
+                .navbar-menu {
+                    background-color: $color;
+                    @include btn-gradient($color);
+                }
+            }
+            @include desktop {
+                .navbar-dropdown a.navbar-item:hover {
+                    color: $color-invert;
+                }
+            }
+        }
+    }
 }
