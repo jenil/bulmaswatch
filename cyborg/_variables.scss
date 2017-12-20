@@ -1,3 +1,4 @@
+@import 'sass/utilities/all';
 ////////////////////////////////////////////////
 // CYBORG
 ////////////////////////////////////////////////
@@ -10,6 +11,7 @@ $grey-lighter: hsl(0, 0%, 86%);
 $primary: #2A9FD6 !default;
 $primary-light: lighten($primary, 10);
 
+$white: #fff;
 $white-ter:    #f5f5f5;
 
 $body-background-color: #000;
@@ -17,11 +19,11 @@ $background: $grey-darker;
 
 $border: $grey-dark;
 
-$title-color: #fff;
+$title-color: $white;
 $subtitle-color: $white-ter;
 $subtitle-strong-color: $white-ter;
 
-$text: #fff;
+$text: $white;
 $text-light: lighten($text, 10);
 $text-strong: darken($text, 5);
 
@@ -53,3 +55,16 @@ $pagination-disabled-background-color: $grey-dark;
 
 $dropdown-content-background-color: $background;
 $dropdown-item-color: $text;
+
+$navbar-background-color: $body-background-color;
+$navbar-item-color: $white;
+$navbar-item-hover-color: $white;
+$navbar-item-hover-background-color: rgba($white, 0.12);
+$navbar-item-active-color: $link;
+$navbar-item-active-background-color: $navbar-item-hover-background-color;
+
+$navbar-dropdown-background-color: $body-background-color;
+$navbar-dropdown-item-hover-color: $white;
+$navbar-dropdown-item-hover-background-color: $navbar-item-hover-background-color;
+$navbar-dropdown-item-active-background-color: $navbar-item-hover-background-color;
+$navbar-dropdown-arrow: $white;
