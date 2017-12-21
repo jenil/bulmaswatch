@@ -79,7 +79,7 @@
     border: 1px solid $grey-darker;
   }
 
-  @include mobile {
+  @include touch {
     .navbar-menu {
       background-color: $navbar-background-color;
     }
