@@ -15,7 +15,7 @@ $blue: #3498db;
 $purple: #8e44ad;
 $red: #e74c3c;
 $white-ter: #ecf0f1;
-$primary: $turquoise !default;
+$primary: #375a7f !default;
 $yellow-invert: #fff;
 
 $family-sans-serif: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
@@ -79,14 +79,17 @@ $navbar-height: 4rem;
 
 $navbar-background-color: $primary;
 $navbar-item-color: $text;
-$navbar-item-hover-color: $text;
-$navbar-item-hover-background-color: $link-hover;
+$navbar-item-hover-color: $link;
+$navbar-item-hover-background-color: transparent;
+$navbar-item-active-color: $link;
 $navbar-dropdown-arrow: #fff;
+$navbar-divider-background-color: rgba(0, 0, 0, 0.2);
+$navbar-dropdown-border-top: 1px solid $navbar-divider-background-color;
 $navbar-dropdown-background-color: $primary;
-$navbar-dropdown-item-hover-color: $text;
-$navbar-dropdown-item-hover-background-color: $link-hover;
-$navbar-dropdown-item-active-background-color: $link-active;
-$navbar-dropdown-item-active-color: $grey-dark;
+$navbar-dropdown-item-hover-color: $grey-lighter;
+$navbar-dropdown-item-hover-background-color: transparent;
+$navbar-dropdown-item-active-background-color: transparent;
+$navbar-dropdown-item-active-color: $link;
 
 $dropdown-content-background-color: $background;
 $dropdown-item-color: $text;

@@ -1,10 +1,6 @@
 // Overrides
 @import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic);
 
-.section {
-  background-color: darken($grey-darker, 4);
-}
-
 hr {
   height: $border-width;
 }
@@ -132,12 +128,12 @@ a {
 
   .card-header {
     box-shadow: none;
-    background-color: rgba($black-bis, .2);
+    background-color: rgba($black-bis, 0.2);
     border-radius: $radius $radius 0 0;
   }
 
   .card-footer {
-    background-color: rgba($black-bis, .2);
+    background-color: rgba($black-bis, 0.2);
   }
 
   .card-footer,
@@ -191,77 +187,31 @@ a {
   border-color: $grey-dark;
 }
 
-.nav {
-  background-color: $primary;
-  border-radius: $radius;
-  @media screen and (max-width: $tablet - 1) {
-    .nav-menu {
-      background-color: $primary;
-      border-radius: $radius;
-    }
-  }
-
-  .nav-item a:not(.button),
-  a.nav-item:not(.button) {
-    &:hover {
-      background-color: $link-hover;
-      color: $white;
-    }
-    // Modifiers
-    &.is-active {
-      color: $white;
-      background-color: $link-active;
-
-      &.is-tab {
-        border-bottom-color: $white;
-      }
-    }
-  }
-
-  .nav-toggle {
-    &:hover {
-      background-color: $link-hover;
-      border-radius: $radius;
-    }
-
-    span {
-      background-color: $white;
-    }
-  }
-}
-
 .navbar {
   border-radius: $radius;
 
-  .navbar-dropdown {
-    .navbar-item.is-active {
-      background-color: $link-active;
+  &.is-transparent {
+    background: none;
+  }
 
-      &:hover {
-        background-color: $link-hover;
+  &.is-primary {
+    .navbar-dropdown {
+      a.navbar-item.is-active {
+        background-color: $link;
       }
     }
   }
 
-  .navbar-burger {
-    border-radius: $radius;
-
-    &:hover {
-      background-color: $link-hover;
-    }
-
-    &.is-active {
-      background-color: $link-active;
-
-      span {
-        background-color: #fff;
-      }
+  @include touch {
+    .navbar-menu {
+      background-color: $navbar-background-color;
+      border-radius: 0 0 $radius $radius;
     }
   }
 }
 
-.hero .nav,
-body > .nav {
+.hero .navbar,
+body > .navbar {
   border-radius: 0;
 }
 
@@ -346,26 +296,16 @@ body > .nav {
 
 .hero {
   // Colors
-  .nav {
-    background-color: $primary;
-  }
   @each $name, $pair in $colors {
     $color: nth($pair, 1);
     $color-invert: nth($pair, 2);
 
     &.is-#{$name} {
-      .nav {
-        background-color: $color;
-      }
-
-      .nav-item a:not(.button),
-      a.nav-item {
-        color: $color-invert;
-
-        &.is-active,
-        &:hover {
-          background-color: darken($color, 10);
-          color: $color-invert;
+      .navbar {
+        .navbar-dropdown {
+          .navbar-item:hover {
+            background-color: $navbar-dropdown-item-hover-background-color;
+          }
         }
       }
     }
