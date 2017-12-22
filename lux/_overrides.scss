@@ -16,10 +16,6 @@ h6 {
   letter-spacing: 3px;
 }
 
-a {
-  color: $grey;
-}
-
 .box {
   box-shadow: 0 0 0 1px $grey-lighter;
 }
@@ -85,7 +81,8 @@ a {
 }
 
 .navbar {
-  .navbar-link, .navbar-item {
+  .navbar-link,
+  .navbar-item {
     text-transform: uppercase;
     font-weight: bold;
   }
@@ -98,78 +95,26 @@ a {
     color: $white;
   }
 
-  .navbar-burger {
-    span {
-      background-color: $grey;
-    }
-
-    &:hover, &:active {
-      background-color: lighten($primary, 10);
-    }
-  }
-}
-
-.nav {
-  background-color: $primary;
-  border-radius: $radius;
-  color: $grey;
-  min-height: 5rem;
-
-  @media screen and (max-width: $tablet - 1) {
-    .nav-menu {
+  @include touch {
+    .navbar-menu {
       background-color: $primary;
       border-radius: $radius;
     }
   }
-
-
-  .subtitle,
-  .title {
-    color: $grey;
-    text-transform: uppercase;
-    font-weight: bold;
-  }
-
-  .nav-item a:not(.button),
-  a.nav-item:not(.button) {
-    color: $grey;
-    text-transform: uppercase;
-    font-weight: bold;
-
-    &:hover {
-      color: $white;
-    }
-    // Modifiers
-    &.is-active {
-      color: $white;
-
-      &.is-tab {
-        border-bottom-color: $grey;
-      }
-    }
-  }
-
-  .nav-toggle {
-    width: 5rem;
-    height: 5rem;
-
-    &:hover {
-      background-color: rgba($white, 0.1);
-
-      span {
-        background-color: $white;
-      }
-    }
-
-    span {
-      background-color: $grey;
-    }
-  }
 }
-
 .hero {
-  .nav {
-    background-color: $primary;
+  .navbar {
+    background-color: $navbar-background-color;
+  }
+  @each $name, $pair in $colors {
+    $color: nth($pair, 1);
+    $color-invert: nth($pair, 2);
+
+    &.is-#{$name} {
+      .navbar {
+        background-color: $color;
+      }
+    }
   }
 }
 
