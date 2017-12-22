@@ -112,35 +112,37 @@
   }
 }
 
-.nav, .navbar {
-  border: solid $grey-lighter;
-  border-width: 1px 1px $thickness 1px;
-}
-
 .hero {
-  .nav {
+  .navbar {
     border: none;
-    box-shadow: 0 $thickness 0 rgba($border, 0.5);
+    box-shadow: 0 $thickness 0 darken($border, 5);
   }
   @each $name, $pair in $colors {
     $color: nth($pair, 1);
     $color-invert: nth($pair, 2);
 
     &.is-#{$name} {
-      .nav {
-        box-shadow: 0 $thickness 0 rgba($color-invert, 0.2);
+      .navbar {
+        box-shadow: 0 $thickness 0 darken($color, 5);
       }
+    }
+  }
+  @include touch {
+    .navbar-menu {
+      box-shadow: none;
     }
   }
 }
 
 .navbar {
+  border: solid darken($border, 5);
+  border-width: 1px 1px $thickness 1px;
   @each $name, $pair in $colors {
     $color: nth($pair, 1);
     $color-invert: nth($pair, 2);
 
     &.is-#{$name} {
-      border-color: darken($color, 10);
+      border-color: darken($color, 5);
     }
   }
 }
