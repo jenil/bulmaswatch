@@ -10,10 +10,11 @@ $grey-lighter: #d9dee2;
 $orange:       #f0ad4e;
 $yellow:       #ffd500;
 $green:        #02B875;
-$blue:         #5bc0de;
+$blue:         #45b2d3;
 $red:          #d9534f;
 
-$primary: #4582EC !default;
+$link: #4582EC !default;
+$primary: $blue !default;
 $danger: $orange;
 
 $subtitle-color: $grey;
@@ -25,11 +26,12 @@ $body-size: 15px;
 $family-serif: Georgia, Cambria, "Times New Roman", Times, serif;
 
 $navbar-height: 5rem;
-$navbar-item-hover-color: $primary;
+$navbar-item-hover-color: $link;
 $navbar-item-hover-background-color: transparent;
-$navbar-item-active-color: $primary;
+$navbar-item-active-color: $link;
 $navbar-item-active-background-color: transparent;
 
-$navbar-dropdown-item-hover-color: $primary;
+$navbar-dropdown-item-hover-color: $link;
 $navbar-dropdown-item-hover-background-color: transparent;
+$navbar-dropdown-item-active-color: $link;
 $navbar-dropdown-item-active-background-color: transparent;
