@@ -2,31 +2,37 @@
 // NUCLEAR
 ////////////////////////////////////////////////
 
-@function inv($c){
+@function inv($c) {
   @return lighten(invert($c),3%);
 }
 
-$black:inv($black);
-$black-bis:  inv($black-bis);
-$black-ter:  inv($black-ter);
-$grey-darker:  inv($grey-darker);
-$grey-dark:  inv($grey-dark);
-$grey:  inv($grey);
-$grey-light:  inv($grey-light);
-$grey-lighter:  inv($grey-lighter);
-$white-ter:  inv($white-ter);
-$white-bis:  inv($white-bis);
-$white:  inv($white);
+$black: inv($black);
+$black-bis: inv($black-bis);
+$black-ter: inv($black-ter);
+$grey-darker: inv($grey-darker);
+$grey-dark: inv($grey-dark);
+$grey: inv($grey);
+$grey-light: inv($grey-light);
+$grey-lighter: inv($grey-lighter);
+$white-ter: inv($white-ter);
+$white-bis: inv($white-bis);
+$white: inv($white);
 
-$orange:  #FFAA00;
-$yellow:  #D9FF00;
-$green:  #00FF48;
-$turquoise:  #00FFFF;
-$blue: #00FFFF;
+$orange: #ffaa00;
+$yellow: #d9ff00;
+$green: #00ff48;
+$turquoise: #00ffff;
+$blue: #00ffff;
 $purple: #8200ff;
-$red:  #f90000;
+$red: #f90000;
 
 $primary: $yellow;
 $warning: $orange;
-$border:$primary;
+$border: $primary;
 $border-hover: $primary;
+
+$body-background-color: $white;
+
+$font-heading: 'Varela Round', BlinkMacSystemFont, -apple-system, 'Segoe UI',
+  'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+  'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;

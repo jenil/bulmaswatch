@@ -1,9 +1,5 @@
 @import url( 'https://fonts.googleapis.com/css?family=Varela+Round');
 
-html {
-  background-color: $white;
-}
-
 .card-header {
   border-bottom: solid 1px $primary;
 }
@@ -28,14 +24,14 @@ html {
 .message-header,
 .tabs,
 .title {
-  font-family: 'Varela Round', BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-family: $font-heading;
   text-transform: uppercase;
 }
 
 .subtitle,
 .tag,
 th {
-  font-family: 'Varela Round', BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-family: $font-heading;
 }
 
 .box {
@@ -44,11 +40,11 @@ th {
 }
 
 .delete {
-  $c: rgba($grey-light,0.6);
+  $c: rgba($grey-light, 0.6);
   background-color: $c;
 
   &:hover {
-    background-color: rgba($c,0.85);
+    background-color: rgba($c, 0.85);
   }
 
   &::after,
@@ -76,34 +72,38 @@ th {
       }
       transition: $transition;
       background: $color;
-      box-shadow: 0 0 3px 0 rgba(0,0,0,0.3) inset, 0 1px 15px 0 rgba(0,0,0,0.6) inset;
+      box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3) inset,
+        0 1px 15px 0 rgba(0, 0, 0, 0.6) inset;
 
       &.is-hovered,
       &:hover {
-        border-color: rgba(0,0,0,0.25);
+        border-color: rgba(0, 0, 0, 0.25);
         transition: $transition;
-        box-shadow: 0 0 3px 0 rgba(0,0,0,0.3) inset, 0 1px 15px 0 rgba(0,0,0,0.6) inset, 0 0 3px 0 $color;
+        box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3) inset,
+          0 1px 15px 0 rgba(0, 0, 0, 0.6) inset, 0 0 3px 0 $color;
       }
 
       &.is-focused,
       &:focus {
         transition: $transition;
         border-color: $color;
-        box-shadow: 0 0 0 0 rgba(0,0,0,0.2) inset, 0 0 0 0 rgba(0,0,0,0.5) inset,0 0 7px 1px $color;
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2) inset,
+          0 0 0 0 rgba(0, 0, 0, 0.5) inset, 0 0 7px 1px $color;
       }
 
       &.is-active,
       &:active {
         transition: $transition;
-        border-color: rgba(0,0,0,0.47);
-        box-shadow: 0 0 3px 0 rgba(0,0,0,0.7) inset, 0 1px 15px 0 rgba(0,0,0,0.9) inset;
+        border-color: rgba(0, 0, 0, 0.47);
+        box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.7) inset,
+          0 1px 15px 0 rgba(0, 0, 0, 0.9) inset;
       }
     }
   }
 }
 
 button.button,
-input[type="submit"].button {
+input[type='submit'].button {
   padding-top: calc(0.375em + 1px);
 }
 
@@ -130,7 +130,10 @@ input[type="submit"].button {
 
       .message-body {
         border-color: $color;
-        color: desaturate(lighten($color, $darken-percentage), $desaturate-percentage);
+        color: desaturate(
+          lighten($color, $darken-percentage),
+          $desaturate-percentage
+        );
       }
     }
   }
