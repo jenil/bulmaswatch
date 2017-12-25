@@ -1,17 +1,18 @@
 ////////////////////////////////////////////////
 // SIMPLEX
 ////////////////////////////////////////////////
-$grey-darker:  #373a3c ;
-$grey-dark:    #444 ;
-$grey:         #777 ;
-$grey-light:   #bbb ;
-$grey-lighter: #ddd ;
+$grey-darker: #373a3c;
+$grey-dark: #444;
+$grey: #777;
+$grey-light: #bbb;
+$grey-lighter: #ddd;
 
-$orange:       #D9831F;
-$green:        #469408;
-$blue:         #029ACF;
-$purple:       #9B479F;
-$red:          #D9230F;
+$orange: #d9831f;
+$green: #469408;
+$blue: #029acf;
+$cyan: #0fc5d9;
+$purple: #9b479f;
+$red: #d9230f;
 
 $primary: $red !default;
 $primary-dark: darken($primary, 10);
@@ -21,11 +22,11 @@ $danger: $orange;
 $orange-invert: #fff;
 $warning-invert: $orange-invert;
 
-$family-sans-serif: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$family-sans-serif: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $body-size: 14px;
 
 $navbar-background-color: $primary;
-$navbar-item-color: rgba(#fff, 0.6);
+$navbar-item-color: rgba(#fff, 0.7);
 $navbar-item-hover-color: #fff;
 $navbar-item-active-color: #fff;
 $navbar-item-hover-background-color: rgba(#000, 0.1);
