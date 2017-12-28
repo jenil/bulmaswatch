@@ -1,10 +1,20 @@
 // Overrides
 @mixin btn-shadow($color) {
-  background-image: linear-gradient(180deg, lighten($color, 6%) 0%, $color 60%, darken($color, 4%) 100%);
+  background-image: linear-gradient(
+    180deg,
+    lighten($color, 6%) 0%,
+    $color 60%,
+    darken($color, 4%) 100%
+  );
   filter: none;
 }
 @mixin btn-shadow-inverse($color) {
-  background-image: linear-gradient(180deg, darken($color, 8%) 0%, darken($color, 4%) 40%, darken($color, 0%) 100%);
+  background-image: linear-gradient(
+    180deg,
+    darken($color, 8%) 0%,
+    darken($color, 4%) 40%,
+    darken($color, 0%) 100%
+  );
   filter: none;
 }
 
@@ -55,10 +65,6 @@
   }
 }
 
-.label {
-  color: $text;
-}
-
 .notification {
   @each $name, $pair in $colors {
     $color: nth($pair, 1);
@@ -87,12 +93,12 @@
 
   .card-header {
     box-shadow: none;
-    background-color: rgba($black-bis, .2);
+    background-color: rgba($black-bis, 0.2);
     border-radius: $radius $radius 0 0;
   }
 
   .card-footer {
-    background-color: rgba($black-bis, .2);
+    background-color: rgba($black-bis, 0.2);
   }
 
   .card-footer,
@@ -105,70 +111,48 @@
 .navbar {
   border: 1px solid $dark;
 
-  a.navbar-item,
+  @include touch {
+    .navbar-menu {
+      background-color: inherit;
+    }
+  }
+
+  .navbar-item,
   .navbar-link {
     color: rgba($white, 0.75);
     border-left: 1px solid rgba($white, 0.1);
     border-right: 1px solid rgba($black, 0.2);
 
-    &:hover {
-      color: $white;
-      border-left: 1px solid rgba($black, 0.2);
-      background-color: rgba($black, 0.2);
-    }
-  }
-}
-
-.nav {
-  background-color: $background;
-  color: $white;
-
-  @media screen and (max-width: $tablet - 1) {
-    .nav-menu {
-      background-color: $background;
-    }
-  }
-
-  .subtitle,
-  .title {
-    color: $white-bis;
-  }
-
-  .nav-item a:not(.button),
-  a.nav-item:not(.button) {
-    color: rgba($white, 0.75);
-    border-left: 1px solid rgba($white, 0.1);
-    border-right: 1px solid rgba($black, 0.2);
-
-    &:hover {
-      color: $white;
-      border-left: 1px solid rgba($black, 0.2);
-      background-color: rgba($black, 0.2);
-    }
-    // Modifiers
     &.is-active {
-      color: $white;
-      background-color: rgba($black, 0.2);
+      background-color: rgba($dark, 0.1);
+    }
 
-      &.is-tab {
-        border-bottom-color: $white;
-      }
+    &:hover {
+      color: $white;
+      border-left: 1px solid rgba($black, 0.2);
+      background-color: rgba($black, 0.2);
     }
   }
 
-  .nav-toggle {
-    &:hover {
-      background-color: rgba($black, 0.075);
-    }
+  @each $name, $pair in $colors {
+    $color: nth($pair, 1);
+    $color-invert: nth($pair, 2);
 
-    span {
-      background-color: rgba($white, 0.75);
+    &.is-#{$name} {
+      .navbar-item,
+      .navbar-link {
+        color: rgba($color-invert, 0.75);
+
+        &.is-active {
+          color: rgba($color-invert, 1);
+        }
+      }
     }
   }
 }
 
 .hero {
-  .nav {
+  .navbar {
     background-color: $background;
   }
   @each $name, $pair in $colors {
@@ -176,21 +160,8 @@
     $color-invert: nth($pair, 2);
 
     &.is-#{$name} {
-      .nav {
+      .navbar {
         background: none;
-      }
-
-      .nav-item a:not(.button),
-      a.nav-item:not(.button) {
-        color: rgba($color-invert, 0.75);
-        border-right: 1px solid darken($color, 15);
-
-        &.is-active,
-        &:hover {
-          background-color: darken($color, 10);
-          color: $color-invert;
-          border-left: 1px solid darken($color, 15);
-        }
       }
     }
   }
