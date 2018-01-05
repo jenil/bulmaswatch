@@ -43,7 +43,8 @@ a {
   }
 
   &.is-loading:after {
-    border-color: transparent transparent $button-border-color $button-border-color;
+    border-color: transparent transparent $button-border-color
+      $button-border-color;
   }
   @each $name, $pair in $colors {
     $color: nth($pair, 1);
@@ -135,12 +136,12 @@ a {
 
   .card-header {
     box-shadow: none;
-    background-color: rgba($black-bis, .2);
+    background-color: rgba($black-bis, 0.2);
     border-radius: $radius $radius 0 0;
   }
 
   .card-footer {
-    background-color: rgba($black-bis, .2);
+    background-color: rgba($black-bis, 0.2);
   }
 
   .card-footer,
@@ -194,51 +195,34 @@ a {
 
 .navbar {
   border-radius: $radius;
-}
 
-.nav {
-  background-color: $grey-dark;
-  border-radius: $radius;
+  &.is-transparent {
+    background-color: transparent;
+  }
 
-  @media screen and (max-width: $tablet - 1) {
-    .nav-menu {
-      background-color: $grey-dark;
-      border-radius: $radius;
+  @include touch {
+    .navbar-menu {
+      background-color: inherit;
     }
   }
 
+  @each $name, $pair in $colors {
+    $color: nth($pair, 1);
+    $color-invert: nth($pair, 2);
 
-  .nav-item a:not(.button),
-  a.nav-item:not(.button) {
-    color: $grey;
+    &.is-#{$name} {
+      @include touch {
+        .navbar-item,
+        .navbar-link {
+          color: rgba($color-invert, 0.75);
 
-    &:hover {
-      color: $link-hover;
-    }
-    // Modifiers
-    &.is-active {
-      color: $grey-lighter;
-
-      &.is-tab {
-        border-bottom-color: $grey-lighter;
+          &.is-active {
+            color: $color-invert;
+          }
+        }
       }
     }
   }
-
-  .nav-toggle {
-    &:hover {
-      background-color: $link-hover;
-    }
-
-    span {
-      background-color: $grey-lighter;
-    }
-  }
-}
-
-.hero .nav,
-body > .nav {
-  border-radius: 0;
 }
 
 .pagination-link,
