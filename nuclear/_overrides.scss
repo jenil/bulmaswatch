@@ -55,6 +55,7 @@ th {
 
 .button {
   border-radius: 4px;
+  padding-top: calc(0.375em + 1px);
   @each $name, $pair in $colors {
     $color: nth($pair, 1);
     $color-invert: nth($pair, 2);
@@ -64,7 +65,6 @@ th {
     $desaturate-percentage: $color-luminance * 30%;
     $glow: 0 0 7px 1px $color;
     $transition: box-shadow 0.1s linear;
-    padding-top: calc(0.375em + 1px);
 
     &.is-#{$name} {
       &:not(.is-outlined) {
