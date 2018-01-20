@@ -49,12 +49,22 @@
   border-radius: $radius-large;
 }
 
-.nav, .navbar {
+.navbar {
   @include btn-shadow($light);
+}
+.navbar {
+  @each $name, $pair in $colors {
+    $color: nth($pair, 1);
+    $color-invert: nth($pair, 2);
+
+    &.is-#{$name} {
+      @include btn-shadow($color);
+    }
+  }
 }
 
 .hero {
-  .nav {
+  .navbar {
     background-color: $background;
     @include btn-shadow($light);
     border: none;
@@ -64,22 +74,11 @@
     $color-invert: nth($pair, 2);
 
     &.is-#{$name} {
-      .nav {
+      .navbar {
         background: $color;
         @include btn-shadow($color);
         border: none;
       }
-    }
-  }
-}
-
-.navbar {
-  @each $name, $pair in $colors {
-    $color: nth($pair, 1);
-    $color-invert: nth($pair, 2);
-
-    &.is-#{$name} {
-      @include btn-shadow($color);
     }
   }
 }
