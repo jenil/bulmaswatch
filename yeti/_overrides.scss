@@ -70,97 +70,69 @@
 }
 
 .navbar {
-  .has-dropdown .navbar-item {
-    @include desktop {
+  &.is-transparent {
+    background-color: transparent;
+
+    .navbar-item,
+    .navbar-link {
+      color: $link;
+
+      &:after {
+        border-color: currentColor;
+      }
+    }
+  }
+
+  @include desktop {
+    .has-dropdown .navbar-item {
       color: $text;
     }
   }
 
-  .navbar-burger {
-    span {
-      background-color: $white;
+  @include touch {
+    .navbar-menu {
+      background-color: inherit;
     }
 
-    &:hover {
-      background-color: $link-hover;
-    }
-  }
-}
+    @each $name, $pair in $colors {
+      $color: nth($pair, 1);
+      $color-invert: nth($pair, 2);
 
-.nav {
-  background-color: $primary;
-  border-radius: $radius;
-  color: rgba($white, 0.6);
-  @media screen and (max-width: $tablet - 1) {
-    .nav-menu {
-      background-color: $primary;
-    }
-  }
-
-  .subtitle,
-  .title {
-    color: $white;
-  }
-
-  .nav-item a:not(.button),
-  a.nav-item:not(.button) {
-    color: rgba($white, 0.6);
-
-    &:hover {
-      color: $white;
-    }
-    // Modifiers
-    &.is-active {
-      color: $white;
-
-      &.is-tab {
-        border-bottom-color: $white;
+      &.is-#{$name} {
+        .navbar-item,
+        .navbar-link {
+          color: $color-invert;
+        }
       }
     }
   }
-
-  .nav-toggle {
-    &:hover {
-      background-color: rgba($white, 0.1);
-
-      span {
-        background-color: $white;
-      }
-    }
-
-    span {
-      background-color: rgba($white, 0.6);
-    }
-  }
-}
-
-.hero .nav,
-body > .nav {
-  border-radius: 0;
 }
 
 .hero {
-  // Colors
-  .nav {
-    background-color: $primary;
+  .navbar {
+    .navbar-item,
+    .navbar-link {
+      color: $link;
+
+      &:after {
+        border-color: currentColor;
+      }
+    }
+
+    @include desktop {
+      .has-dropdown .navbar-item {
+        color: $text;
+      }
+    }
   }
   @each $name, $pair in $colors {
     $color: nth($pair, 1);
     $color-invert: nth($pair, 2);
 
     &.is-#{$name} {
-      .nav {
-        background: none;
-      }
-
-      .nav-item a:not(.button),
-      a.nav-item {
-        color: rgba($color-invert, 0.6);
-
-        &.is-active,
-        &:hover {
-          color: $color-invert;
-        }
+      .navbar-item,
+      .navbar-link {
+        color: $color-invert;
       }
     }
   }
