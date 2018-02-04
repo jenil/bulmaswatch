@@ -1,7 +1,8 @@
 @import '../materia/bulmaswatch';
 @import "highlight";
-pre code {
-  text-align: left;
+
+pre code, .highlight {
+  text-align: left !important;
 }
 nav.main-nav {
     border-radius: 0;

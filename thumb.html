@@ -11,23 +11,30 @@ permalink: /thumb/
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" />
   <link href="{{ site.baseurl }}/default/bulmaswatch.min.css" id="stylesheet" rel="stylesheet" type="text/css" />
   <style type="text/css">
-  .switcher {
-    position: fixed;
-    top: 0;
-    right: 0;
-    z-index: 5;
-  }
-  .nav h1 {
-    font-weight: bold;
-  }
+    .switcher {
+      position: fixed;
+      top: 0;
+      right: 0;
+      z-index: 5;
+    }
 
-  .navbar-start, .navbar-item {
-    display: flex;
-  }
+    .navbar h1 {
+      font-weight: bold;
+    }
 
-  .navbar-item {
-    align-items: center;
-  }
+    .navbar>.container,
+    .navbar-start,
+    .navbar-item {
+      display: flex;
+    }
+
+    .navbar-item {
+      align-items: center;
+    }
+
+    body.flatly .navbar-item:not(.is-active) {
+      color: #fff !important;
+    }
   </style>
 </head>
 
@@ -40,9 +47,6 @@ permalink: /thumb/
             <h1 class="navbar-item" id="title"> Hero title </h1>
             <a class="navbar-item is-active">Home</a>
             <a class="navbar-item">Features</a>
-            <span class="navbar-item">
-              <button class="button" type="button" id="open-preview">Preview</button>
-            </span>
           </div>
         </div>
       </nav>
@@ -66,37 +70,38 @@ permalink: /thumb/
       <option value="default" selected="">Default</option>
       <option disabled>───</option>
       {% for t in site.themes %}
-        <option value="{{ t.name | slugify }}">{{ loop.index }} {{ t.name }} </option>
+      <option value="{{ t.name | slugify }}">{{ loop.index }} {{ t.name }} </option>
       {% endfor %}
     </select>
   </div>
   <script crossorigin="anonymous" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" src="//code.jquery.com/jquery-3.1.1.min.js">
   </script>
   <script type="text/javascript">
-  function switchTheme(t) {
-    var theme = t || 'default';
-    $('#stylesheet').attr('href', '../' + theme + '/bulmaswatch.min.css');
-    var title = theme.charAt(0).toUpperCase() + theme.substring(1);
-    window.history.replaceState(theme, title, '?' + theme);
-    $('#title').text(title);
-    $('#subtitle').text(title);
-    document.title = title;
-  }
-  $(function() {
-    $('.switcher select').change(function(e) {
-      switchTheme(e.target.value);
-    });
-    if (window.location.search) {
-      $('.switcher select').val(window.location.search.substring(1));
-      $('.switcher select').trigger('change');
+    function switchTheme(t) {
+      var theme = t || 'default';
+      $('#stylesheet').attr('href', '../' + theme + '/bulmaswatch.min.css');
+      var title = theme.charAt(0).toUpperCase() + theme.substring(1);
+      window.history.replaceState(theme, title, '?' + theme);
+      $('#title').text(title);
+      $('#subtitle').text(title);
+      document.title = title;
     }
-    $('.modal-background, .modal-close').click(function() {
-      $(this).parent().removeClass('is-active');
+    $(function () {
+      $('.switcher select').change(function (e) {
+        switchTheme(e.target.value);
+      });
+      if (window.location.search) {
+        $('.switcher select').val(window.location.search.substring(1));
+        $('.switcher select').trigger('change');
+        $('body').addClass(window.location.search.substring(1));
+      }
+      $('.modal-background, .modal-close').click(function () {
+        $(this).parent().removeClass('is-active');
+      });
+      $('#open-preview').on('click', function (e) {
+        window.top.location.href = '{{ site.baseurl }}/' + window.location.search.substring(1);
+      });
     });
-    $('#open-preview').on('click', function(e) {
-      window.top.location.href = '{{ site.baseurl }}/' + window.location.search.substring(1);
-    });
-  });
   </script>
 </body>
 
