@@ -14,7 +14,7 @@ nav.main-nav {
     .logo {
         padding-right: 10px;
     }
-    .navbar-item {
+    > * > * > .navbar-item {
         margin: 0.75rem 0.25rem;
         border-radius: $radius;
     }
