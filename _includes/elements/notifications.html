@@ -1,0 +1,13 @@
+<section class="section" id="notifications">
+  <h1 class="title"> Notifications </h1>
+  <hr>
+  <div class="columns is-multiline">
+    {% for m in page.modifiers limit:7 %}
+    <div class="column is-half">
+      <div class="notification {% if m != '' %}is-{{m}}{% endif %}">
+        <button class="delete"> </button> Lorem ipsum dolor sit amet,
+        <a href="#">consectetur</a> adipiscing elit lorem ipsum dolor sit amet, consectetur adipiscing elit </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>

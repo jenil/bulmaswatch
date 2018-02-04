@@ -86,51 +86,47 @@
   background-color: $body-background-color;
 }
 
-.nav {
-  background-color: $background;
-  @media screen and (max-width: $tablet - 1) {
-    .nav-menu {
-      background-color: $primary;
-      border-radius: $radius;
+.navbar {
+  &.is-transparent {
+    background-color: transparent;
+  }
+
+  @include touch {
+    .navbar-menu {
+      background-color: transparent;
     }
   }
 
-  .nav-item a:not(.button),
-  a.nav-item:not(.button) {
-    color: $grey-lighter;
-
-    &:hover {
-      color: $link;
-    }
-
-    &.is-active {
-      color: $primary;
-    }
-  }
-}
-
-.hero {
-  .nav {
-    background-color: $background;
-  }
   @each $name, $pair in $colors {
     $color: nth($pair, 1);
     $color-invert: nth($pair, 2);
 
     &.is-#{$name} {
-      .nav {
-        background-color: $color;
-      }
-
-      .nav-item a:not(.button),
-      a.nav-item {
-        color: $color-invert;
-
-        &.is-active,
-        &:hover {
-          background-color: darken($color, 10);
+      @include touch {
+        .navbar-item,
+        .navbar-link {
           color: $color-invert;
+
+          &.is-active {
+            color: rgba($color-invert, 0.7);
+          }
         }
+
+        .navbar-burger {
+          span {
+            background-color: $color-invert;
+          }
+        }
+      }
+    }
+  }
+}
+
+.hero {
+  .navbar {
+    .navbar-dropdown {
+      .navbar-item {
+        color: $grey-lighter;
       }
     }
   }

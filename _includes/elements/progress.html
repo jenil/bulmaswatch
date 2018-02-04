@@ -1,0 +1,11 @@
+<section class="section" id="progress">
+  <h1 class="title"> Progress bars </h1>
+  <hr>
+  {% for m in page.modifiers limit:7 %}
+  <progress class="progress {% if m != '' %}is-{{m}}{% endif %}" max="100" value="15"> 15% </progress>
+  {% endfor %}
+  <progress class="progress is-small" max="100" value="15"> 15% </progress>
+  <progress class="progress" max="100" value="30"> 30% </progress>
+  <progress class="progress is-medium" max="100" value="45"> 45% </progress>
+  <progress class="progress is-large" max="100" value="60"> 60% </progress>
+</section>

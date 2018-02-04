@@ -63,8 +63,13 @@ $navbar-background-color: $background;
 $navbar-item-color: $text;
 $navbar-item-hover-color: $grey-light;
 $navbar-item-active-color: $primary;
+$navbar-item-hover-background-color: rgba($grey-darker, 0.1);
+$navbar-item-active-background-color: rgba($grey-darker, 0.1);
 $navbar-dropdown-item-hover-color: $grey-light;
+$navbar-dropdown-item-active-color: $primary;
 $navbar-dropdown-background-color: $background;
+$navbar-dropdown-arrow: currentColor;
 
 $dropdown-content-background-color: $background;
 $dropdown-item-color: $text;
+$dropdown-item-hover-color: $text-light;

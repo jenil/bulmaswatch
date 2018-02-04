@@ -42,9 +42,17 @@
 
   .navbar-item,
   .navbar-link {
-    font-size: 0.8rem;
+    font-size: 0.875rem;
     font-weight: 700;
     text-transform: uppercase;
+
+    &.is-active {
+      background-color: darken($grey-dark, 5);
+
+      @include touch {
+        background-color: rgba($grey-dark, 0.25);
+      }
+    }
   }
 
   @include desktop {
@@ -53,68 +61,41 @@
     }
   }
 
-  .navbar-burger {
-    span {
-      background-color: $grey-lighter;
-    }
-
-    &:hover {
-      background-color: $grey-darker;
-    }
-  }
-}
-
-.nav {
-  background-color: $grey-dark;
-  border-radius: $radius;
-  color: $white;
-  @media screen and (max-width: $tablet - 1) {
-    .nav-menu {
-      background-color: $grey-dark;
-      border-radius: $radius;
+  @include touch {
+    .navbar-menu {
+      background-color: inherit;
     }
   }
 
-  .subtitle,
-  .title {
-    color: $white;
+  &:not([class*='is-']) .navbar-burger span {
+    background-color: $white-ter;
   }
 
-  .nav-item a:not(.button),
-  a.nav-item:not(.button) {
-    color: $grey-light;
-    font-size: 0.8rem;
-    font-weight: 700;
-    text-transform: uppercase;
+  @each $name, $pair in $colors {
+    $color: nth($pair, 1);
+    $color-invert: nth($pair, 2);
 
-    &:hover {
-      color: $white-bis;
-    }
-    // Modifiers
-    &.is-active {
-      color: $white;
-
-      &.is-tab {
-        border-bottom-color: $white;
+    &.is-#{$name} {
+      @include touch {
+        .navbar-item,
+        .navbar-link {
+          color: rgba($color-invert, 0.7);
+          &.is-active {
+            color: $color-invert;
+          }
+        }
       }
     }
   }
 
-  .nav-toggle {
-    &:hover {
-      background-color: $button-active-color;
-      border-radius: $radius;
-    }
-
-    span {
-      background-color: $grey-light;
-    }
+  &.is-transparent {
+    background-color: transparent;
   }
 }
 
 .hero {
   // Colors
-  .nav {
+  .navbar {
     background-color: $grey-dark;
   }
   @each $name, $pair in $colors {
@@ -122,19 +103,8 @@
     $color-invert: nth($pair, 2);
 
     &.is-#{$name} {
-      .nav {
+      .navbar {
         background: none;
-      }
-
-      .nav-item a:not(.button),
-      a.nav-item {
-        color: $color-invert;
-
-        &.is-active,
-        &:hover {
-          background-color: darken($color, 10);
-          color: $color-invert;
-        }
       }
     }
   }

@@ -1,0 +1,26 @@
+<section class="section" id="message">
+  <h1 class="title">Message</h1>
+  <hr>
+  <div class="columns is-multiline">
+    {% for m in page.modifiers %}
+    <div class="column is-half">
+      <article class="message {% if m != '' %}is-{{m}}{% endif %}">
+        <div class="message-header">
+          <p>
+            {% if m != '' %}
+            {{m | capitalize}}
+            {% else %}
+            Message
+            {% endif %}
+          </p>
+          <button class="delete"></button>
+        </div>
+        <div class="message-body">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum
+          <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>.
+        </div>
+      </article>
+    </div>
+    {% endfor %}
+  </div>
+</section>

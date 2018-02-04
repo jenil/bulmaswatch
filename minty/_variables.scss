@@ -7,10 +7,11 @@ $grey-light:   #aaa;
 $orange:       #eea170;
 $yellow:       #FFCE67;
 $green:        #56cc90;
-$blue:         #6CC3D5;
+$cyan:         #6CC3D5;
+$blue:         #6D90D6;
 $red:          #e07f7d;
+$turquoise: #6abfb0;
 
-$primary: #6abfb0 !default;
 $danger: $orange;
 
 $text: darken($grey, 10);
@@ -30,8 +31,8 @@ $radius-large: 8px;
 
 $family-heading: "Montserrat", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 
-$navbar-background-color: $primary;
-$navbar-item-color: rgba(#fff, 0.6);
+$navbar-background-color: $turquoise;
+$navbar-item-color: rgba(#fff, 0.75);
 $navbar-item-hover-color: #fff;
 $navbar-item-active-color: #fff;
 $navbar-item-hover-background-color: rgba(#000, 0.1);

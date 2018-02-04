@@ -97,12 +97,12 @@ a {
 
   .card-header {
     box-shadow: none;
-    background-color: rgba($white-ter, .8);
+    background-color: rgba($white-ter, 0.8);
     border-radius: $radius $radius 0 0;
   }
 
   .card-footer {
-    background-color: rgba($white-ter, .8);
+    background-color: rgba($white-ter, 0.8);
   }
 
   .card-footer,
@@ -141,97 +141,50 @@ a {
   border-width: $border-width;
 }
 
-.nav {
-  background-color: $primary;
-  border-radius: $radius;
-  color: $white;
-  @media screen and (max-width: $tablet - 1) {
-    .nav-menu {
-      background-color: $primary;
-      border-radius: $radius;
-    }
-  }
-
-  .subtitle,
-  .title {
-    color: $white;
-  }
-
-  .nav-item a,
-  a.nav-item {
-    &:hover {
-      color: $button-hover-color;
-    }
-  }
-
-  .nav-item a:not(.button),
-  a.nav-item:not(.button) {
-    color: $white;
-
-    &:hover {
-      background-color: $button-hover-color;
-      color: $turquoise;
-    }
-    // Modifiers
-    &.is-active {
-      color: $white;
-      background-color: $button-active-color;
-
-      &.is-tab {
-        border-bottom-color: $turquoise;
-      }
-    }
-  }
-
-  .nav-toggle {
-    &:hover {
-      background-color: $button-active-color;
-      border-radius: $radius;
-    }
-
-    span {
-      background-color: $white;
-    }
-  }
-}
-
 .navbar {
-  strong {
-    color: $grey-lighter;
-  }
+  border-radius: $radius;
 
   .navbar-menu {
     box-shadow: none;
   }
 
-  &:not(.is-transparent) .navbar-burger {
-    &:hover {
-      background-color: $button-hover-color;
+  .navbar-dropdown {
+    box-shadow: none;
+    .navbar-item {
+      color: $button-color;
+    }
+  }
+
+  @include touch {
+    color: $navbar-item-color;
+    .navbar-menu {
+      background-color: $navbar-dropdown-background-color;
+      border-radius: 0 0 $radius $radius;
     }
 
-    &.is-active {
-      background-color: $button-active-color;
-    }
-
-    span {
-      background-color: #fff;
+    .navbar-item,
+    .navbar-link {
+      &:not(.is-active):not(:hover) {
+        color: $button-color;
+      }
     }
   }
 
   &.is-transparent {
     background-color: transparent;
+    color: $text;
 
     .navbar-item,
     .navbar-link {
       color: $button-color;
 
       &:hover {
-        color: $turquoise;
+        color: $link;
         background-color: transparent;
       }
 
       &.is-active {
-        color: $turquoise;
+        color: $link;
         background-color: transparent;
       }
     }
@@ -240,25 +193,14 @@ a {
       border-color: $button-color;
     }
 
-    .navbar-dropdown {
+    .navbar-burger:hover {
       background-color: $white-ter;
-      border-color: $grey-lighter;
-
-      .navbar-item {
-        &:hover {
-          background-color: transparent;
-        }
-      }
-    }
-
-    .navbar-divider {
-      background-color: $grey-lighter;
     }
   }
 }
 
-.hero .nav,
-body > .nav {
+.hero .navbar,
+body > .navbar {
   border-radius: 0;
 }
 
@@ -328,27 +270,34 @@ body > .nav {
 }
 
 .hero {
-  // Colors
-  .nav {
+  .navbar {
     background-color: $primary;
+    .navbar-menu {
+      border-radius: 0;
+    }
   }
+
   @each $name, $pair in $colors {
     $color: nth($pair, 1);
     $color-invert: nth($pair, 2);
 
     &.is-#{$name} {
-      .nav {
+      .navbar {
         background-color: $color;
-      }
 
-      .nav-item a:not(.button),
-      a.nav-item {
-        color: $color-invert;
+        .navbar-item,
+        .navbar-link {
+          &:not(.is-active):not(:hover) {
+            color: $color-invert;
+          }
+        }
 
-        &.is-active,
-        &:hover {
-          background-color: darken($color, 10);
-          color: $color-invert;
+        @include desktop {
+          .navbar-dropdown {
+            .navbar-item:not(.is-active):not(:hover) {
+              color: $button-color;
+            }
+          }
         }
       }
     }

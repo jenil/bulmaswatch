@@ -1,7 +1,8 @@
 @import '../materia/bulmaswatch';
 @import "highlight";
-pre code {
-  text-align: left;
+
+pre code, .highlight {
+  text-align: left !important;
 }
 nav.main-nav {
     border-radius: 0;
@@ -13,13 +14,9 @@ nav.main-nav {
     .logo {
         padding-right: 10px;
     }
-    .nav-item {
+    .navbar-item {
         margin: 0.75rem 0.25rem;
         border-radius: $radius;
-    }
-
-    .select select {
-        padding-right: 2.5em !important;
     }
 }
 
@@ -27,15 +24,11 @@ nav.main-nav {
     .main-nav {
         background-color: transparent !important;
         box-shadow: none !important;
-        .nav-item {
+        .navbar-item {
             &.is-active,
             &:hover {
                 background-color: rgba($black, 0.05) !important;
             }
-        }
-        .select select {
-            background-color: transparent;
-            box-shadow: none;
         }
     }
     .hero {

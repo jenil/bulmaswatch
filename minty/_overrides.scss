@@ -118,86 +118,68 @@ h6 {
     transition: all 300ms;
   }
 
-  .has-dropdown .navbar-item {
+  @include touch {
+    .navbar-menu {
+      background-color: inherit;
+      border-radius: inherit;
+    }
+  }
+
+  .navbar-dropdown .navbar-item {
     @include desktop {
       color: $text;
     }
   }
 
-  .navbar-burger {
-    span {
-      background-color: $navbar-item-color;
-    }
+  &.is-transparent {
+    background-color: transparent;
+    .navbar-item,
+    .navbar-link {
+      color: rgba($text, 0.75);
 
-    &:hover {
-      background-color: $navbar-item-hover-background-color;
-
-      span {
-        background-color: $navbar-item-active-color;
+      &.is-active {
+        color: $text;
       }
-    }
-  }
-}
 
-.nav {
-  background-color: $primary;
-  border-radius: $radius;
-  color: rgba($white, 0.6);
-  @media screen and (max-width: $tablet - 1) {
-    .nav-menu {
-      background-color: $primary;
-      border-radius: $radius;
-    }
-  }
-
-  .subtitle,
-  .title {
-    color: rgba($white, 0.6);
-    font-family: $family-heading;
-  }
-
-  .nav-item a:not(.button),
-  a.nav-item:not(.button) {
-    color: rgba($white, 0.6);
-    font-family: $family-heading;
-
-    &:hover {
-      color: $white;
-    }
-    // Modifiers
-    &.is-active {
-      color: $white;
-
-      &.is-tab {
-        border-bottom-color: rgba($white, 0.6);
+      &:after {
+        border-color: inherit;
       }
     }
   }
 
-  .nav-toggle {
-    &:hover {
-      background-color: rgba($white, 0.1);
-      border-radius: $radius;
+  @each $name, $pair in $colors {
+    $color: nth($pair, 1);
+    $color-invert: nth($pair, 2);
 
-      span {
-        background-color: $white;
+    &.is-#{$name} {
+      .navbar-start,
+      .navbar-end {
+        > .navbar-item,
+        .navbar-link {
+          color: rgba($color-invert, 0.75);
+
+          &.is-active {
+            color: $color-invert;
+          }
+        }
+      }
+      @include touch {
+        .navbar-item,
+        .navbar-link {
+          color: rgba($color-invert, 0.75);
+
+          &.is-active {
+            color: $color-invert;
+          }
+        }
       }
     }
-
-    span {
-      background-color: rgba($white, 0.6);
-    }
   }
-}
-
-.hero .nav,
-body > .nav {
-  border-radius: 0;
 }
 
 .hero {
   // Colors
-  .nav {
+  .navbar {
     background-color: $primary;
   }
   @each $name, $pair in $colors {
@@ -205,18 +187,8 @@ body > .nav {
     $color-invert: nth($pair, 2);
 
     &.is-#{$name} {
-      .nav {
+      .navbar {
         background: none;
-      }
-
-      .nav-item a:not(.button),
-      a.nav-item {
-        color: rgba($color-invert, 0.6);
-
-        &.is-active,
-        &:hover {
-          color: $color-invert;
-        }
       }
     }
   }

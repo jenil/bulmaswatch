@@ -1,0 +1,20 @@
+<section class="section" id="tag">
+  <h1 class="title"> Tag </h1>
+  <hr>
+  <div class="tags">
+    {% for m in page.modifiers offset:1 %}
+    <span class="tag {% if m != '' %}is-{{m}}{% endif %}"> {{m | capitalize}} </span>
+    {% endfor %}
+    <span class="tag is-primary is-medium"> Medium </span>
+    <span class="tag is-info is-large"> Large </span>
+    <span class="tag is-success"> Bar
+      <button class="delete is-small"> </button>
+    </span>
+    <span class="tag is-warning is-medium"> Hello
+      <button class="delete is-small"> </button>
+    </span>
+    <span class="tag is-danger is-large"> World
+      <button class="delete"> </button>
+    </span>
+  </div>
+</section>

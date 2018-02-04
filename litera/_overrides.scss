@@ -112,24 +112,14 @@ blockquote {
   }
 }
 
-.nav {
-  min-height: 5rem;
-  border: 1px solid $grey-lighter;
-}
-
 .navbar {
   border: 1px solid $border;
 }
 
-.nav-toggle {
-  width: 5rem;
-  height: 5rem;
-}
-
 .hero {
-  .nav {
+  .navbar {
     border: none;
-    box-shadow: 0 1px 0 rgba($border, 0.5);
+    box-shadow: 0 1px 0 rgba($border, 0.25);
   }
 }
 

@@ -13,6 +13,8 @@ $blue: #5bc0de;
 $red: #ee5f5b;
 
 $primary: $grey !default;
+$warning: $orange;
+$warning-invert: #fff;
 
 $dark: darken($grey-darker, 3);
 
@@ -47,6 +49,7 @@ $input-hover-color: $grey-light;
 $input-disabled-background-color: $grey-lighter;
 $input-disabled-border: $grey-lighter;
 $input-arrow: $primary;
+$label-color: $text;
 
 $table-color: $text;
 $table-head: $grey-lighter;
@@ -58,8 +61,6 @@ $table-striped-row-even-background-color: $grey-darker;
 $table-striped-row-even-hover-background-color: lighten($grey-darker, 4);
 
 $pagination-border-color: $border;
-
-$nav-height: 4rem;
 
 $navbar-height: 4rem;
 $navbar-background-color: $background;

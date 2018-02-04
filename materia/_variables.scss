@@ -1,17 +1,17 @@
 ////////////////////////////////////////////////
 // MATERIA
 ////////////////////////////////////////////////
+
 $orange: #FF9800;
 $yellow: #FFEB3B;
 $green: #4CAF50;
 $turquoise: #009688;
-$blue: #03A9F4;
+$cyan: #29B6F6;
+$blue: #2196F3;
 $purple: #9C27B0;
 $red: #F44336;
-$primary: #2196F3 !default;
 
-$link-hover: darken($primary, 10);
-$button-hover-color: #363636;
+$primary: #3F51B5 !default;
 
 $family-sans-serif: "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 $title-weight: 400;
@@ -31,15 +31,6 @@ $input-disabled-background-color: transparent;
 $border-width: 2px;
 
 $navbar-height: 4rem;
-$navbar-background-color: $primary;
-$navbar-item-color: #fff;
-$navbar-item-hover-color: #fff;
-$navbar-item-active-color: #fff;
-$navbar-dropdown-arrow: $navbar-item-color;
-$navbar-item-active-background-color: $link-hover;
-$navbar-item-hover-background-color: $link-hover;
-$navbar-dropdown-item-active-color: #fff;
-$navbar-dropdown-item-active-background-color: $link-hover;
 
 $dropdown-content-shadow: $shadow-large;
 $dropdown-content-radius: 4px;

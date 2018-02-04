@@ -4,13 +4,12 @@
 $orange:       #FF7518;
 $yellow:       #f1c40f;
 $green:        #2ecc71;
-$turquoise:    #1abc9c;
+$turquoise:    #14a789;
 $blue:         #3498db;
 $purple:       #8e44ad;
 $red:          #e74c3c;
 
 $primary: $purple !default;
-$primary-dark: darken($primary, 10);
 $warning: $orange;
 
 $orange-invert: #fff;
@@ -21,15 +20,27 @@ $background: lighten($primary, 50);
 $family-sans-serif: 'Muli', "Helvetica Neue", Arial, sans-serif;
 $body-size: 14px;
 
-$subtitle-color: $primary-dark;
+$subtitle-color: darken($primary, 10);
 
 $radius: 0;
 $radius-small: 0;
 $radius-large: 0;
 
-$link-hover: $primary-dark;
-$link-focus: $primary-dark;
-$link-active: $primary-dark;
+$link: $turquoise;
+$link-hover: lighten($link, 5);
+$link-focus: darken($link, 10);
+$link-active: darken($link, 10);
+
+$button-hover-color: lighten($primary, 10);
+$button-hover-border-color: lighten($primary, 10);
+
+$button-focus-color: darken($primary, 10);
+$button-focus-border-color: darken($primary, 10);
+$button-focus-box-shadow-size: 0 0 0 0.125em;
+$button-focus-box-shadow-color: rgba($primary, 0.25);
+
+$button-active-color: darken($primary, 10);
+$button-active-border-color: darken($primary, 10);
 
 $navbar-background-color: $primary;
 $navbar-item-color: #fff;
@@ -37,4 +48,7 @@ $navbar-item-hover-color: $navbar-item-color;
 $navbar-item-active-color: $navbar-item-color;
 $navbar-item-hover-background-color: rgba(#000, 0.2);
 $navbar-item-active-background-color: rgba(#000, 0.2);
+$navbar-dropdown-item-active-color: $primary;
 $navbar-dropdown-arrow: $navbar-item-color;
+
+$menu-item-active-background-color: $primary;

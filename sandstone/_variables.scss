@@ -1,25 +1,27 @@
 ////////////////////////////////////////////////
 // SANDSTONE
 ////////////////////////////////////////////////
-$grey-darker:  #2a2a26;
-$grey-dark:    #3E3F3A;
-$grey:         #8E8C84;
-$grey-light:   #c9c8b8;
+$grey-darker: #2a2a26;
+$grey-dark: #3e3f3a;
+$grey: #8e8c84;
+$grey-light: #c9c8b8;
 $grey-lighter: #e6e1d7;
 
-$white-ter:    #F8F5F0;
+$white-ter: #f8f5f0;
 
-$orange:       #F47C3C;
-$green:        #93C54B;
-$blue:         #29ABE0;
-$red:          #d9534f;
+$orange: #f47c3c;
+$green: #93c54b;
+$blue: #29abe0;
+$red: #d9534f;
 
-$primary: #325D88 !default;
+$primary: #325d88 !default;
+$warning: $orange;
+$warning-invert: #fff;
 
-$family-sans-serif: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$family-sans-serif: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $body-size: 14px;
 
-$link: $green;
+$link: #8E8C84;
 
 $pagination-background-color: $grey-lighter;
 

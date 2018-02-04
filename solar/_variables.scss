@@ -11,13 +11,14 @@ $grey-darker:  #002B36;
 $orange       : #cb4b16;
 $yellow       : #b58900;
 $green        : #859900;
-$turquoise    : #2aa198;
+$cyan         : #2aa198;
 $blue         : #268bd2;
 $purple       : #6c71c4;
 $red          : #d33682;
 
-$primary: $yellow !default;
+$primary: $cyan !default;
 $warning      : $orange;
+$info: $blue;
 $yellow-invert: #fff;
 
 $light: $grey-lighter;
@@ -51,7 +52,7 @@ $text       : $grey;
 $text-light : lighten($text, 10);
 $text-strong: darken($text, 5);
 
-$link             : $primary;
+$link             : $yellow;
 $link-hover       : $grey-light;
 $link-hover-border: $grey-light;
 $link-focus       : darken($grey-light, 10);
@@ -98,3 +99,4 @@ $navbar-dropdown-item-active-color: $grey-lighter;
 
 $dropdown-content-background-color: $background;
 $dropdown-item-color: $text;
+$dropdown-item-hover-color: $link-hover;
