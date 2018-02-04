@@ -303,31 +303,3 @@ a {
     }
   }
 }
-
-.hero {
-  // Colors
-  .nav {
-    background-color: $grey-darker;
-  }
-  @each $name, $pair in $colors {
-    $color: nth($pair, 1);
-    $color-invert: nth($pair, 2);
-
-    &.is-#{$name} {
-      .nav {
-        background-color: $color;
-      }
-
-      .nav-item a:not(.button),
-      a.nav-item {
-        color: $color-invert;
-
-        &.is-active,
-        &:hover {
-          background-color: darken($color, 10);
-          color: $color-invert;
-        }
-      }
-    }
-  }
-}

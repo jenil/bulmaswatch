@@ -141,60 +141,6 @@ a {
   border-width: $border-width;
 }
 
-.nav {
-  background-color: $primary;
-  border-radius: $radius;
-  color: $white;
-  @media screen and (max-width: $tablet - 1) {
-    .nav-menu {
-      background-color: $primary;
-      border-radius: $radius;
-    }
-  }
-
-  .subtitle,
-  .title {
-    color: $white;
-  }
-
-  .nav-item a,
-  a.nav-item {
-    &:hover {
-      color: $button-hover-color;
-    }
-  }
-
-  .nav-item a:not(.button),
-  a.nav-item:not(.button) {
-    color: $white;
-
-    &:hover {
-      background-color: $button-hover-color;
-      color: $turquoise;
-    }
-    // Modifiers
-    &.is-active {
-      color: $white;
-      background-color: $button-active-color;
-
-      &.is-tab {
-        border-bottom-color: $turquoise;
-      }
-    }
-  }
-
-  .nav-toggle {
-    &:hover {
-      background-color: $button-active-color;
-      border-radius: $radius;
-    }
-
-    span {
-      background-color: $white;
-    }
-  }
-}
-
 .navbar {
   border-radius: $radius;
 
