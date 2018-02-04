@@ -24,7 +24,7 @@ nav.main-nav {
     .main-nav {
         background-color: transparent !important;
         box-shadow: none !important;
-        .navbar-item {
+        .navbar-item, .navbar-link {
             &.is-active,
             &:hover {
                 background-color: rgba($black, 0.05) !important;
