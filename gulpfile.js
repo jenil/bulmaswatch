@@ -105,9 +105,9 @@ gulp.task('api', function() {
             delete file.meta.order;
             file.meta.preview = HOME + '/' + file.meta.name.toLowerCase() + '/';
             file.meta.thumb = HOME + '/thumb/?' + file.meta.name.toLowerCase();
-            file.meta.css = CDN + '/' + file.meta.name.toLowerCase() + '/bulmaswatch.min.css';
-            file.meta.scss = CDN + '/' + file.meta.name.toLowerCase() + '/bulmaswatch.scss';
-            file.meta.scssVariables = CDN + '/' + file.meta.name.toLowerCase() + '/_variables.scss';
+            file.meta.css = CDN + '@' + VERSION + '/' + file.meta.name.toLowerCase() + '/bulmaswatch.min.css';
+            file.meta.scss = CDN + '@' + VERSION + '/' + file.meta.name.toLowerCase() + '/bulmaswatch.scss';
+            file.meta.scssVariables = CDN + '@' + VERSION + '/' + file.meta.name.toLowerCase() + '/_variables.scss';
         }))
         .pipe(pluck('meta', 'themes.json'))
         .pipe(data(function(file) {
