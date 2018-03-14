@@ -1,4 +1,9 @@
 /*! bulmaswatch v0.6.2 | MIT License */
+
+// Comment $font-import-url + $font-import-name if system font stack is preferred
+$font-import-url: 'https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i' !default;
+$font-import-name: 'Lato';
+
 @import "variables";
 @import "bulma";
 @import "overrides";
