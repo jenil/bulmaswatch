@@ -15,6 +15,6 @@ Credits
 
 ## Copyright and License
 
-Copyright 2017 [Jenil Gogari](https://jgog.in).
+Copyright 2018 [Jenil Gogari](https://jgog.in).
 
 Code released under the MIT License.
