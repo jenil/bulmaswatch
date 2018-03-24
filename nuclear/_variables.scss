@@ -6,6 +6,19 @@
   @return lighten(invert($c),3%);
 }
 
+$black: #000;
+$black-bis: #111111;
+$black-ter: #242424;
+$grey-darker:  #353535;
+$grey-dark:    #494949;
+$grey:         #7a7a7a;
+$grey-light:   #b5b5b5;
+$grey-lighter: #dbdbdb;
+
+$white-ter:    #f4f4f4;
+$white-bis:    #f9f9f9;
+$white:        #ffffff;
+
 $black: inv($black);
 $black-bis: inv($black-bis);
 $black-ter: inv($black-ter);

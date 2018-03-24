@@ -1,7 +1,6 @@
 ////////////////////////////////////////////////
 // LUMEN
 ////////////////////////////////////////////////
-@import 'sass/utilities/initial-variables.sass';
 
 $orange: #ff851b;
 $green: #28b62c;
@@ -21,6 +20,6 @@ $pagination-current-border: darken($primary, 5);
 
 $navbar-item-active-color: $primary;
 
-$dropdown-content-shadow: 0 0 0 1px $grey-lighter, 0 #{$thickness} 0 1px $grey-lighter;
+$dropdown-content-shadow: 0 0 0 1px #dbdbdb, 0 #{$thickness} 0 1px #dbdbdb;
 
 $navbar-dropdown-boxed-shadow: $dropdown-content-shadow;
