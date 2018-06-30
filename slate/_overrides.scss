@@ -183,13 +183,6 @@
       }
     }
   }
-
-  &.is-boxed {
-    li.is-active a {
-      background-color: $primary;
-      color: $primary-invert;
-    }
-  }
 }
 
 .modal {
