@@ -59,9 +59,10 @@ $button-color: $primary;
 $button-hover-color: darken($text, 5); // text-dark
 $button-focus: darken($text, 5); // text-dark
 $button-active-color: darken($text, 5); // text-dark
+$button-disabled-background-color: $grey-light;
 
 $input-hover-color: $grey-light;
-$input-disabled-background-color: $grey-lighter;
+$input-disabled-background-color: $grey-light;
 $input-disabled-border: $grey-lighter;
 
 $table-color: $text;
