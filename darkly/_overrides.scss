@@ -103,16 +103,6 @@ a {
   background-color: $grey-dark;
 }
 
-.progress {
-  &::-webkit-progress-value {
-    background-color: $grey;
-  }
-
-  &::-moz-progress-bar {
-    background-color: $grey;
-  }
-}
-
 .card {
   $card-border-color: lighten($grey-darker, 5);
   box-shadow: none;
