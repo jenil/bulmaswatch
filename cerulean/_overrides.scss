@@ -53,10 +53,11 @@
     $pair in $colors {
         $color: nth($pair, 1);
         $color-invert: nth($pair, 2);
+        $color-lightning: max((100% - lightness($color)) - 2%, 0%);
         &.is-#{$name} {
-            background-color: rgba($color, .1);
+            background-color: lighten($color, $color-lightning);
             color: $color;
-            border: 1px solid rgba($color, .2);
+            border: 1px solid lighten($color, 30);
         }
     }
 }
