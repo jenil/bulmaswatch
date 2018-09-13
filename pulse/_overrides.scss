@@ -1,5 +1,7 @@
 // Overrides
-@import url( 'https://fonts.googleapis.com/css?family=Muli:400,700');
+@if $bulmaswatch-import-font {
+    @import url( 'https://fonts.googleapis.com/css?family=Muli:400,700');
+}
 
 .content blockquote {
   border-color: $primary;
