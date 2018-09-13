@@ -1,5 +1,7 @@
 // Overrides
-@import url(https://fonts.googleapis.com/css?family=Nunito+Sans);
+@if $bulmaswatch-import-font {
+    @import url(https://fonts.googleapis.com/css?family=Nunito+Sans);
+}
 
 body {
   font-weight: 200;
