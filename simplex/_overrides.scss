@@ -1,5 +1,7 @@
 // Overrides
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400, 700');
+@if $bulmaswatch-import-font {
+    @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+}
 
 @mixin btn-shadow($color) {
   background-image: linear-gradient(
