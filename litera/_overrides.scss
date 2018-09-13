@@ -1,5 +1,7 @@
 // Overrides
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,700);
+@if $bulmaswatch-import-font {
+    @import url(https://fonts.googleapis.com/css?family=Raleway:400,700);
+}
 
 a {
   transition: all 200ms ease;
