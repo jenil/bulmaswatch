@@ -1,5 +1,7 @@
 // Overrides
-@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500,700);
+@if $bulmaswatch-import-font {
+    @import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500,700);
+}
 
 hr {
   background-color: lighten($grey-lighter, 5);
@@ -53,7 +55,7 @@ hr {
   &:focus {
     border-color: transparent;
   }
-  
+
   @each $name, $pair in $colors {
     $color: nth($pair, 1);
     $color-invert: nth($pair, 2);
