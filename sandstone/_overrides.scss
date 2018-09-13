@@ -1,5 +1,7 @@
 // Overrides
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700);
+@if $bulmaswatch-import-font {
+    @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700);
+}
 
 .button,
 .control.has-icons-left .icon,
