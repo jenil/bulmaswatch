@@ -1,5 +1,7 @@
 // Overrides
-@import url(https://fonts.googleapis.com/css?family=Montserrat);
+@if $bulmaswatch-import-font {
+    @import url(https://fonts.googleapis.com/css?family=Montserrat);
+}
 
 .modal-card-title,
 .subtitle,
