@@ -13,10 +13,6 @@
   filter: none;
 }
 
-.box {
-  box-shadow: 0 0 0 1px $border;
-}
-
 .button,
 .control.has-icons-left .icon,
 .control.has-icons-right .icon,
@@ -50,14 +46,8 @@
   box-shadow: none;
 }
 
-.card {
-  box-shadow: 0 0 0 1px $border;
-  background-color: $white-bis;
-
-  .card-header {
-    box-shadow: none;
+.card .card-header {
     border-bottom: 1px solid $border;
-  }
 }
 
 .notification {

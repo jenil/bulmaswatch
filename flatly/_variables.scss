@@ -36,6 +36,10 @@ $text: $primary;
 $text-light: lighten($primary, 10);
 $text-strong: darken($primary, 5);
 
+$box-color: $text;
+$box-background-color: $white-ter;
+$box-shadow: none;
+
 $link: $turquoise;
 $link-hover: darken($link, 10);
 $link-focus: darken($link, 10);

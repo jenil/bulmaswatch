@@ -35,6 +35,14 @@ $text: $grey-lighter;
 $text-strong: darken($grey-lighter, 10);
 $text-light: $grey-light;
 
+$box-background-color: $background;
+
+$card-shadow: none;
+$card-background-color: darken($body-background-color, 1);
+$card-header-box-shadow: none;
+$card-header-background-color: darken($body-background-color, 3);
+$card-footer-background-color: darken($body-background-color, 3);
+
 $link: $grey-light;
 $link-hover: $grey-lighter;
 $link-focus: $grey-lighter;

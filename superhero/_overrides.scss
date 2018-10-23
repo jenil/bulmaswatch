@@ -11,10 +11,6 @@
   background-color: $body-background-color;
 }
 
-.box {
-  background-color: $background;
-}
-
 .button {
   &.is-hovered,
   &:hover {
@@ -56,9 +52,7 @@
 }
 
 .card {
-  box-shadow: none;
   border: 1px solid $border;
-  background-color: darken($body-background-color, 1);
   border-radius: $radius;
 
   .card-image {
@@ -68,13 +62,7 @@
   }
 
   .card-header {
-    box-shadow: none;
-    background-color: darken($body-background-color, 3);
     border-radius: $radius $radius 0 0;
-  }
-
-  .card-footer {
-    background-color: darken($body-background-color, 3);
   }
 
   .card-footer,

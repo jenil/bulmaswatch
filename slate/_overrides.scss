@@ -26,11 +26,6 @@
   background-color: $grey-dark;
 }
 
-.box {
-  box-shadow: none;
-  background-color: $grey-dark;
-}
-
 .button,
 .input,
 .pagination-ellipsis,
@@ -80,9 +75,7 @@
 }
 
 .card {
-  box-shadow: none;
   border: 1px solid $border;
-  background-color: $grey-darker;
   border-radius: $radius;
 
   .card-image {
@@ -92,13 +85,7 @@
   }
 
   .card-header {
-    box-shadow: none;
-    background-color: rgba($black-bis, 0.2);
     border-radius: $radius $radius 0 0;
-  }
-
-  .card-footer {
-    background-color: rgba($black-bis, 0.2);
   }
 
   .card-footer,

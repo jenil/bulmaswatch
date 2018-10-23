@@ -16,6 +16,8 @@ $primary: $grey !default;
 $warning: $orange;
 $warning-invert: #fff;
 
+$black-bis: rgb(18, 18, 18);
+
 $dark: darken($grey-darker, 3);
 
 $border: $grey;
@@ -35,6 +37,15 @@ $subtitle-strong-color: $grey-light;
 $text: #aaa;
 $text-light: lighten($text, 10);
 $text-strong: darken($text, 5);
+
+$box-shadow: none;
+$box-background-color: $grey-dark;
+
+$card-shadow: none;
+$card-background-color: $grey-darker;
+$card-header-shadow: none;
+$card-header-background-color: rgba($black-bis, 0.2);
+$card-footer-background-color: rgba($black-bis, 0.2);
 
 $link: #fafafa;
 $link-invert: $grey;

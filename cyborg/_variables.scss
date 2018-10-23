@@ -1,6 +1,7 @@
 ////////////////////////////////////////////////
-// CYBORG
+// KIBIBIT
 ////////////////////////////////////////////////
+$grey-accent:  hsl(0, 0%, 14%);
 $grey-darker:  hsl(0, 0%, 21%);
 $grey-dark:    hsl(0, 0%, 29%);
 $grey:         hsl(0, 0%, 48%);
@@ -27,6 +28,10 @@ $subtitle-strong-color: $white-ter;
 $text: $white;
 $text-light: lighten($text, 10);
 $text-strong: darken($text, 5);
+
+$box-color: $text;
+$box-background-color: $grey-accent;
+$box-shadow: none;
 
 $link-hover: $primary-light;
 $link-focus: $primary-light;

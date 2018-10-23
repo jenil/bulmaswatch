@@ -8,6 +8,7 @@ $turquoise:    #5bc0de;
 $blue:         #033C73;
 $purple:       #7e5ea3;
 $red:          #C71C22;
+$grey:         #dbdbdb;
 
 $primary: #2FA4E7 !default;
 $primary-dark: #317EAC;
@@ -26,3 +27,5 @@ $title-weight-bold: 700;
 
 $subtitle-weight: 300;
 $subtitle-strong-color: 500;
+
+$box-shadow: 0 0 0 1px $grey;
