@@ -36,6 +36,7 @@
         "node-sass": "^4.5.0"
     },
     "scripts": {
+        "install": "bundle install",
         "build": "gulp sass api",
         "start": "gulp",
         "api": "gulp api"
