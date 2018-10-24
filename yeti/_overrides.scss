@@ -52,10 +52,10 @@
   box-shadow: none;
 }
 
-.box,
-.card {
-  box-shadow: 0 0 0 1px $border;
-}
+// .box,
+// .card {
+//   box-shadow: 0 0 0 1px $border;
+// }
 
 .notification {
   @each $name, $pair in $colors {

@@ -11,6 +11,7 @@ $turquoise:    #00ABA9;
 $blue:         #1FAEFF;
 $purple:       #AA40FF;
 $red:          #FF2E12;
+$grey:         #dbdbdb;
 
 $primary: #2780E3 !default;
 $primary-dark: darken(#2780E3, 20);
@@ -37,3 +38,6 @@ $button-focus: $black-ter;
 $button-active-color: $black-ter;
 
 $bulmaswatch-import-font: true !default;
+
+$box-shadow: 0 0 0 1px $grey;
+$card-shadow: 0 0 0 1px $grey;

@@ -13,6 +13,7 @@ $blue: #029acf;
 $cyan: #0fc5d9;
 $purple: #9b479f;
 $red: #d9230f;
+$white-bis: #fafafa;
 
 $primary: $red !default;
 $primary-dark: darken($primary, 10);
@@ -33,3 +34,8 @@ $navbar-item-hover-background-color: rgba(#000, 0.1);
 $navbar-dropdown-arrow: $navbar-item-color;
 
 $bulmaswatch-import-font: true !default;
+
+$box-shadow: 0 0 0 1px $grey-lighter;
+$card-shadow: 0 0 0 1px $grey-lighter;
+$card-header-shadow: none;
+$card-background-color: $white-bis;

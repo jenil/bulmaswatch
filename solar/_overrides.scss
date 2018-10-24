@@ -20,11 +20,6 @@ h6 {
   background-color: $grey-dark;
 }
 
-.box {
-  box-shadow: none;
-  background-color: $grey-dark;
-}
-
 a {
   transition: all 200ms ease;
 }
@@ -125,9 +120,7 @@ a {
 
 .card {
   $card-border-color: lighten($grey-darker, 5);
-  box-shadow: none;
   border: $border-width solid $card-border-color;
-  background-color: $grey-darker;
   border-radius: $radius;
 
   .card-image {
@@ -137,13 +130,7 @@ a {
   }
 
   .card-header {
-    box-shadow: none;
-    background-color: rgba($black-bis, 0.2);
     border-radius: $radius $radius 0 0;
-  }
-
-  .card-footer {
-    background-color: rgba($black-bis, 0.2);
   }
 
   .card-footer,

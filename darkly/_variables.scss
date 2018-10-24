@@ -49,6 +49,10 @@ $text: #fff;
 $text-light: lighten($text, 10);
 $text-strong: darken($text, 5);
 
+$box-color: $text;
+$box-background-color: $grey-dark;
+$box-shadow: none;
+
 $link: $turquoise;
 $link-hover: lighten($link, 5);
 $link-focus: darken($link, 5);
