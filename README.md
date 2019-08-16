@@ -5,8 +5,17 @@ Themes for [Bulma](http://bulma.io), inspired by [Bootswatch](http://bootswatch.
 
 Get started
 -----
-Read the intructions [here](https://jenil.github.io/bulmaswatch/help/).
+Read the instructions [here](https://jenil.github.io/bulmaswatch/help/).
 
+
+Development
+-----
+Assuming you already have Node.js, [Yarn](https://yarnpkg.com/) and [Bundler](https://bundler.io/)
+
+```
+yarn install # or npm install
+yarn start 
+```
 
 Credits
 -----
