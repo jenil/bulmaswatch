@@ -3,6 +3,7 @@
     "version": "0.7.3",
     "description": "Themes for Bulma",
     "author": "Jenil Gogari <i@jgog.in>",
+    "main": "materia/bulmaswatch.min.css",
     "homepage": "https://jenil.github.io/bulmaswatch",
     "repository": {
         "type": "git",
