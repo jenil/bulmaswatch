@@ -1,6 +1,6 @@
 {
     "name": "bulmaswatch",
-    "version": "0.7.4-1",
+    "version": "0.7.5",
     "description": "Themes for Bulma",
     "author": "Jenil Gogari <i@jgog.in>",
     "main": "materia/bulmaswatch.min.css",
@@ -23,7 +23,7 @@
     ],
     "devDependencies": {
         "browser-sync": "^2.18.6",
-        "bulma": "0.7.3",
+        "bulma": "0.7.5",
         "del": "^5.0.0",
         "gulp": "3.x",
         "gulp-autoprefixer": "^6.1.0",
