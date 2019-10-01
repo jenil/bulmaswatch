@@ -11,8 +11,8 @@
 .pagination-link,
 .pagination-next,
 .pagination-previous,
-.select,
-.select select,
+.select:not(.is-multiple),
+.select:not(.is-multiple) select,
 .textarea {
   height: 2.572em;
 }
