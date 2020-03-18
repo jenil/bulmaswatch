@@ -1,6 +1,6 @@
 {
     "name": "bulmaswatch",
-    "version": "0.7.5",
+    "version": "0.8.0",
     "description": "Themes for Bulma",
     "author": "Jenil Gogari <i@jgog.in>",
     "main": "materia/bulmaswatch.min.css",
@@ -23,8 +23,8 @@
     ],
     "devDependencies": {
         "browser-sync": "^2.18.6",
-        "bulma": "0.7.5",
-        "del": "^5.0.0",
+        "bulma": "0.8.0",
+        "del": "^5.1.0",
         "gulp": "3.x",
         "gulp-autoprefixer": "^6.1.0",
         "gulp-csso": "^3.0.0",
@@ -34,7 +34,7 @@
         "gulp-rename": "^1.2.2",
         "gulp-sass": "^4.0.2",
         "gulp-sourcemaps": "^2.4.0",
-        "node-sass": "^4.5.0"
+        "node-sass": "^4.13.1"
     },
     "scripts": {
         "build": "gulp sass api",
