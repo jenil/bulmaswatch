@@ -10,10 +10,11 @@ Read the instructions [here](https://jenil.github.io/bulmaswatch/help/).
 
 Development
 -----
-Assuming you already have Node.js, [Yarn](https://yarnpkg.com/) and [Bundler](https://bundler.io/)
+Assuming you already have Node.js (v10), [Yarn](https://yarnpkg.com/) and [Bundler](https://bundler.io/)
 
 ```
 yarn install # or npm install
+bundler install
 yarn start 
 ```
 
