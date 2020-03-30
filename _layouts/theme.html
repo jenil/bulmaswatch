@@ -13,26 +13,26 @@
 </head>
 
 <body class="theme-page">
-  <section class="hero is-primary">
+  <section >
     <!-- Hero header: will stick at the top -->
-    <div class="hero-head">
       {% include nav.html %}
-    </div>
     <!-- Hero content: will be in the middle -->
-    <div class="hero-body">
-      <div class="container">
-        <h1 class="title">
-          {{ page.name }}
-        </h1>
-        <h2 class="subtitle">
-          {{ page.description }}
-        </h2>
-        <p>
-          <a class="button is-primary is-inverted" href="{{ site.baseurl }}/{{page.name | slugify}}/bulmaswatch.min.css" target="_blank" onclick="ga('send', 'event', 'theme', 'download', '{{page.name}}');">Download</a>
-          <a class="button is-dark" href="{{ site.repo_url }}/tree/gh-pages/{{page.name | slugify}}" target="_blank" onclick="ga('send', 'event', 'theme', 'github', '{{page.name}}');" title="Download from Github">
-            <span class="icon"> <i class="fa fa-github"> </i> </span>
-          </a>
-        </p>
+    <div class="hero is-primary">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title">
+            {{ page.name }}
+          </h1>
+          <h2 class="subtitle">
+            {{ page.description }}
+          </h2>
+          <p>
+            <a class="button is-primary is-inverted" href="{{ site.baseurl }}/{{page.name | slugify}}/bulmaswatch.min.css" target="_blank" onclick="ga('send', 'event', 'theme', 'download', '{{page.name}}');">Download</a>
+            <a class="button is-dark" href="{{ site.repo_url }}/tree/gh-pages/{{page.name | slugify}}" target="_blank" onclick="ga('send', 'event', 'theme', 'github', '{{page.name}}');" title="Download from Github">
+              <span class="icon"> <i class="fa fa-github"> </i> </span>
+            </a>
+          </p>
+        </div>
       </div>
     </div>
   </section>

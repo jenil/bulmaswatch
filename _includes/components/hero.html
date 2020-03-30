@@ -2,10 +2,9 @@
   <h1 class="title">Hero</h1>
   <hr>
   {% for m in page.modifiers %}
-  <section class="hero {% if m != '' %}is-{{m}}{% endif %}">
-    <!-- Hero head: will stick at the top -->
-    <div class="hero-head">
-      <nav class="navbar">
+  <section>
+    <div>
+      <nav class="navbar {% if m != '' %}is-{{m}}{% endif %}">
         <div class="container">
           <div class="navbar-brand">
             <a class="navbar-item">
@@ -29,25 +28,25 @@
                 Documentation
               </a>
               <div class="navbar-item has-dropdown is-hoverable">
-                  <div class="navbar-link">
-                    More
-                  </div>
-                  <div id="moreDropdown" class="navbar-dropdown ">
-                    <a class="navbar-item " href="#">
-                      <div class="level is-mobile">
-                        <div class="level-left">
-                          <div class="level-item">
-                            <p>
-                              <strong>Extensions</strong>
-                              <br>
-                              <small>Side projects to enhance Bulma</small>
-                            </p>
-                          </div>
+                <div class="navbar-link">
+                  More
+                </div>
+                <div id="moreDropdown" class="navbar-dropdown ">
+                  <a class="navbar-item " href="#">
+                    <div class="level is-mobile">
+                      <div class="level-left">
+                        <div class="level-item">
+                          <p>
+                            <strong>Extensions</strong>
+                            <br>
+                            <small>Side projects to enhance Bulma</small>
+                          </p>
                         </div>
                       </div>
-                    </a>
-                  </div>
+                    </div>
+                  </a>
                 </div>
+              </div>
               <span class="navbar-item">
                 <a class="button is-primary is-inverted">
                   <span class="icon">
@@ -62,42 +61,44 @@
       </nav>
     </div>
     <!-- Hero content: will be in the middle -->
-    <div class="hero-body">
-      <div class="container has-text-centered">
-        <h1 class="title">
-        Title
-      </h1>
-        <h2 class="subtitle">
-        Subtitle
-      </h2>
-      </div>
-    </div>
-    <!-- Hero footer: will stick at the bottom -->
-    <div class="hero-foot">
-      <nav class="tabs">
-        <div class="container">
-          <ul>
-            <li class="is-active">
-              <a>Overview</a>
-            </li>
-            <li>
-              <a>Modifiers</a>
-            </li>
-            <li>
-              <a>Grid</a>
-            </li>
-            <li>
-              <a>Elements</a>
-            </li>
-            <li>
-              <a>Components</a>
-            </li>
-            <li>
-              <a>Layout</a>
-            </li>
-          </ul>
+    <div class="hero {% if m != '' %}is-{{m}}{% endif %}">
+      <div class="hero-body">
+        <div class="container has-text-centered">
+          <h1 class="title">
+            Title
+          </h1>
+          <h2 class="subtitle">
+            Subtitle
+          </h2>
         </div>
-      </nav>
+      </div>
+      <!-- Hero footer: will stick at the bottom -->
+      <div class="hero-foot">
+        <nav class="tabs">
+          <div class="container">
+            <ul>
+              <li class="is-active">
+                <a>Overview</a>
+              </li>
+              <li>
+                <a>Modifiers</a>
+              </li>
+              <li>
+                <a>Grid</a>
+              </li>
+              <li>
+                <a>Elements</a>
+              </li>
+              <li>
+                <a>Components</a>
+              </li>
+              <li>
+                <a>Layout</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
     </div>
   </section>
   <br>
