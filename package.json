@@ -1,6 +1,6 @@
 {
   "name": "bulmaswatch",
-  "version": "0.8.0",
+  "version": "0.8.1",
   "description": "Themes for Bulma",
   "author": "Jenil Gogari <i@jgog.in>",
   "main": "materia/bulmaswatch.min.css",
