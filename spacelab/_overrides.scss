@@ -1,9 +1,14 @@
 // Overrides
 @if $bulmaswatch-import-font {
-    @import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700&display=swap);
+  @import url("https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700&display=swap");
 }
 @mixin btn-shadow($color) {
-  background-image: linear-gradient(180deg, lighten($color, 15%) 0%, $color 60%, darken($color, 4%) 100%);
+  background-image: linear-gradient(
+    180deg,
+    lighten($color, 15%) 0%,
+    $color 60%,
+    darken($color, 4%) 100%
+  );
   filter: none;
   border: 1px solid darken($color, 10%);
 }

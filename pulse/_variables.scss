@@ -1,13 +1,13 @@
 ////////////////////////////////////////////////
 // PULSE
 ////////////////////////////////////////////////
-$orange:       #FF7518;
-$yellow:       #f1c40f;
-$green:        #2ecc71;
-$turquoise:    #14a789;
-$blue:         #3498db;
-$purple:       #8e44ad;
-$red:          #e74c3c;
+$orange: #ff7518;
+$yellow: #f1c40f;
+$green: #2ecc71;
+$turquoise: #14a789;
+$blue: #3498db;
+$purple: #8e44ad;
+$red: #e74c3c;
 
 $primary: $purple !default;
 $warning: $orange;
@@ -17,7 +17,7 @@ $warning-invert: $orange-invert;
 
 $background: lighten($primary, 50);
 
-$family-sans-serif: 'Muli', "Helvetica Neue", Arial, sans-serif;
+$family-sans-serif: "Muli", "Helvetica Neue", Arial, sans-serif;
 $body-size: 14px;
 
 $subtitle-color: darken($primary, 10);

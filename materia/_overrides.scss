@@ -1,6 +1,6 @@
 // Overrides
 @if $bulmaswatch-import-font {
-    @import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap);
+  @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap");
 }
 
 hr {
@@ -74,7 +74,7 @@ hr {
   }
 
   &:before {
-    content: '';
+    content: "";
     display: block;
     position: absolute;
     width: 100%;

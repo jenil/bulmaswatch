@@ -2,10 +2,10 @@
 // SLATE
 ////////////////////////////////////////////////
 $grey-lighter: #98a4ad;
-$grey-light:   #7A8288;
-$grey:         #52575C;
-$grey-dark:    #3A3F44;
-$grey-darker:  #272B30;
+$grey-light: #7a8288;
+$grey: #52575c;
+$grey-dark: #3a3f44;
+$grey-darker: #272b30;
 
 $orange: #f89406;
 $green: #62c462;
@@ -57,6 +57,9 @@ $link-active-border: $link-focus-border;
 
 $button-color: #fafafa;
 
+$input-color: $grey-darker;
+$input-icon-color: $grey;
+$input-icon-active-color: $input-color;
 $input-hover-color: $grey-light;
 $input-disabled-background-color: $grey-lighter;
 $input-disabled-border: $grey-lighter;
@@ -94,5 +97,11 @@ $button-disabled-background-color: $grey-lighter;
 
 $tabs-toggle-link-active-background-color: $background;
 $tabs-toggle-link-active-border-color: $border;
-$tabs-toggle-link-active-color: #FFF;
+$tabs-toggle-link-active-color: #fff;
 $tabs-boxed-link-active-background-color: $body-background-color;
+
+$file-cta-background-color: $grey-darker;
+
+$progress-bar-background-color: $grey-dark;
+
+$panel-heading-background-color: $grey-dark;

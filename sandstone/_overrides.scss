@@ -1,6 +1,6 @@
 // Overrides
 @if $bulmaswatch-import-font {
-    @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap);
+  @import url("https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap");
 }
 
 .button,
@@ -65,7 +65,7 @@
     }
   }
 
-  &:not([class*='is-']) .navbar-burger span {
+  &:not([class*="is-"]) .navbar-burger span {
     background-color: $white-ter;
   }
 

@@ -3,21 +3,21 @@
 ////////////////////////////////////////////////
 
 @function inv($c) {
-  @return lighten(invert($c),3%);
+  @return lighten(invert($c), 3%);
 }
 
 $black: #000;
 $black-bis: #111111;
 $black-ter: #242424;
-$grey-darker:  #353535;
-$grey-dark:    #494949;
-$grey:         #7a7a7a;
-$grey-light:   #b5b5b5;
+$grey-darker: #353535;
+$grey-dark: #494949;
+$grey: #7a7a7a;
+$grey-light: #b5b5b5;
 $grey-lighter: #dbdbdb;
 
-$white-ter:    #f4f4f4;
-$white-bis:    #f9f9f9;
-$white:        #ffffff;
+$white-ter: #f4f4f4;
+$white-bis: #f9f9f9;
+$white: #ffffff;
 
 $black: inv($black);
 $black-bis: inv($black-bis);
@@ -46,9 +46,9 @@ $border-hover: $primary;
 
 $body-background-color: $white;
 
-$font-heading: 'Varela Round', BlinkMacSystemFont, -apple-system, 'Segoe UI',
-  'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
-  'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+$font-heading: "Varela Round", BlinkMacSystemFont, -apple-system, "Segoe UI",
+  "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+  "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 
 $bulmaswatch-import-font: true !default;
 

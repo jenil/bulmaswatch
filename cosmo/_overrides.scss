@@ -1,6 +1,6 @@
 // Overrides
 @if $bulmaswatch-import-font {
-    @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700&display=swap);
+  @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700&display=swap");
 }
 .button,
 .control.has-icons-left .icon,
@@ -13,180 +13,176 @@
 .select,
 .select select,
 .textarea {
-    height: 2.6667em;
+  height: 2.6667em;
 }
 
 .button {
-    &.is-active,
-    &.is-focused,
-    &:active,
-    &:focus {
-        box-shadow: inset 1px 1px 4px rgba($grey-darker, 0.3);
+  &.is-active,
+  &.is-focused,
+  &:active,
+  &:focus {
+    box-shadow: inset 1px 1px 4px rgba($grey-darker, 0.3);
+  }
+  @each $name, $pair in $colors {
+    $color: nth($pair, 1);
+    $color-invert: nth($pair, 2);
+    &.is-#{$name} {
+      &.is-hovered,
+      &:hover {
+        background-color: darken($color, 10);
+      }
+      &.is-active,
+      &.is-focused,
+      &:active,
+      &:focus {
+        box-shadow: inset 1px 0 3px rgba($grey-darker, 0.3);
+        background-color: darken($color, 10);
+      }
     }
-    @each $name,
-    $pair in $colors {
-        $color: nth($pair, 1);
-        $color-invert: nth($pair, 2);
-        &.is-#{$name} {
-            &.is-hovered,
-            &:hover {
-                background-color: darken($color, 10);
-            }
-            &.is-active,
-            &.is-focused,
-            &:active,
-            &:focus {
-                box-shadow: inset 1px 0 3px rgba($grey-darker, 0.3);
-                background-color: darken($color, 10);
-            }
-        }
-    }
+  }
 }
 
 .input,
 .textarea {
-    box-shadow: none;
+  box-shadow: none;
 }
 
 .notification {
-    @each $name,
-    $pair in $colors {
-        $color: nth($pair, 1);
-        $color-invert: nth($pair, 2);
-        &.is-#{$name} {
-            a:not(.button) {
-                color: $color-invert;
-                text-decoration: underline;
-            }
-        }
+  @each $name, $pair in $colors {
+    $color: nth($pair, 1);
+    $color-invert: nth($pair, 2);
+    &.is-#{$name} {
+      a:not(.button) {
+        color: $color-invert;
+        text-decoration: underline;
+      }
     }
+  }
 }
 
 .progress {
-    height: $size-small;
+  height: $size-small;
 }
 
 .progress,
 .tag {
-    border-radius: $radius;
+  border-radius: $radius;
 }
 
 .navbar:not(.is-transparent) {
+  background-color: $black-ter;
+  .navbar-menu {
     background-color: $black-ter;
-    .navbar-menu {
-        background-color: $black-ter;
+  }
+  .navbar-item,
+  .navbar-link {
+    color: $white;
+    &.has-dropdown:hover .navbar-link,
+    &:hover {
+      background-color: rgba($white, 0.05);
     }
-    .navbar-item,
-    .navbar-link {
-        color: $white;
-        &.has-dropdown:hover .navbar-link,
-        &:hover {
-            background-color: rgba($white, 0.05);
+    &.is-active,
+    &:active {
+      background-color: rgba($black-ter, 0.05);
+      color: $primary;
+    }
+  }
+  .navbar-burger:hover {
+    background-color: rgba($black-ter, 0.05);
+  }
+  .navbar-link::after {
+    border-color: $white;
+  }
+  @include desktop {
+    .navbar-dropdown .navbar-item {
+      color: $grey-dark;
+      &:hover {
+        background-color: rgba($black-ter, 0.05);
+      }
+      &.is-active,
+      &:active {
+        color: $primary;
+      }
+      strong {
+        color: $grey;
+      }
+    }
+  }
+  .navbar-burger {
+    span {
+      background-color: $white;
+    }
+  }
+  strong {
+    color: $white-ter;
+  }
+  @each $name, $pair in $colors {
+    $color: nth($pair, 1);
+    $color-invert: nth($pair, 2);
+    &.is-#{$name} {
+      background-color: $color;
+      .navbar-menu {
+        background-color: $color;
+      }
+      .navbar-item,
+      .navbar-link {
+        @media (max-width: $desktop) {
+          color: $color-invert;
         }
         &.is-active,
         &:active {
-            background-color: rgba($black-ter, 0.05);
-            color: $primary;
+          color: $color-invert;
         }
-    }
-    .navbar-burger:hover {
-        background-color: rgba($black-ter, 0.05);
-    }
-    .navbar-link::after {
-        border-color: $white;
-    }
-    @include desktop {
-        .navbar-dropdown .navbar-item {
-            color: $grey-dark;
-            &:hover {
-                background-color: rgba($black-ter, 0.05);
-            }
-            &.is-active,
-            &:active {
-                color: $primary;
-            }
-            strong {
-                color: $grey;
-            }
+      }
+      .navbar-burger {
+        &:hover {
+          background-color: darken($color, 5);
         }
-    }
-    .navbar-burger {
         span {
-            background-color: $white;
+          background-color: $color-invert;
         }
+      }
     }
-    strong {
-        color: $white-ter;
-    }
-    @each $name,
-    $pair in $colors {
-        $color: nth($pair, 1);
-        $color-invert: nth($pair, 2);
-        &.is-#{$name} {
-            background-color: $color;
-            .navbar-menu {
-                background-color: $color;
-            }
-            .navbar-item,
-            .navbar-link {
-                @media (max-width: $desktop) {
-                    color: $color-invert;
-                }
-                &.is-active,
-                &:active {
-                    color: $color-invert;
-                }
-            }
-            .navbar-burger {
-                &:hover {
-                    background-color: darken($color, 5);
-                }
-                span {
-                    background-color: $color-invert;
-                }
-            }
-        }
-    }
+  }
 }
 
 .hero {
-    // Colors
-    .navbar:not(.is-transparent) {
-        background-color: $black-ter;
-    }
-    @each $name,
-    $pair in $colors {
-        $color: nth($pair, 1);
-        $color-invert: nth($pair, 2);
-        &.is-#{$name} {
-            .navbar {
-                background: none;
-            }
-            .navbar-item,
-            .navbar-link {
-                color: $color-invert;
-                &.is-active,
-                &:hover {
-                    background-color: darken($color, 10);
-                    color: $color-invert;
-                }
-                &:after {
-                    border-color: $color-invert;
-                }
-            }
-            .navbar-menu {
-                background-color: $color;
-            }
-            .navbar-burger {
-                span {
-                    background-color: $color-invert;
-                }
-            }
-            @include desktop {
-                .navbar-dropdown a.navbar-item {
-                    color: $grey-dark;
-                }
-            }
+  // Colors
+  .navbar:not(.is-transparent) {
+    background-color: $black-ter;
+  }
+  @each $name, $pair in $colors {
+    $color: nth($pair, 1);
+    $color-invert: nth($pair, 2);
+    &.is-#{$name} {
+      .navbar {
+        background: none;
+      }
+      .navbar-item,
+      .navbar-link {
+        color: $color-invert;
+        &.is-active,
+        &:hover {
+          background-color: darken($color, 10);
+          color: $color-invert;
         }
+        &:after {
+          border-color: $color-invert;
+        }
+      }
+      .navbar-menu {
+        background-color: $color;
+      }
+      .navbar-burger {
+        span {
+          background-color: $color-invert;
+        }
+      }
+      @include desktop {
+        .navbar-dropdown a.navbar-item {
+          color: $grey-dark;
+        }
+      }
     }
+  }
 }

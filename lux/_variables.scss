@@ -2,17 +2,18 @@
 // LUX
 ////////////////////////////////////////////////
 $grey: #7f888f;
-$grey-light:   lighten($grey, 10%);
+$grey-light: lighten($grey, 10%);
 $grey-lighter: lighten($grey, 20%);
 
-$green:        #4BBF73;
-$blue:         #1F9BCF;
-$red:          #d9534f;
+$green: #4bbf73;
+$blue: #1f9bcf;
+$red: #d9534f;
 
 $primary: #222 !default;
 $link: $grey;
 
-$family-sans-serif: "Nunito Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$family-sans-serif: "Nunito Sans", -apple-system, system-ui, BlinkMacSystemFont,
+  "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 $body-size: 14px;
 
 $radius: 0;

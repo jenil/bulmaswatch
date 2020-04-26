@@ -1,19 +1,19 @@
 ////////////////////////////////////////////////
 // CYBORG
 ////////////////////////////////////////////////
-$grey-accent:  hsl(0, 0%, 14%);
-$grey-darker:  hsl(0, 0%, 21%);
-$grey-dark:    hsl(0, 0%, 29%);
-$grey:         hsl(0, 0%, 48%);
-$grey-light:   hsl(0, 0%, 71%);
+$grey-accent: hsl(0, 0%, 14%);
+$grey-darker: hsl(0, 0%, 21%);
+$grey-dark: hsl(0, 0%, 29%);
+$grey: hsl(0, 0%, 48%);
+$grey-light: hsl(0, 0%, 71%);
 $grey-lighter: hsl(0, 0%, 86%);
 
-$primary: #2A9FD6 !default;
+$primary: #2a9fd6 !default;
 $primary-light: lighten($primary, 10);
-$link: #3273E2;
+$link: #3273e2;
 
 $white: #fff;
-$white-ter:    #f5f5f5;
+$white-ter: #f5f5f5;
 
 $body-background-color: #000;
 $background: $grey-darker;
@@ -46,6 +46,10 @@ $button-hover-color: $grey-lighter;
 $button-focus: $grey-light;
 $button-active-color: $grey-light;
 
+$input-color: $grey-darker;
+$input-icon-color: $grey;
+$input-icon-active-color: $input-color;
+
 $table-color: $text;
 $table-head: $grey-lighter;
 $table-background-color: $grey-darker;
@@ -76,3 +80,9 @@ $navbar-dropdown-item-active-background-color: $navbar-item-hover-background-col
 $navbar-dropdown-arrow: $white;
 
 $tabs-boxed-link-active-background-color: $body-background-color;
+
+$file-cta-background-color: $grey-darker;
+
+$progress-bar-background-color: $grey-dark;
+
+$panel-heading-background-color: $grey-dark;

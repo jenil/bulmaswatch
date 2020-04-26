@@ -1,80 +1,86 @@
-@import '../materia/bulmaswatch';
+@import "../materia/bulmaswatch";
 @import "highlight";
 
-pre code, .highlight {
+pre code,
+.highlight {
   text-align: left !important;
 }
 nav.main-nav {
-    border-radius: 0;
-    min-height: 4rem;
-    .title {
-        color: #fff;
-        font-weight: bold;
-    }
-    .logo {
-        padding-right: 10px;
-    }
-    > * > * > .navbar-item {
-        margin: 0.75rem 0.25rem;
-        border-radius: $radius;
-    }
+  border-radius: 0;
+  min-height: 4rem;
+  .title {
+    color: #fff;
+    font-weight: bold;
+  }
+  .logo {
+    padding-right: 10px;
+  }
+  > * > * > .navbar-item {
+    margin: 0.75rem 0.25rem;
+    border-radius: $radius;
+  }
 }
 
 .home-page {
-    .main-nav {
-        background-color: transparent !important;
-        box-shadow: none !important;
-        .navbar-item, .navbar-link {
-            &.is-active,
-            &:hover {
-                background-color: rgba($black, 0.05) !important;
-            }
-        }
+  .main-nav {
+    background-color: transparent !important;
+    box-shadow: none !important;
+    .navbar-item,
+    .navbar-link {
+      color: $navbar-item-color !important;
+      &.is-active,
+      &:hover {
+        background-color: rgba($black, 0.05) !important;
+      }
+      &::after {
+        border-color: $navbar-item-color !important;
+      }
     }
-    .hero {
-        overflow: hidden !important;
+  }
+  .hero {
+    overflow: hidden !important;
+  }
+  .hero-body {
+    transform: translate3d(0, 0, 0);
+    will-change: transform;
+    transition: transform ease 1ms;
+    padding-bottom: 0;
+    .title {
+      font-weight: 200;
+      margin-top: 1rem;
     }
-    .hero-body {
-        transform: translate3d(0, 0, 0);
-        will-change: transform;
-        transition: transform ease 1ms;
-        padding-bottom: 0;
-        .title {
-            font-weight: 200;
-            margin-top: 1rem;
-        }
-        .subtitle {
-            font-weight: 700;
-        }
-        a {
-            text-decoration: underline;
-        }
-        img {
-            display: block;
-        }
+    .subtitle {
+      font-weight: 700;
     }
-    .iframe>* {
-        bottom: 0;
-        left: 0;
-        position: absolute;
-        right: 0;
-        top: 0;
-        height: 100%;
-        width: 100%;
-        border-top-left-radius: $radius-large;
-        border-top-right-radius: $radius-large;
+    a {
+      text-decoration: underline;
     }
-    .section.themes {
-        padding-top: 5rem;
-        padding-bottom: 5rem;
-        .box {
-            background-color: #fafafa;
-            padding: 0 0 1rem;
-            border-top-left-radius: $radius-large;
-            border-top-right-radius: $radius-large;
-            .block {
-                margin: 1rem 0;
-            }
-        }
+    img {
+      display: block;
     }
+  }
+  .iframe > * {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    border-top-left-radius: $radius-large;
+    border-top-right-radius: $radius-large;
+  }
+  .section.themes {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    .box {
+      background-color: #fafafa;
+      padding: 0 0 1rem;
+      border-top-left-radius: $radius-large;
+      border-top-right-radius: $radius-large;
+      .block {
+        margin: 1rem 0;
+      }
+    }
+  }
 }

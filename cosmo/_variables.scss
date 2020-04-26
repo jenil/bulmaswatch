@@ -4,24 +4,25 @@
 $grey-darker: #333;
 $black-ter: #222;
 
-$orange:       #FF7518;
-$yellow:       #f4db00;
-$green:        #3FB618;
-$turquoise:    #00ABA9;
-$blue:         #1FAEFF;
-$purple:       #AA40FF;
-$red:          #FF2E12;
-$grey:         #dbdbdb;
+$orange: #ff7518;
+$yellow: #f4db00;
+$green: #3fb618;
+$turquoise: #00aba9;
+$blue: #1faeff;
+$purple: #aa40ff;
+$red: #ff2e12;
+$grey: #dbdbdb;
 
-$primary: #2780E3 !default;
-$primary-dark: darken(#2780E3, 20);
+$primary: #2780e3 !default;
+$primary-dark: darken(#2780e3, 20);
 $warning: $orange;
 $info: $purple;
 
 $orange-invert: #fff;
 $warning-invert: $orange-invert;
 
-$family-sans-serif: "Segoe UI", "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
+$family-sans-serif: "Segoe UI", "Source Sans Pro", Calibri, Candara, Arial,
+  sans-serif;
 
 $body-size: 15px;
 

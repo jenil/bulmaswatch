@@ -1,40 +1,41 @@
 ////////////////////////////////////////////////
 // DARKLY
 ////////////////////////////////////////////////
-$grey-lighter: #FDF6E3;
-$grey-light:   #eee8d5;
-$grey:         #839496;
-$grey-alt:     #586e75;
-$grey-dark:    #073642;
-$grey-darker:  #002B36;
+$grey-lighter: #fdf6e3;
+$grey-light: #eee8d5;
+$grey: #839496;
+$grey-alt: #586e75;
+$grey-dark: #073642;
+$grey-darker: #002b36;
 
-$orange       : #cb4b16;
-$yellow       : #b58900;
-$green        : #859900;
-$cyan         : #2aa198;
-$blue         : #268bd2;
-$purple       : #6c71c4;
-$red          : #d33682;
+$orange: #cb4b16;
+$yellow: #b58900;
+$green: #859900;
+$cyan: #2aa198;
+$blue: #268bd2;
+$purple: #6c71c4;
+$red: #d33682;
 
 $black-bis: rgb(18, 18, 18);
 
 $primary: $cyan !default;
-$warning      : $orange;
+$warning: $orange;
 $info: $blue;
 $yellow-invert: #fff;
 
 $light: $grey-lighter;
-$dark : darken($grey-darker, 3);
+$dark: darken($grey-darker, 3);
 
-$family-sans-serif: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+$family-sans-serif: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI",
+  "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 $family-monospace: "Inconsolata", "Consolas", "Monaco", monospace;
 
 $radius-small: 3px;
-$radius: .4em;
+$radius: 0.4em;
 $radius-large: 8px;
 
 $body-size: 15px;
-$size-7: .85em;
+$size-7: 0.85em;
 
 $title-weight: 500;
 $subtitle-weight: 400;
@@ -51,8 +52,8 @@ $title-color: $grey;
 $subtitle-color: $grey-alt;
 $subtitle-strong-color: $grey-light;
 
-$text       : $grey;
-$text-light : lighten($text, 10);
+$text: $grey;
+$text-light: lighten($text, 10);
 $text-strong: darken($text, 5);
 
 $box-shadow: none;
@@ -64,12 +65,12 @@ $card-header-box-shadow: none;
 $card-header-background-color: rgba($black-bis, 0.2);
 $card-footer-background-color: rgba($black-bis, 0.2);
 
-$link             : $yellow;
-$link-hover       : $grey-light;
+$link: $yellow;
+$link-hover: $grey-light;
 $link-hover-border: $grey-light;
-$link-focus       : darken($grey-light, 10);
+$link-focus: darken($grey-light, 10);
 $link-focus-border: $grey-light;
-$link-active      : darken($grey-light, 10);
+$link-active: darken($grey-light, 10);
 
 $button-color: $grey;
 $button-background-color: $background;

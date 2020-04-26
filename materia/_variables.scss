@@ -2,24 +2,26 @@
 // MATERIA
 ////////////////////////////////////////////////
 
-$orange: #FF9800;
-$yellow: #FFEB3B;
-$green: #4CAF50;
+$orange: #ff9800;
+$yellow: #ffeb3b;
+$green: #4caf50;
 $turquoise: #009688;
-$cyan: #29B6F6;
-$blue: #2196F3;
-$purple: #9C27B0;
-$red: #F44336;
+$cyan: #29b6f6;
+$blue: #2196f3;
+$purple: #9c27b0;
+$red: #f44336;
 
-$primary: #3F51B5 !default;
+$primary: #3f51b5 !default;
 
 $family-sans-serif: "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 $title-weight: 400;
 $title-weight-bold: 500;
 
 $radius: 0;
-$shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
-$shadow-large: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+$shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),
+  0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+$shadow-large: 0px 5px 5px -3px rgba(0, 0, 0, 0.2),
+  0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
 
 $button-border-color: transparent;
 $button-hover-border: transparent;

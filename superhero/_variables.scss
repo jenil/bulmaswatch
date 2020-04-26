@@ -1,17 +1,17 @@
 ////////////////////////////////////////////////
 // SUPERHERO
 ////////////////////////////////////////////////
-$grey-darker:  #1f2d3b;
-$grey-dark:    #2B3E50;
-$grey:         #4E5D6C;
-$grey-light:   #8694a4;
+$grey-darker: #1f2d3b;
+$grey-dark: #2b3e50;
+$grey: #4e5d6c;
+$grey-light: #8694a4;
 $grey-lighter: #dee5ed;
 
-$orange:       #DF691A;
-$yellow:       #f0ad4e;
-$green:        #5cb85c;
-$blue:         #5bc0de;
-$red:          #d9534f;
+$orange: #df691a;
+$yellow: #f0ad4e;
+$green: #5cb85c;
+$blue: #5bc0de;
+$red: #d9534f;
 
 $primary: $orange !default;
 
@@ -59,6 +59,9 @@ $radius: 0;
 $radius-small: 0;
 
 $input-hover-color: $link-hover;
+$input-color: $grey-darker;
+$input-icon-color: $grey;
+$input-icon-active-color: $input-color;
 
 $table-color: $text;
 $table-head-color: $grey-lighter;
@@ -85,10 +88,16 @@ $dropdown-item-hover-color: $text-light;
 
 $tabs-toggle-link-active-background-color: $background;
 $tabs-toggle-link-active-border-color: $border;
-$tabs-toggle-link-active-color: #FFF;
+$tabs-toggle-link-active-color: #fff;
 $tabs-boxed-link-active-background-color: $body-background-color;
 
 $pagination-color: $link;
 $pagination-border-color: $border;
 
 $bulmaswatch-import-font: true !default;
+
+$file-cta-background-color: $grey-darker;
+
+$progress-bar-background-color: $grey-dark;
+
+$panel-heading-background-color: $grey-dark;

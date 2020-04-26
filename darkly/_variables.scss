@@ -2,10 +2,10 @@
 // DARKLY
 ////////////////////////////////////////////////
 $grey-lighter: #dbdee0;
-$grey-light:   #8c9b9d;
-$grey:         darken($grey-light, 18);
-$grey-dark:    darken($grey, 18);
-$grey-darker:  darken($grey, 23);
+$grey-light: #8c9b9d;
+$grey: darken($grey-light, 18);
+$grey-dark: darken($grey, 18);
+$grey-darker: darken($grey, 23);
 
 $orange: #e67e22;
 $yellow: #f1b70e;
@@ -18,14 +18,15 @@ $white-ter: #ecf0f1;
 $primary: #375a7f !default;
 $yellow-invert: #fff;
 
-$family-sans-serif: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+$family-sans-serif: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI",
+  "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 $family-monospace: "Inconsolata", "Consolas", "Monaco", monospace;
 
 $radius-small: 3px;
-$radius: .4em;
+$radius: 0.4em;
 $radius-large: 8px;
 $size-6: 15px;
-$size-7: .85em;
+$size-7: 0.85em;
 $title-weight: 500;
 $subtitle-weight: 400;
 $subtitle-color: $grey-dark;
@@ -65,6 +66,9 @@ $button-focus: darken($text, 5); // text-dark
 $button-active-color: darken($text, 5); // text-dark
 $button-disabled-background-color: $grey-light;
 
+$input-color: $grey-darker;
+$input-icon-color: $grey;
+$input-icon-active-color: $input-color;
 $input-hover-color: $grey-light;
 $input-disabled-background-color: $grey-light;
 $input-disabled-border: $grey-lighter;
@@ -103,3 +107,9 @@ $dropdown-item-color: $text;
 $progress-value-background-color: $grey-lighter;
 
 $bulmaswatch-import-font: true !default;
+
+$file-cta-background-color: $grey-darker;
+
+$progress-bar-background-color: $grey-dark;
+
+$panel-heading-background-color: $grey-dark;

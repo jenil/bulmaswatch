@@ -1,16 +1,16 @@
 ////////////////////////////////////////////////
 // MINTY
 ////////////////////////////////////////////////
-$grey:         #888;
-$grey-light:   #aaa;
+$grey: #888;
+$grey-light: #aaa;
 $grey-lighter: #dbdbdb;
 
-$orange:       #eea170;
-$yellow:       #FFCE67;
-$green:        #56cc90;
-$cyan:         #6CC3D5;
-$blue:         #6D90D6;
-$red:          #e07f7d;
+$orange: #eea170;
+$yellow: #ffce67;
+$green: #56cc90;
+$cyan: #6cc3d5;
+$blue: #6d90d6;
+$red: #e07f7d;
 $turquoise: #6abfb0;
 
 $danger: $orange;
@@ -30,7 +30,8 @@ $radius-small: 4px;
 $radius: 6px;
 $radius-large: 8px;
 
-$family-heading: "Montserrat", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$family-heading: "Montserrat", -apple-system, system-ui, BlinkMacSystemFont,
+  "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 
 $navbar-background-color: $turquoise;
 $navbar-item-color: rgba(#fff, 0.75);
