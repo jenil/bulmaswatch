@@ -1,7 +1,7 @@
 Bulmaswatch
 ===========
 
-Themes for [Bulma](http://bulma.io), inspired by [Bootswatch](http://bootswatch.com/).
+Themes for [Bulma](https://bulma.io), inspired by [Bootswatch](https://bootswatch.com/).
 
 Get started
 -----
@@ -20,8 +20,8 @@ yarn start
 
 Credits
 -----
-- @jgthms for [Bulma](http://bulma.io)
-- @thomaspark for [Bootswatch](http://bootswatch.com/)
+- @jgthms for [Bulma](https://bulma.io)
+- @thomaspark for [Bootswatch](https://bootswatch.com/)
 
 ## Copyright and License
 
