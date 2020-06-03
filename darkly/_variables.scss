@@ -66,6 +66,8 @@ $button-focus: darken($text, 5); // text-dark
 $button-active-color: darken($text, 5); // text-dark
 $button-disabled-background-color: $grey-light;
 
+$control-height: 2.5em;
+
 $input-color: $grey-darker;
 $input-icon-color: $grey;
 $input-icon-active-color: $input-color;

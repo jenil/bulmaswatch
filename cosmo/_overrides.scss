@@ -2,19 +2,6 @@
 @if $bulmaswatch-import-font {
   @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700&display=swap");
 }
-.button,
-.control.has-icons-left .icon,
-.control.has-icons-right .icon,
-.input,
-.pagination-ellipsis,
-.pagination-link,
-.pagination-next,
-.pagination-previous,
-.select,
-.select select,
-.textarea {
-  height: 2.6667em;
-}
 
 .button {
   &.is-active,

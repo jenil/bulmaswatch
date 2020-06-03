@@ -13,20 +13,6 @@
   filter: none;
 }
 
-.button,
-.control.has-icons-left .icon,
-.control.has-icons-right .icon,
-.input,
-.pagination-ellipsis,
-.pagination-link,
-.pagination-next,
-.pagination-previous,
-.select,
-.select select,
-.textarea {
-  height: 2.286em;
-}
-
 .button {
   @each $name, $pair in $colors {
     $color: nth($pair, 1);
