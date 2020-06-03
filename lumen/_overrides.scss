@@ -10,7 +10,7 @@
 }
 
 .button {
-  height: 2.648em;
+  height: $control-height + 0.398em;
 }
 
 .button {
@@ -91,13 +91,7 @@
 .select select {
   border-width: 1px 1px $thickness 1px;
   &:not([multiple]) {
-    height: calc(2.25em + #{$thickness});
-  }
-}
-
-.field.has-addons {
-  .control .select select {
-    height: 2.25em;
+    height: calc(#{$control-height} + #{$thickness});
   }
 }
 
