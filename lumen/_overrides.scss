@@ -91,7 +91,8 @@
 .select select {
   border-width: 1px 1px $thickness 1px;
   &:not([multiple]) {
-    height: calc(#{$control-height} + #{$thickness});
+    height: $control-height;
+    line-height: 1em;
   }
 }
 
