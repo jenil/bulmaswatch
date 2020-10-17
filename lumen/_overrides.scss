@@ -13,6 +13,14 @@
   height: $control-height + 0.398em;
 }
 
+.field.has-addons .control .button {
+  &.is-small,
+  &.is-medium,
+  &.is-large {
+    height: $control-height;
+  }
+}
+
 .button {
   transition: all 300ms ease;
   border-style: solid;
