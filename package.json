@@ -22,7 +22,7 @@
     "themes"
   ],
   "devDependencies": {
-    "browser-sync": "^2.26.12",
+    "browser-sync": "^2.26.13",
     "bulma": "0.9.1",
     "del": "^5.1.0",
     "gulp": "3.x",
