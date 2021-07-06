@@ -80,7 +80,7 @@
   .navbar-link::after {
     border-color: $white;
   }
-  @include desktop {
+    @include from($navbar-breakpoint) {
     .navbar-dropdown .navbar-item {
       color: $grey-dark;
       &:hover {
@@ -165,7 +165,7 @@
           background-color: $color-invert;
         }
       }
-      @include desktop {
+      @include from($navbar-breakpoint) {
         .navbar-dropdown a.navbar-item {
           color: $grey-dark;
         }

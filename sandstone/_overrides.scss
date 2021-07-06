@@ -33,19 +33,19 @@
     &.is-active {
       background-color: darken($grey-dark, 5);
 
-      @include touch {
+      @include until($navbar-breakpoint) {
         background-color: rgba($grey-dark, 0.25);
       }
     }
   }
 
-  @include desktop {
+    @include from($navbar-breakpoint) {
     .navbar-dropdown .navbar-item {
       color: $text;
     }
   }
 
-  @include touch {
+  @include until($navbar-breakpoint) {
     .navbar-menu {
       background-color: inherit;
     }
@@ -60,7 +60,7 @@
     $color-invert: nth($pair, 2);
 
     &.is-#{$name} {
-      @include touch {
+      @include until($navbar-breakpoint) {
         .navbar-item,
         .navbar-link {
           color: rgba($color-invert, 0.7);

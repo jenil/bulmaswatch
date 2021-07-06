@@ -175,7 +175,7 @@ a {
     background-color: transparent;
   }
 
-  @include touch {
+  @include until($navbar-breakpoint) {
     .navbar-menu {
       background-color: inherit;
     }
@@ -186,7 +186,7 @@ a {
     $color-invert: nth($pair, 2);
 
     &.is-#{$name} {
-      @include touch {
+      @include until($navbar-breakpoint) {
         .navbar-item,
         .navbar-link {
           color: rgba($color-invert, 0.75);

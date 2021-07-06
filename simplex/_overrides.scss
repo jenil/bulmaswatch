@@ -52,12 +52,12 @@
 .navbar {
   @include btn-shadow($primary);
   .has-dropdown .navbar-item {
-    @include desktop {
+      @include from($navbar-breakpoint) {
       color: $text;
     }
   }
 
-  @include touch {
+  @include until($navbar-breakpoint) {
     .navbar-menu {
       background-color: inherit;
     }
@@ -73,7 +73,7 @@
 
     &.is-#{$name} {
       @include btn-shadow($color);
-      @include touch {
+      @include until($navbar-breakpoint) {
         .navbar-item,
         .navbar-link {
           color: rgba($color-invert, 0.7);

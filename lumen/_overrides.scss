@@ -185,7 +185,7 @@
       }
     }
   }
-  @include touch {
+  @include until($navbar-breakpoint) {
     .navbar-menu {
       box-shadow: none;
     }
