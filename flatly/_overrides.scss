@@ -138,7 +138,7 @@ a {
     }
   }
 
-  @include touch {
+  @include until($navbar-breakpoint) {
     color: $navbar-item-color;
     .navbar-menu {
       background-color: $navbar-dropdown-background-color;
@@ -275,7 +275,7 @@ body > .navbar {
           }
         }
 
-        @include desktop {
+          @include from($navbar-breakpoint) {
           .navbar-dropdown {
             .navbar-item:not(.is-active):not(:hover) {
               color: $button-color;

@@ -79,7 +79,7 @@ h6 {
     color: $white;
   }
 
-  @include touch {
+  @include until($navbar-breakpoint) {
     .navbar-menu {
       background-color: $primary;
       border-radius: $radius;

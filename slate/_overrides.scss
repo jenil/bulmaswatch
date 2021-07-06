@@ -84,7 +84,7 @@
 .navbar {
   border: 1px solid $dark;
 
-  @include touch {
+  @include until($navbar-breakpoint) {
     .navbar-menu {
       background-color: inherit;
     }

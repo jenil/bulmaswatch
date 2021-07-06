@@ -102,7 +102,7 @@ h6 {
     transition: all 300ms;
   }
 
-  @include touch {
+  @include until($navbar-breakpoint) {
     .navbar-menu {
       background-color: inherit;
       border-radius: inherit;
@@ -110,7 +110,7 @@ h6 {
   }
 
   .navbar-dropdown .navbar-item {
-    @include desktop {
+      @include from($navbar-breakpoint) {
       color: $text;
     }
   }
@@ -147,7 +147,7 @@ h6 {
           }
         }
       }
-      @include touch {
+      @include until($navbar-breakpoint) {
         .navbar-item,
         .navbar-link {
           color: rgba($color-invert, 0.75);

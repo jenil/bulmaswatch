@@ -81,7 +81,7 @@
     background-color: transparent;
   }
 
-  @include touch {
+  @include until($navbar-breakpoint) {
     .navbar-menu {
       background-color: transparent;
     }
@@ -92,7 +92,7 @@
     $color-invert: nth($pair, 2);
 
     &.is-#{$name} {
-      @include touch {
+      @include until($navbar-breakpoint) {
         .navbar-item,
         .navbar-link {
           color: $color-invert;

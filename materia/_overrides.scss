@@ -232,12 +232,12 @@ hr {
   }
 
   .has-dropdown .navbar-item {
-    @include desktop {
+      @include from($navbar-breakpoint) {
       color: $text;
     }
   }
 
-  @include touch {
+  @include until($navbar-breakpoint) {
     .navbar-menu {
       background-color: inherit;
     }
@@ -248,7 +248,7 @@ hr {
     $color-invert: nth($pair, 2);
 
     &.is-#{$name} {
-      @include touch {
+      @include until($navbar-breakpoint) {
         .navbar-menu {
           .navbar-item,
           .navbar-link {

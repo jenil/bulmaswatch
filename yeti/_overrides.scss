@@ -71,13 +71,13 @@
     }
   }
 
-  @include desktop {
+    @include from($navbar-breakpoint) {
     .has-dropdown .navbar-item {
       color: $text;
     }
   }
 
-  @include touch {
+  @include until($navbar-breakpoint) {
     .navbar-menu {
       background-color: inherit;
     }
@@ -107,7 +107,7 @@
       }
     }
 
-    @include desktop {
+    @include from($navbar-breakpoint) {
       .has-dropdown .navbar-item {
         color: $text;
       }

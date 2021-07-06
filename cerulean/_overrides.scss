@@ -72,13 +72,13 @@
   .navbar-link::after {
     border-color: $white;
   }
-  @include mobile {
+  @include until($navbar-breakpoint) {
     .navbar-menu {
       background-color: $primary;
       @include btn-gradient($primary);
     }
   }
-  @include desktop {
+    @include from($navbar-breakpoint) {
     .navbar-dropdown .navbar-item {
       color: $grey-dark;
     }
@@ -93,7 +93,7 @@
     $color-invert: nth($pair, 2);
     &.is-#{$name} {
       @include btn-gradient($color);
-      @include mobile {
+      @include until($navbar-breakpoint) {
         .navbar-menu {
           background-color: $color;
           @include btn-gradient($color);
@@ -148,13 +148,13 @@
           background-color: $color-invert;
         }
       }
-      @include touch {
+      @include until($navbar-breakpoint) {
         .navbar-menu {
           background-color: $color;
           @include btn-gradient($color);
         }
       }
-      @include desktop {
+        @include from($navbar-breakpoint) {
         .navbar-dropdown a.navbar-item:hover {
           color: $color-invert;
         }

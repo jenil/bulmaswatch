@@ -74,7 +74,7 @@
     border: 1px solid $grey-darker;
   }
 
-  @include touch {
+  @include until($navbar-breakpoint) {
     .navbar-menu {
       background-color: $navbar-background-color;
     }
