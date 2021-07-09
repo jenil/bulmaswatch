@@ -13,6 +13,14 @@
   height: $control-height + 0.398em;
 }
 
+.field.has-addons .control .button {
+  &.is-small,
+  &.is-medium,
+  &.is-large {
+    height: $control-height;
+  }
+}
+
 .button {
   transition: all 300ms ease;
   border-style: solid;
@@ -91,7 +99,8 @@
 .select select {
   border-width: 1px 1px $thickness 1px;
   &:not([multiple]) {
-    height: calc(#{$control-height} + #{$thickness});
+    height: $control-height;
+    line-height: 1em;
   }
 }
 
