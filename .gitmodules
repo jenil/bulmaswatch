@@ -1,0 +1,3 @@
+[submodule "swatchpicker"]
+	path = swatchpicker
+	url = https://github.com/ddupas/swatchpicker.git
