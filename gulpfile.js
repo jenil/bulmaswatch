@@ -1,24 +1,27 @@
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var sourcemaps = require('gulp-sourcemaps');
-var autoprefixer = require('gulp-autoprefixer');
-var csso = require('gulp-csso');
-var rename = require('gulp-rename');
-var browserSync = require('browser-sync').create();
-var cp = require('child_process');
-var del = require('del');
-var data = require('gulp-data');
-var pluck = require('gulp-pluck');
-var frontMatter = require('gulp-front-matter');
+import gulp from 'gulp'
+import nodeSass from 'node-sass'
+import gulpSass from 'gulp-sass';
+const sass = gulpSass(nodeSass);
+import sourcemaps from 'gulp-sourcemaps'
+import autoprefixer from 'gulp-autoprefixer'
+import csso from 'gulp-csso'
+import rename from 'gulp-rename'
+import browserSyncSrc from 'browser-sync'
+const browserSync = browserSyncSrc.create()
+import cp from 'child_process'
+import {deleteSync, deleteAsync} from 'del';
+import data from 'gulp-data'
+import pluck from 'gulp-pluck'
+import frontMatter from 'gulp-front-matter'
 
-const pkg = require('./package.json');
+import pkg from './package.json'  assert { type: "json" }
 const VERSION = pkg.version;
 const HOME = pkg.homepage;
 const CDN = 'https://unpkg.com/bulmaswatch';
 var changedTheme = '';
 
-gulp.task('clean', function() {
-    return del(['*/*.css', '*/*.css.map']);
+gulp.task('clean', async function() {
+    await deleteAsync(['*/*.css', '*/*.css.map']);
 });
 
 gulp.task('jekyll-build', function(done) {
@@ -30,31 +33,9 @@ gulp.task('jekyll-build', function(done) {
     });
 });
 
-gulp.task('jekyll-rebuild', ['jekyll-build'], function() {
+gulp.task('jekyll-rebuild', gulp.series('jekyll-build', function() {
     browserSync.reload();
-});
-
-
-gulp.task('serve', ['sass:dev', 'jekyll-build'], function() {
-    browserSync.init({
-        server: {
-            baseDir: '_site'
-        },
-        ghostMode: {
-            clicks: false,
-            forms: false
-        },
-        reloadDelay: 500
-    });
-
-    gulp.watch(['*/*.scss', '!_site/**'], ['sass:dev']).on('change', function(event) {
-        console.log('SCSS: File ' + event.path + ' was ' + event.type + ', running tasks...');
-        changedTheme = event.path.split('/')[event.path.split('/').length - 2]
-    });
-    gulp.watch(['**/*.{html,md}', '!_site/**'], ['jekyll-rebuild']).on('change', function(event) {
-        console.log('HTML: File ' + event.path + ' was ' + event.type + ', running tasks...');
-    });
-});
+}));
 
 gulp.task('sass:dev', function() {
     console.log('Building', changedTheme);
@@ -74,7 +55,29 @@ gulp.task('sass:dev', function() {
         .pipe(gulp.dest(changedTheme ? `_site/${changedTheme}` : '.'));
 });
 
-gulp.task('sass', ['clean'], function() {
+
+gulp.task('serve', gulp.parallel('sass:dev', 'jekyll-build', function() {
+    browserSync.init({
+        server: {
+            baseDir: '_site'
+        },
+        ghostMode: {
+            clicks: false,
+            forms: false
+        },
+        reloadDelay: 500
+    });
+
+    gulp.watch(['*/*.scss', '!_site/**'], gulp.series('sass:dev')).on('change', function(event) {
+        console.log('SCSS: File ' + event.path + ' was ' + event.type + ', running tasks...');
+        changedTheme = event.path.split('/')[event.path.split('/').length - 2]
+    });
+    gulp.watch(['**/*.{html,md}', '!_site/**'], gulp.series('jekyll-rebuild')).on('change', function(event) {
+        console.log('HTML: File ' + event.path + ' was ' + event.type + ', running tasks...');
+    });
+}));
+
+gulp.task('sass', gulp.series('clean', function compile() {
     return gulp.src('*/*.scss')
         .pipe(sourcemaps.init())
         .pipe(sass({
@@ -87,7 +90,7 @@ gulp.task('sass', ['clean'], function() {
         .pipe(csso())
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('.'));
-});
+}));
 
 gulp.task('api', function() {
     var API = {
@@ -95,7 +98,7 @@ gulp.task('api', function() {
         themes: []
     };
 
-    del(['api/*']);
+    deleteSync(['api/*']);
 
     return gulp.src('./_themes/*.md')
         .pipe(frontMatter({
@@ -117,4 +120,6 @@ gulp.task('api', function() {
         .pipe(gulp.dest('api'));
 });
 
-gulp.task('default', ['serve']);
+gulp.task('default', gulp.series('serve'));
+
+gulp.task('build', gulp.parallel('sass', 'api'));

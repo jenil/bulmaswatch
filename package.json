@@ -3,7 +3,8 @@
   "version": "0.8.1",
   "description": "Themes for Bulma",
   "author": "Jenil Gogari <i@jgog.in>",
-  "main": "materia/bulmaswatch.min.css",
+  "exports": "./materia/bulmaswatch.min.css",
+  "type": "module",
   "homepage": "https://jenil.github.io/bulmaswatch",
   "repository": {
     "type": "git",
@@ -22,26 +23,29 @@
     "themes"
   ],
   "devDependencies": {
-    "browser-sync": "^2.18.6",
+    "browser-sync": "^2.27.11",
     "bulma": "0.8.1",
-    "del": "^5.1.0",
-    "gulp": "3.x",
-    "gulp-autoprefixer": "^6.1.0",
-    "gulp-csso": "^3.0.0",
+    "del": "^7.0.0",
+    "gulp": "4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-csso": "^4.0.1",
     "gulp-data": "^1.2.1",
     "gulp-front-matter": "^1.3.0",
     "gulp-pluck": "^0.0.4",
-    "gulp-rename": "^1.2.2",
-    "gulp-sass": "^4.0.2",
-    "gulp-sourcemaps": "^2.4.0",
-    "node-sass": "^4.13.1"
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "node-sass": "^8.0.0"
   },
   "scripts": {
-    "build": "gulp sass api",
+    "build": "gulp build",
     "start": "gulp",
     "api": "gulp api"
   },
   "resolutions": {
     "graceful-fs": "4.2.3"
+  },
+  "engines": {
+    "node": ">=14.16"
   }
 }
